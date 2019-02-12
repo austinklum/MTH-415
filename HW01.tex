@@ -51,9 +51,13 @@
     \item[0.8] Copy and paste the editing link to the project into Canvas.
 \end{enumerate} 
 \begin{enumerate}
-	\item[1.1] Determine all of the possible topologies on  $ X =\{a,b\}$
-	
-	\item[1.2]$  \begin{array} { l } { \text { On the three-point set } X = \{ a , b , c \} , \text { the trivial topology has two open sets and } } \\ { \text { the discrete topology has eight open sets. For each of } n = 3 , \ldots , 7 , \text { either find } } \\ { \text { a topology on } X \text { consisting of } n \text { open sets or prove that no such topology exists. } } \end{array} $
+	\item[1.1] Determine all of the possible topologies on  $ X =\{a,b\}$\\
+			$ \mathcal{ T } = \{\phi, X\},\{\phi,X,\{a\},\{b\}\},\{\phi,X,\{a\}\},\{\phi,X,\{b\}\}   $
+	\item[1.2]$  \begin{array} { l } { \text { On the three-point set } X = \{ a , b , c \} , \text { the trivial topology has two open sets and } } \\ { \text { the discrete topology has eight open sets. For each of } n = 3 , \ldots , 6 , \text { either find } } \\ { \text { a topology on } X \text { consisting of } n \text { open sets or prove that no such topology exists. } } \end{array} $\\
+	$n=3 \quad \mathcal{ T }= \{\phi,X,\{a\}\} $\\
+	$n=4 \quad \mathcal{ T }= \{\phi,X,\{a\},\{b\}\} $\\
+	$n=5 \quad \mathcal{ T }= \{\phi,X,\{a\},\{b\},\{a,b\}\} $\\
+	$n=6 \quad \mathcal{ T }= \{\phi,X,\{a\},\{b\},\{a,b\},\{b,c\}\} $\\
 	
 	\item[1.3]$  \begin{array} { l } { \text { Prove that a topology } \mathcal { T } \text { on } X \text { is the discrete topology if and only if } \{ x \} \in \mathcal { T } } \\ { \text { for all } x \in X . } \end{array} $
 	
@@ -62,25 +66,55 @@
 				\item$  \begin{array} { l } { \text { Make and prove a conjecture indicating for what class of sets the discrete } } \\ { \text { and finite complement topologies coincide. } } \end{array}$
 			\end{enumerate}
 	
-	\item[1.5] $ \begin{array} { l } { \text { Find three topologies on the five-point set } X = \{ a , b , c , d , e \} \text { such that the the } } \\ { \text { first is strictly finer than the seecond and the second strictly finer than the third, } } \\ { \text { without using either the trivial or the discrete topology. Find a topology on } X } \\ { \text { that is not comparable to each of the first three that you found. } } \end{array} $
+	\item[1.5] $ \begin{array} { l } { \text { Find three topologies on the five-point set } X = \{ a , b , c , d , e \} \text { such that the the } } \\ { \text { first is strictly finer than the seecond and the second strictly finer than the third, } } \\ { \text { without using either the trivial or the discrete topology. Find a topology on } X } \\ { \text { that is not comparable to each of the first three that you found. } } \end{array} $\\
+	$ \mathcal{ T }_1 = \{\phi,X,\{a\}\} $\\
+	$ \mathcal{ T }_2 = \{\phi,X,\{a\}\{a,b\}\} $\\
+	$ \mathcal{ T }_3 = \{\phi,X,\{a\}\{a,b\},\{a,b,c\}\} $\\
+	$ \mathcal{ T }_4 = \{\phi,X,\{a\}\{a,b\},\{a,b,c\},\{b\}\} $\\
+	\item[1.8]$  \begin{array} { l } { \text { Let } X \text { be a set and assume } p \in X . \text { Show that the collection } \mathcal { T } , \text { consisting of } X } \\ { \text { and all subsets of } X \text { that exclude } p , \text { is a topology on } X . \text { This topology is called } } \\ { \text { the excluded point topology on } X , \text { and we denote it by } E P X _ { p } \text { . } } \end{array} $\\
+	Let $ X $ be a set and assume $ p\in X $. $ \mathcal{ T } $ consists of $ X $ and all subsets of $ X $ that exclude $ p $.
+	\begin{enumerate}
+		\item[i] By the definition of $ \mathcal{ T } $, we have $ \phi,X\in\mathcal{ T } $
+		\item[ii] As the intersection of all the sets that exclude $ p $ will all have sets in common, we then have that the finite intersections of the open sets that exclude $ p $ are open.
+		\item[iii] As the union of the open sets excluding $ p $ will be in $ \mathcal{ T } $ and since we will never union on $ p $, then the unions must be open sets.
+	\end{enumerate}
 	
-	\item[1.8]$  \begin{array} { l } { \text { Let } X \text { be a set and assume } p \in X . \text { Show that the collection } \mathcal { T } , \text { consisting of } X } \\ { \text { and all subsets of } X \text { that exclude } p , \text { is a topology on } X . \text { This topology is called } } \\ { \text { the excluded point topology on } X , \text { and we denote it by } E P X _ { p } \text { . } } \end{array} $
+	\item[1.9]$ \text { Let } \mathcal { T } \text { consist of } \varnothing, \mathbb { R } , \text { and all intervals } ( - \infty , p ) \text { for } p \in \mathbb { R } . \text { Prove that } \mathcal { T } \text { is a } \text { topology on } \mathbb { R } \text { . } $\\
+	Let $ p \in \mathbb{ R } $ and $ \mathcal{ T } $ consists of $ \phi,\mathbb{R}, $ and all intervals $ (-\infty,p) $. 
+	\begin{enumerate}
+		\item[i] By definition, $ \phi,\mathbb{ R } \in \mathcal{ T } $
+		\item[ii] As we are bounded by the upper value $ p $, we must have that all intersection of intervals will be in the range of $ (-\infty,p) $
+		\item[iii] As we are bounded by the upper value $ p $, we must have that all unions of intervals will be in the range of $ (-\infty,p) $
+	\end{enumerate}
 	
-	\item[1.9]$  \begin{array} { l } { \text { Let } \mathcal { T } \text { consist of } \varnothing, \mathbb { R } , \text { and all intervals } ( - \infty , p ) \text { for } p \in \mathbb { R } . \text { Prove that } \mathcal { T } \text { is a } } \\ { \text { topology on } \mathbb { R } \text { . } } \end{array} $
+	\item[1.10] Show that $ \mathcal { B } = \{ [ a , b ) \subset \mathbb{ R } | a < b \} \text { is a basis for a topology on } \mathbb { R } $\\
+		Let $ x\in \mathbb{ R } $ then $ x\in [x-\epsilon,x+\epsilon),\epsilon > 0 $.\\
+		Suppose $ x\in [a_1,b_1)\cap[a_2,b_2) $, then let $ a = $ max $ \{a_1,a_2\} $ and $ b = $ min $ \{b_1,b_2\} $\\
+		Thus, $ \mathcal{ B } $ is a basis.
 	
-	\item[1.10] Show that $ \mathcal { B } = \{ [ a , b ) \subset \mathbb { R } | a < b \} \text { is a basis for a topology on } \mathbb { R } $
+	\item[1.11]$ \begin{array} { l } { \text { Determine which of the following collections of subsets of } \mathbb { R } \text { are bases: } } \\ { \text { (a) } \mathcal { C } _ { 1 } = \{ ( n , n + 2 ) \subset \mathbb { R } | n \in \mathbb { Z } \} } \\ { \text { (b) } \mathcal { C } _ { 2 } = \{ [ a , b ] \subset \mathbb { R } | a < b \} } \\ { \text { (c) } \mathcal { C } _ { 3 } = \{ [ a , b ] \subset \mathbb { R } | a \leq b \} } \\ { \text { (d) } \mathcal { C } _ { 4 } = \{ ( - x , x ) \subset \mathbb { R } | x \in \mathbb { R } \} } \\ { \text { (e) } \mathcal { C } _ { 5 } = \{ ( a , b ) \cup \{ b + 1 \} \subset \mathbb { R } | a < b \} } \end{array} $\\
+	$ \mathcal{C}_2,\mathcal{C}_3,\mathcal{C}_4,\mathcal{C}_5 $ are all bases.
+	\item[1.13]Consider the following six topologies defined on $ \mathbb {R}$: the trivial topology, the discrete topology, the finite complement topology, the standard topology, the lower limit topology, and the upper limit topology. Show how they compare to each other (finer, strictly finer, coarser, strictly coarser, noncomparable) and justify your claim.
 	
-	\item[1.11]$ \begin{array} { l } { \text { Determine which of the following collections of subsets of } \mathbb { R } \text { are bases: } } \\ { \text { (a) } \mathcal { C } _ { 1 } = \{ ( n , n + 2 ) \subset \mathbb { R } | n \in \mathbb { Z } \} } \\ { \text { (b) } \mathcal { C } _ { 2 } = \{ [ a , b ] \subset \mathbb { R } | a < b \} } \\ { \text { (c) } \mathcal { C } _ { 3 } = \{ [ a , b ] \subset \mathbb { R } | a \leq b \} } \\ { \text { (d) } \mathcal { C } _ { 4 } = \{ ( - x , x ) \subset \mathbb { R } | x \in \mathbb { R } \} } \\ { \text { (e) } \mathcal { C } _ { 5 } = \{ ( a , b ) \cup \{ b + 1 \} \subset \mathbb { R } | a < b \} } \end{array} $
+	\item[1.16] $\text { Prove Theorem } 1.12 : \text { On the plane } \mathbb { R } ^ { 2 } , \text { let } $
+		\[\mathcal { B } = \left\{ ( a , b ) \times ( c , d ) \subset \mathbb { R } ^ { 2 } | a < b , c < d \right\}\]
 	
-	\item[1.13]$ \begin{array} { l } { \text { Consider the following six topologies defined on } \mathbb { R } \text { : the trivial topology, the } } \\ { \text { discrete topology, the finite complement topology, the standard topology, the } } \\ { \text { lower limit topology, and the upper limit topology. Show how they compare } } \\ { \text { to each other (finer, strictly finer, coarser, strictly coarser, noncomparable) and } } \\ { \text { justify your claim. } } \end{array} $
-	
-	\item[1.16]$ \begin{array} { c } { \text { Prove Theorem } 1.12 : \text { On the plane } \mathbb { R } ^ { 2 } , \text { let } } \\ { \mathcal { B } = \left\{ ( a , b ) \times ( c , d ) \subset \mathbb { R } ^ { 2 } | a < b , c < d \right\} } \end{array} \begin{array} { l } { \text { (a) Show that } \mathcal { B } \text { is a basis for a topology on } \mathbb { R } ^ { 2 } \text { . } } \\ { \text { (b) Show that the topology, } \mathcal { T } ^ { \prime } \text { , generated by } \mathcal { B } \text { is the standard topology on } } \end{array} \mathbb { R } ^ { 2 } \text { (Hint: if } \mathcal { T } \text { is the standard topology, show that } \mathcal { T } \subset \mathcal { T } ^ { \prime } \text { and } \mathcal { T } ^ { \prime } \subset \mathcal { T } . ) $
+	\begin{enumerate}
+		\item[(a)] Show that $ \mathcal { B } \text { is a basis for a topology on } \mathbb { R } ^ { 2 } \text { . } $
+		\item[(b)]  Show that the topology,  $ \mathcal { T } ^ { \prime } \text { , generated by } \mathcal { B } \text { is the standard topology on } \mathbb { R } ^ { 2 } \text { (Hint: if } \mathcal { T } \text { is the } \\ \text{standard topology, show that } \mathcal { T } \subset \mathcal { T } ^ { \prime } \text { and } \mathcal { T } ^ { \prime } \subset \mathcal { T }$.
+	\end{enumerate}
 	
 	\item[1.17] $ \begin{array} { l } { \text { An open half plane is a subset of } \mathbb { R } ^ { 2 } \text { in the form } \left\{ ( x , y ) \in \mathbb { R } ^ { 2 } | A x + B y < C \right\} } \\ { \text { for some } A , B , C \in \mathbb { R } \text { with either } A \text { or } B \text { nonzero. (See Figure } 1.11 . \text { ) Prove } } \\ { \text { that open half planes are open sets in the standard topology on} \mathbb { R }^2 \text { . } } \end{array} $
 	
 	\item[1.18]$ \begin{array} { l } { \text { Show that the collection } \{ ( - \infty , q ) \subset \mathbb { R } | q \text { rational } \} \text { is a basis for the topology } } \\ { \text { in Exercise } 1.9 . } \end{array} $
 	
-	\item[1.19]$ \begin{array} { l } { \text { (a) Show that the collection } \left\{ \{ a \} \times ( b , c ) \subset \mathbb { R } ^ { 2 } | a , b , c \in \mathbb { R } \right\} \text { of vertical } } \\ { \text { intervals in the plane is a basis for a topology on } \mathbb { R } ^ { 2 } . \text { We call this topology } } \\ { \text { the vertical interval topology. } } \end{array} \text {(b) Compare the vertical interval topology with the standard topology on} \mathbb {R}^2 $
+	\item[1.19] 
+	\begin{enumerate}
+		\item[(a)]  Show that the collection $ \left\{ \{ a \} \times ( b , c ) \subset \mathbb { R } ^ { 2 } | a , b , c \in \mathbb { R } \right\} \text { of vertical } \text { intervals in the plane is a} \\ \text{ basis for a topology on } \mathbb { R } ^ { 2 } . \text { We call this topology } \text { the vertical interval topology. } $\\
+		Let $ x\in R $. Then let $ B\in \mathcal {B} $ where $ B = \{a\} \times (x,x+\epsilon) $.\\
+		Suppose $ x  \in \{a\}\times(b_1,c_1)\cap\{a\}\times(b_2,c_2)\} $. Then let $ B_3 = \{a\} \times $ (max$ \{b_1,c_1\} $, min$ \{b_2,c_2\} $)
+		\item[(b)] Compare the vertical interval topology with the standard topology on $ \mathbb {R}^2 $
+	\end{enumerate}
 \end{enumerate}
  
 \end{document}
