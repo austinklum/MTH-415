@@ -41,6 +41,28 @@
 	 \begin{quotation}
 		In game theory, the Nash equilibrium is a solution concept of a non-cooperative game involving two or more players in which each player is assumed to know the equilibrium strategies of the other players, and no player has anything to gain by changing only their own strategy (Cai, Liu, and Qu)
  	\end{quotation}
+ 	Proof of Nash Equilibrium:\\
+ 	\\
+ 	Proof: The proof of Nash makes use of Kakutani's fixed point theorem, which states: Let $X$ be a convex closed bounded body in $\Re ^ { n } . \forall x \in X ,$
+ 	$f ( x )$ is a nonempty convex subset of $X . \{ \langle x , f ( x ) \rangle \}$ is closed. Then $\exists x ^ { * }$ such that $x ^ { * } \in f \left( x ^ { * } \right) .$. Suppose there are 3
+ 	players, $A , B ,$ and $C .$ Let $\overline { p } , \overline { q } ,$ and $\overline { r }$ be their probability distributions over the action sets. And $\alpha ,$
+ 	$\beta ,$ and $\gamma$ are their payoff functions. $P ( \overline { q } , \overline { r } )$ denotes the set of best-play $\vec { p } ^ { \prime } s .$ Not hard to see $P ( \overline { q } , \overline { r } )$
+ 	is a convex closed set. Similarly, we define
+ 	 $Q ( \overline { r } , \overline { p } )$ and
+ 	  $R ( \overline { p } , \overline { q } ) .$ 
+ 	  Define function\[f : \left( \begin{array} { c } { \overline { p } } \\ { \overline { q } } \\ { \overline { r } } \end{array} \right) \rightarrow \left( \begin{array} { c } { P ( \overline { q } , \overline { r } ) } \\ { Q ( \overline { r } , \overline { p } ) } \\ { R ( \overline { p } , \overline { q } ) } \end{array} \right)\]
+ 	\\
+ 	then if we could apply Kakutani's fix point theorem, we have\\
+ 	\[\left( \begin{array} { c } { \overline { p } } \\ { \overline { q } } \\ { \overline { r } } \end{array} \right) \in f \left( \begin{array} { c } { \overline { p } } \\ { \overline { q } } \\ { \overline { r } } \end{array} \right)\]
+ 	which shows the existance of Nash equilibrium. Now what we need to do is just verify our setup
+ 	satisfies the conditions of Kakutani's fix point theorem. The first two conditions are trivially
+ 	satisfied. We only need to show $\{ \langle x , f ( x ) \rangle \}$ is closed, which means we need to show if $\langle x , f ( x ) \rangle \rightarrow$ $\left\langle x ^ { * } , y ^ { * } \right\rangle$ then $\left\langle x ^ { * } , y ^ { * } \right\rangle \in f \left( x ^ { * } \right) .$ Let $x = ( \overline { p } , \overline { q } , \overline { r } )$ and $y = ( \overline { u } , \overline { v } , \overline { w } )$\\
+ 	$\left\langle x ^ { * } , y ^ { * } \right\rangle \in f \left( x ^ { * } \right) \Leftrightarrow y ^ { * } \in f \left( x ^ { * } \right) \Leftrightarrow$ \[\alpha \left( \overline { u } ^ { * } , \overline { q } ^ { * } , \overline { r } ^ { * } \right) \geq \alpha \left( \overline { p } ^ { \prime } , \overline { q } ^ { * } , \overline { r } ^ { * } \right) \forall \overline { p } ^ { \prime }\]
+ 	\[\beta \left( \overline { p } ^ { * } , \overline { v } ^ { * } , \overline { r } ^ { * } \right) \geq \beta \left( \overline { p } ^ { * } , \overline { q } ^ { \prime } , \overline { r } ^ { * } \right) \forall \overline { q } ^ { \prime }\]
+ 	\[	\gamma \left( \overline { p } ^ { * } , \overline { q } ^ { * } , \overline { w } ^ { * } \right) \geq \gamma \left( \overline { p } ^ { * } , \overline { q } ^ { * } , \overline { r } ^ { \prime } \right) \forall \overline { r } ^ { \prime }\]
+$ 	\begin{array} { l } { \text { which shows } \{ \langle x , f ( x ) \rangle \} \text { is closed. And the above argument can easily apply to any finite number } } \\ { \text { players. } } \end{array} $\\
+ 	(Zhifeng Sun)\\
+ 	\\
  	This led to the creation of a famous game theory example called the "Prisoner's Dilemma" in 1950 by Merrill Flood and Melvin Dresher while working at RAND. The game goes as some version as such: \\
  		Two people are arrested and imprisoned for some sort of crime. Each prisoner is in solitary confinement and have no way of communicating with one another. There is insufficient evidence to convict the pair of the main charge, but enough to charge them of a lesser charge. Each prisoner is made an offer to either working against the other by betrayal and testifying the other committed the crime or to work together and remain silent. If both prisoners betray each other they will serve 3 years in jail. If one prisoner betrays and the other is silent, the betrayer is free to go but the silent prisoner is given a 5 year sentence. If both remain silent, they will be forced to serve 1 year sentences each.\\
  	This game makes the reader think about how for purely rational people who cannot communicate decide what would be the best way to proceed.
@@ -59,8 +81,27 @@
  	In game theory, there are many different types of game that each serve different problems best. Initially there were only a limited a number of game types, but as research has progress there is a greater range, variety, and uses for the differing game types.
  	\subsection{Cooperative and Non-Cooperative}
  		In Cooperative games, players best benefit through cooperation and most often binding agreements of cooperation are given and enforced. Players form groups called coalitions. Cooperative game theory looks more at the rewards and techniques that coalitions will use for optimization. In cooperative games there is no Nash equilibrium. In non-cooperative there are no binding rules which force players to cooperate. Instead, these are self enforced alliances where the main goal is to still maximize payout. In non-cooperative games, we are searching for a Nash equilibrium.
- 	\subsection{Symmetric and Asymmetric Games}
+ 	\subsection{Symmetric and Asymmetric}
+ 		Symmetric games are the those that only depend on the strategy used and not who is playing. If the players can be interchanged, and the decisions remain the same the game is symmetric. The prisoner's dilemma is an example of symmetric game. No matter who is playing there is a clear strategy to be employed. For Asymmetric games, the players who are participating affect the results of the game. An example would be the entry of a new organization in a market as each organization will decide on differing methods of entering the market. One such game that is popular with economic experiments is called the ultimatum game. The game was first devised by Werner Guth, Rolf Schmittberger, and Bernd Schwarze.
+ 		\begin{quotation}
+ 			 The classical [Ultimatum] game involves two players who are given the opportunity to split \$10. One player proposes a potential split, and the other can accept, in which case the players receive the amounts in the proposal, or reject, in which case, both players receive nothing. (Chang, Levinboim, Maheswaran)
+ 		\end{quotation} 
+ 			 The Nash equilibrium entails having the first player offering the minimum amount of \$1 to the other. While keeping the maximum amount of \$9 for themselves. Logically the second player should accept, as \$1 is better than what they had before. 
+ 			 
+ 			 \begin{quote}
+ 			 	However, when experiments are conducted with human subjects, this behavior is rarely observed.  (Chang, Levinboim, Maheswaran)
+ 			\end{quote}
+ 		This is an interesting result to observe. As much as game theory prides itself in being logical and rational, humans are not completely logical and rational, and so in this case the expect results of the game differ from what actually occurs.
+ 	 \subsection{Evolutionary}
+ 	 	Evolutionary Game Theory is used to model evolving populations and how they change their strategies and react to change over time. This application of game theory is of interested for many fields including economists, sociologists, anthropologists, and philosophers. John Maynard Smith was the leading mathematical biologist who developed evolutionary game theory. His major interest being the discrepancy between Darwin's survival of the fitness and the sharing of resources so willingly in society.
+ 	\section{Applications}
+ 		The amazing aspect about game theory is the ability to be so apt applied to real life situations. As almost everything we do is in direct interactions with others, we can easily find examples where we are able to describe the possible outcomes and best solutions based on the "rules" of the given game.
+ 		\subsection{Politics}
+ 		In the early 60's there was the Cuban Missile Crisis, where the USSR tried to build a missile base in Cuba. The U.S.A set up a naval blockade to slow the supply ships. This issue can be simplified down to the game Chicken. Chicken involves two players running towards each other and seeing how close the players will get into running into each other. The winner is the player who stood their ground and didn't back off last second. Both users will lose if they run into each other. This is like the Cuban Missile Crisis as the first player to back down "loses", yet if no one backs down there would be a nuclear war of mutual assured destruction.
  		
+ 		\subsection{Economy}
+ 		There have been numerous attempts to model the economy accurately using a variety of methods. While Game Theory can explain a lot and help us get a greater understanding for what we expect and what is actually happening, humans are not rational creatures and thus game theory cannot predict what doesn't make sense. Game theory has been great at modeling many many different economic topics from auction, bargaining, fair divisions, oligopolies, voting systems, information economics and many others.
+ 	
 \end{document}
 
 
