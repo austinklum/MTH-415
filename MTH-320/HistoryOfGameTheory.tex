@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb,ragged2e}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+\begin{document}
+\pagestyle{fancy} \lhead{History of Game Theory} \chead{}
+\rhead{\text{Austin Klum}} 
+\lfoot{} \cfoot{} \rfoot{}
+
+\section{Game Theory: What is it?}
+ 
+\begin{quotation}
+	 Game Theory can be defined as the study of mathematical models of
+	conflict and cooperation between intelligent rational decision-makers.
+	Game Theory provides general mathematical techniques for analyzing
+	situations in which two or more individuals make decisions that will
+	influence one another's welfare. (Myerson, R.B. 1)
+\end{quotation}
+	Game Theory is the mathematics behind rational decision making based on the game being "played". This study of games, which are merely formal models of interactive situations, can be "played" in numerous applications such as economics, biology, artificial intelligence, politics, and many other topics. These games are then modeled and the best possible outcome is determined from all options and variations given. Involved in games are players that are often assumed to be rational. That is players will have all information needed and are able to make their decision based on facts and figures as opposed to emotions and relationships. First hinted at in ancient times with deciding fairness and best course of action, Game Theory has grown beyond it's initial implication of games and can now be applied to a majority of decisions.
+\section{Brief History}
+	Game Theory has had a long informal history. There has always been discussion on the best possible course of action for a set of rules, weather the scenario is a life-or-death situation or more light hearted such as played a board game. The first formalization of Game Theory occurred in early 20th century with mathematician Jon Von Neumann and his paper "On the Theory of Parlor Games" published in 1928. In this paper he began to develop the ideas that will eventually become Game Theory. These ideas were further elaborated in 1944 in the book co-authored by Jon Von Neumann and economist Oskar Morgenstern called "Theory of Games and Economic Behavior". This work truly pushed Game Theory into an actual area of study with formal rules and ideologies. Game Theory was originally discussed as zero-sum games, where one's gain causes the loss for another. Eventually, in further papers and exploration of Game Theory, zero-sum games are a special case rather than the norm. 
+	\subsection{Nash Equilibrium}
+	 John Nash was a famous mathematician who further advanced game theory greatly. John Nash was a able to use these ideas presented by John Von Nuemann in 1950 to show that finite games always have a Nash Equilibrium. 
+	 \begin{quotation}
+		In game theory, the Nash equilibrium is a solution concept of a non-cooperative game involving two or more players in which each player is assumed to know the equilibrium strategies of the other players, and no player has anything to gain by changing only their own strategy (Cai, Liu, and Qu)
+ 	\end{quotation}
+ 	This led to the creation of a famous game theory example called the "Prisoner's Dilemma" in 1950 by Merrill Flood and Melvin Dresher while working at RAND. The game goes as some version as such: \\
+ 		Two people are arrested and imprisoned for some sort of crime. Each prisoner is in solitary confinement and have no way of communicating with one another. There is insufficient evidence to convict the pair of the main charge, but enough to charge them of a lesser charge. Each prisoner is made an offer to either working against the other by betrayal and testifying the other committed the crime or to work together and remain silent. If both prisoners betray each other they will serve 3 years in jail. If one prisoner betrays and the other is silent, the betrayer is free to go but the silent prisoner is given a 5 year sentence. If both remain silent, they will be forced to serve 1 year sentences each.\\
+ 	This game makes the reader think about how for purely rational people who cannot communicate decide what would be the best way to proceed.
+ 	The Nash Equilibrium states that the best course of action is for both prisoners to betray each other. This is because betraying the other results in a higher potential reward and as there is no communication and trust between the two prisoners the other cannot know how the other will act. Therefore, it is the safest bet to simply betray. Similar concepts can be applied to the same basics as the Prisoner's Dilemma. Arm Races, cut-price marketing, environmental pollution are all examples that where working together would result in the best course for both players, but as trust and communication is minimal, mutual betrayal is the best solution for those involved.  
+ 	\section{Later Developments}
+ 	The work published in this time led to a rapid expansion in the 1950's on the ideas of Game Theory. Examples include: Fictitious play, extensive form game, repeated games, and the Shapley Value  This time also saw an increase of more practical applications of game theory, being applied to philosophy and politics.
+ 	\subsection{Tit-for-tat}
+ 	 In 1979, Robert Axelrod was able to simulate players by using computer programs. The game was a tournament between programs, where the winner uses a tit-for-tat algorithm. The tit-for-tat program first cooperated with the opposing program, and from there on copied what the opponent program did the last round. Tit-for-tat could also be called equivalent retaliation as whatever the opponent did would be matched, weather good or bad. This result of a mostly cooperative strategy when facing opponents ends up explaining human nature quite well. Social psychologists and sociologist's study in tactics to reduce conflict. When two parties have been long in conflict with no trust, the best step in rebuilding trust is having one party cooperate. This will often cause the other party to cooperate in response. Over time this will rebuild trust and cooperation will be the default interaction. \\
+ 	 A variant of the prisoner's dilemma allows for infinitely repeated games. Using the tit-for-tat strategy results in further cooperation and higher payoff for the prisoner's. 
+ 	 \subsection{Nobel Work}
+ 	 Reinhard Selten, in 1965, was able to better define the Nash Equilibriam with the concept of the subgame perfect equilibria. Reinhard Selten, along with John Nash, became Economics Nobel Laureates in 1994 for their work.\\
+ 	 Thomas Schelling worked on dynamic models, which were the precursors to evolutionary game theory with help from Robert Aumann who worked on further defining and understanding equilibriums. They were awarded in 2005 as Nobel Laureates.\\
+ 	 Due to the work related to mechanism design theory, Leonid Hurwiz, Eric Maskin, and Rodger Myerson were all awarded the Nobel Prize in Economics in 2007.\\
+ 	 Even more recently was in 2012, with Alvin Roth and Lloyd Shapley. Followed by Jean Tirole in 2014.
+ 	\section{Types of Games}
+ 	In game theory, there are many different types of game that each serve different problems best. Initially there were only a limited a number of game types, but as research has progress there is a greater range, variety, and uses for the differing game types.
+ 	\subsection{Cooperative and Non-Cooperative}
+ 		In Cooperative games, players best benefit through cooperation and most often binding agreements of cooperation are given and enforced. Players form groups called coalitions. Cooperative game theory looks more at the rewards and techniques that coalitions will use for optimization. In cooperative games there is no Nash equilibrium. In non-cooperative there are no binding rules which force players to cooperate. Instead, these are self enforced alliances where the main goal is to still maximize payout. In non-cooperative games, we are searching for a Nash equilibrium.
+ 	\subsection{Symmetric and Asymmetric Games}
+ 		
+\end{document}
+
+
