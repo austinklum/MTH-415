@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+\pagestyle{fancy} \lhead{MTH 415 Homework 04} 
+\chead{03/08/2019}
+\rhead{Austin Klum}
+\lfoot{} \cfoot{} \rfoot{}
+
+\begin{enumerate}
+
+	\item[3.01] Let $X = \left\{ ( x , 0 ) \in \mathbb { R } ^ { 2 } | x \in \mathbb { R } \right\} ,$ the $x$ -axis in the plane. Describe the topology that $X$ inherits as a subspace of $\mathbb { R } ^ { 2 }$ with the standard topology.
+
+	\item[3.02] Let $Y = [ - 1,1 ]$ have the standard topology. Which of the following sets are open in $Y$ and which are open in $\mathbb { R } ?$\\
+		\[A = ( - 1 , - 1 / 2 ) \cup ( 1 / 2,1 )\]
+		\[B = ( - 1 , - 1 / 2 ] \cup [ 1 / 2,1 )\]
+		\[C = [ - 1 , - 1 / 2 ) \cup ( 1 / 2,1 ]\]
+		\[D = [ - 1 , - 1 / 2 ] \cup [ 1 / 2,1 ]\]
+		\[E = \bigcup _ { n = 1 } ^ { \infty } \left( \frac { 1 } { 1 + n } , \frac { 1 } { n } \right)\]
+
+	\item[3.03] \textbf{Prove Theorem $3.4 :$ }Let $X$ be a topological space, and let $Y \subset X$ have the subspace topology. Then $C \subset Y$ is closed in $Y$ if and only if $C = D \cap Y$ for some closed set $D$ in $X$
+
+	\item[3.07] Let $X$ be a Hausdorff topological space, and $Y$ be a subset of $X .$ Prove that the subspace topology on $Y$ is Hausdorff.
+
+	\item[3.08] Let $X$ be a topological space, and let $Y \subset X$ have the subspace topology.
+		\begin{enumerate}
+			\item[(a)] If $A$ is open in $Y ,$ and $Y$ is open in $X ,$ show that $A$ is open in $X .$
+			
+			\item[(b)] If $A$ is closed in $Y ,$ and $Y$ is closed in $X ,$ show that $A$ is closed in $X .$
+			
+		\end{enumerate}
+
+	\item[3.15] \textbf{Prove Theorem $3.9 :$} Let $X$ and $Y$ be topological spaces, and assume that $A \subset X$ and $B \subset Y .$ Then the topology on $A \times B$ as a subspace of the product $X \times Y$ is the same as the product topology on $A \times B ,$ where $A$ has the subspace topology inherited from $X ,$ and $B$ has the subspace topology inherited from $Y .$
+
+	\item[3.16] Let $S ^ { 2 }$ be the sphere, $D$ be the disk, $T$ be the torus, $S ^ { 1 }$ be the circle, and $I = [ 0,1 ]$ with the standard topology. Draw pictures of the product spaces
+	$S ^ { 2 } \times I , T \times I , S ^ { 1 } \times I \times I ,$ and $S ^ { 1 } \times D$
+
+	\item[3.18] Show that if $X$ and $Y$ are Hausdorff spaces, then so is the product space $X \times Y$
+
+	\item[3.19] Show that if $A$ is closed in $X$ and $B$ is closed in $Y ,$ then $A \times B$ is closed in $X \times Y .$
+
+	\item[3.20] Show that if $A \subset X$ and $B \subset Y ,$ then $\operatorname { Cl } ( A \times B ) = C l ( A ) \times C l ( B )$
+
+	\item[3.23] If $ \R $ has the standard topology, define \\
+	$p : \mathbb { R } \rightarrow \{ a , b , c , d , e \}$ by $p ( x ) = \left\{ \begin{array} { l } { a \text { if } x > 2 } \\ { b \text { if } x > 2 } \\ { b \text { if } x = 2 } \\ { d \text { if } 0 \leq x < 2 } \\ { d \text { if } - 1 < x < 0 } \\ { e \text { if } x \leq - 1 } \end{array} \right.$
+	\begin{enumerate}
+		\item[(a)] List the open sets in the quotient topology on $\{ a , b , c , d , e \}$
+		
+		\item[(b)] Now assume that $\mathbb { R }$ has the lower limit topology. What are the open sets in the resulting quotient topology on $\{ a , b , c , d , e \} ?$
+		
+	\end{enumerate}
+
+	\item[3.24] Let $X = \mathbb { R }$ in the standard topology. Take the partition
+		\[X ^ { * } = \{ \ldots , ( - 1,0 ] , ( 0,1 ] , ( 1,2 ] , \ldots \}\]
+	Describe the open sets in the resulting quotient topology on $X ^ { * }$ .
+
+	\item[3.25] Define a partition of $X = \mathbb { R } ^ { 2 } - \{ O \}$ by taking each ray emanating from the origin as an element in the partition. (See Figure $3.25 .$ Which topological space that we have previously encountered appears to be topologically equivalent to the quotient space that results from this partition?
+
+	\item[3.27] Provide an example showing that a quotient space of a Hausdorff space need
+	not be a Hausdorff space.
+
+	\item[3.29] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } + x _ { 2 } = w _ { 1 } + w _ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.
+
+	\item[3.30] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } ^ { 2 } + x _ { 2 } ^ { 2 } = w _ { 1 } ^ { 2 } + w _ { 2 } ^ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.
+
+	\item[3.35] On a sketch of the surface $T \# T$ , illustrate where the glued edges of the octagon in Figure 3.33 appear.
+
+	\item[3.36] \begin{enumerate}
+		\item[(a)] Show that a hexagon with opposite edges glued together straight across yields a torus.
+			
+		\item[(b)]Show that a hexagon with opposite edges glued together with a flip yields	a projective plane.
+		
+	\end{enumerate}
+	
+	\item[3.38] Show that the quotient space in Example 3.27 is topologically equivalent to
+	$S ^ { 1 } \times P ,$ the product of a circle and a projective plane.
+
+\end{enumerate}
+ 
+\end{document}
+
+
