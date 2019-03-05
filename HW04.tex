@@ -28,25 +28,44 @@
 
 \begin{enumerate}
 
-	\item[3.01] Let $X = \left\{ ( x , 0 ) \in \mathbb { R } ^ { 2 } | x \in \mathbb { R } \right\} ,$ the $x$ -axis in the plane. Describe the topology that $X$ inherits as a subspace of $\mathbb { R } ^ { 2 }$ with the standard topology.
+	\item[3.01] Let $X = \left\{ ( x , 0 ) \in \mathbb { R } ^ { 2 } | x \in \mathbb { R } \right\} ,$ the $x$ -axis in the plane. Describe the topology that $X$ inherits as a subspace of $\mathbb { R } ^ { 2 }$ with the standard topology.\\
+	Notice, the basis for the Product Topology is the product of the basis of the individual properties. For $ \R^2 $, let $ a,b,c,d\in\R $, then we have elements of the form $ (a,b)\times(c,d) $. When intersected with $ X $, we result in the subspace topology.
 
 	\item[3.02] Let $Y = [ - 1,1 ]$ have the standard topology. Which of the following sets are open in $Y$ and which are open in $\mathbb { R } ?$\\
-		\[A = ( - 1 , - 1 / 2 ) \cup ( 1 / 2,1 )\]
-		\[B = ( - 1 , - 1 / 2 ] \cup [ 1 / 2,1 )\]
-		\[C = [ - 1 , - 1 / 2 ) \cup ( 1 / 2,1 ]\]
-		\[D = [ - 1 , - 1 / 2 ] \cup [ 1 / 2,1 ]\]
-		\[E = \bigcup _ { n = 1 } ^ { \infty } \left( \frac { 1 } { 1 + n } , \frac { 1 } { n } \right)\]
+		\[A = ( - 1 , - 1 / 2 ) \cup ( 1 / 2,1 ) \text{ ::  Open in $ Y $ and $ \R $}\]
+		\[B = ( - 1 , - 1 / 2 ] \cup [ 1 / 2,1 ) \text{ ::  Not open in $ Y $ and $ \R $}\]
+		\[C = [ - 1 , - 1 / 2 ) \cup ( 1 / 2,1 ] \text{ ::  Open in $ Y $ and not open in $ \R $}\]
+		\[D = [ - 1 , - 1 / 2 ] \cup [ 1 / 2,1 ] \text{ ::  Closed in $ Y $ and $ \R $}\]
+		\[E = \bigcup _ { n = 1 } ^ { \infty } \left( \frac { 1 } { 1 + n } , \frac { 1 } { n } \right) \text{ ::  Open in $ Y $ and $ \R $}\]
 
-	\item[3.03] \textbf{Prove Theorem $3.4 :$ }Let $X$ be a topological space, and let $Y \subset X$ have the subspace topology. Then $C \subset Y$ is closed in $Y$ if and only if $C = D \cap Y$ for some closed set $D$ in $X$
+	\item[3.03] \textbf{Prove Theorem $3.4 :$ }Let $X$ be a topological space, and let $Y \subset X$ have the subspace topology. Then $C \subset Y$ is closed in $Y$ if and only if $C = D \cap Y$ for some closed set $D$ in $X$.\\
+	Let $ C\subset Y $ be closed in $ Y $. Then, there exists a closed subset $ D $ in $ X $ with $ D\cap Y = C $. Define $ U = X-D $ and $ V=Y-C $. Note, $ U $ is open. Observe,
+		\begin{align*}	
+			U\cap Y &= (X-D)\cap Y\\
+					&= (X\cap Y)-(D\cap Y)\\
+					&= Y-C\\
+					&= V
+		\end{align*}
+	Thus, $ V $ is open. Hence, $ C=Y-V $ is closed.\\
+	Therefore, there exists a closed set in $ Y $ such that $ C $ equals the intersection of such a set and $ Y $.
+	\\
+	Let $ D $ be a closed set in $ X $ and $ C= D\cap Y $. Then, this implies that $ C=D-Y^\complement $. Notice, as $ D $ is closed and $ Y^\complement $ is closed, we must have that $ C $ is closed by definition of the intersection of closed sets.
 
-	\item[3.07] Let $X$ be a Hausdorff topological space, and $Y$ be a subset of $X .$ Prove that the subspace topology on $Y$ is Hausdorff.
+	\item[3.07] Let $X$ be a Hausdorff topological space, and $Y$ be a subset of $X .$ Prove that the subspace topology on $Y$ is Hausdorff.\\
+	Let $ a,b\in Y $ with $ a \not= b $. Since $ X $ is Hausdorff, there exist disjoint neighborhoods $ U $ and $ V $ in $ X $ of $ a $ and $ b $, respectively. Notice, a set containing $ a $ in $ Y $ is $ W_1=U\cap Y $. Then, $ W_1 $ must be open in $ Y $ by the definition of the subspace topology. Hence, $ W_1 $ is a neighborhood of $ a $ in $ Y $. \\
+	Notice, a set containing $ b $ in $ Y $ is $ W_2=V\cap Y $. Then, $ W_2 $ must be open in $ Y $ by definition of the subspace topology. Hence, $ W_2 $ is a neighborhood of $ b $ in $ Y $.\\
+	Observe that as $ U $ and $V$ are disjoint and$ W_1 \subset U $ and $ W_2 \subset V $, we must have that $ W_1 $ and $ W_2 $ are also disjoint.\\
+	Therefore, $ Y $ is Hausdorff.
 
 	\item[3.08] Let $X$ be a topological space, and let $Y \subset X$ have the subspace topology.
 		\begin{enumerate}
-			\item[(a)] If $A$ is open in $Y ,$ and $Y$ is open in $X ,$ show that $A$ is open in $X .$
+			\item[(a)] If $A$ is open in $Y ,$ and $Y$ is open in $X ,$ show that $A$ is open in $X .$\\
+			Let $ A $ be open in $ Y $ and $ Y $ be open in $ X $. Then, $ A=Y\cap U $ for some open set $ U $ in $ X $. Since, $ Y $ and $ U $ are both open in $ X $, their intersection must also be open by definition.\\
+			Therefore, $ A $ is open in $ X $.
 			
-			\item[(b)] If $A$ is closed in $Y ,$ and $Y$ is closed in $X ,$ show that $A$ is closed in $X .$
-			
+			\item[(b)] If $A$ is closed in $Y ,$ and $Y$ is closed in $X ,$ show that $A$ is closed in $X .$\\
+				Let $ A $ be closed in $ Y $ and $ Y $ be closed in $ X $. Then, $ A=Y\cap U $ for some closed set $ U $ in $ X $. Since, $ Y $ and $ U $ are both closed in $ X $, their intersection must also be closed by definition.\\
+				Therefore, $ A $ is open in $ X $.
 		\end{enumerate}
 
 	\item[3.15] \textbf{Prove Theorem $3.9 :$} Let $X$ and $Y$ be topological spaces, and assume that $A \subset X$ and $B \subset Y .$ Then the topology on $A \times B$ as a subspace of the product $X \times Y$ is the same as the product topology on $A \times B ,$ where $A$ has the subspace topology inherited from $X ,$ and $B$ has the subspace topology inherited from $Y .$
