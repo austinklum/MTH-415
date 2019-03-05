@@ -65,7 +65,7 @@
 			
 			\item[(b)] If $A$ is closed in $Y ,$ and $Y$ is closed in $X ,$ show that $A$ is closed in $X .$\\
 				Let $ A $ be closed in $ Y $ and $ Y $ be closed in $ X $. Then, $ A=Y\cap U $ for some closed set $ U $ in $ X $. Since, $ Y $ and $ U $ are both closed in $ X $, their intersection must also be closed by definition.\\
-				Therefore, $ A $ is open in $ X $.
+				Therefore, $ A $ is closed in $ X $.
 		\end{enumerate}
 
 	\item[3.15] \textbf{Prove Theorem $3.9 :$} Let $X$ and $Y$ be topological spaces, and assume that $A \subset X$ and $B \subset Y .$ Then the topology on $A \times B$ as a subspace of the product $X \times Y$ is the same as the product topology on $A \times B ,$ where $A$ has the subspace topology inherited from $X ,$ and $B$ has the subspace topology inherited from $Y .$
@@ -73,29 +73,41 @@
 	\item[3.16] Let $S ^ { 2 }$ be the sphere, $D$ be the disk, $T$ be the torus, $S ^ { 1 }$ be the circle, and $I = [ 0,1 ]$ with the standard topology. Draw pictures of the product spaces
 	$S ^ { 2 } \times I , T \times I , S ^ { 1 } \times I \times I ,$ and $S ^ { 1 } \times D$
 
-	\item[3.18] Show that if $X$ and $Y$ are Hausdorff spaces, then so is the product space $X \times Y$
-
-	\item[3.19] Show that if $A$ is closed in $X$ and $B$ is closed in $Y ,$ then $A \times B$ is closed in $X \times Y .$
-
-	\item[3.20] Show that if $A \subset X$ and $B \subset Y ,$ then $\operatorname { Cl } ( A \times B ) = C l ( A ) \times C l ( B )$
+	\item[3.18] Show that if $X$ and $Y$ are Hausdorff spaces, then so is the product space $X \times Y$\\
+	Let $ X $ and $ Y $ be Hausdorff spaces and $ X \times Y $ be the product space. Suppose $ (x_1,y_1),(x_2,y_2) $ are two distinct point in $ X \times Y $. Then, $ x_1 \not = x_2 $ or $ y_1 \not = y_2 $. Without loss of generality, assume $ x_1\not = x_2 $. Let $ V_1,V_2 \subset_{open} X$ with $ x_1\in V_1 $, $ x_2\in V_2 $ and since $ X $ is a a Hausdorff Space, also assume $ V_1\cap V_2 = \varnothing $. \\
+	Similarly, let $ U_1,U_2 \subset_{open} Y $ with $ y_1 \in U_1 $ and $ y_2\in U_2 $. Notice, $ (x_1,y_1)\in V_1 \times U_1 $ and $ (x_2,y_2)\in V_2\times U_2 $. Observe.
+		\[(V_1 \times U_1)\cap (V_2\times U_2) = (V_1\cap V_2)\times ( U_1\cap U_2) = \varnothing\]
+	Thus, for two distinct point in $ X\times Y $, we can find two disjoint open sets containing the two points respectively.\\
+	Therefore, $ X\times Y $ is Hausdorff.
+	\item[3.19] Show that if $A$ is closed in $X$ and $B$ is closed in $Y ,$ then $A \times B$ is closed in $X \times Y .$\\
+	Let $ A $ be closed in $ X $ and $ B $ be closed in $ Y $. Notice, $ X-A $ is open in $ X $ and $ Y-B $ is open in $ Y $. Then, $ (X-A)\times(Y-B) $ is open in $ X\times Y $ by the definition of the product topology. And so, $ (X\times Y)-(A\times B) $ is also open in$ X\times Y $.\\
+	Therefore, $ A\times B$ is closed in $ X\times Y $
+	\item[3.20] Show that if $A \subset X$ and $B \subset Y ,$ then $\operatorname { Cl } ( A \times B ) = C l ( A ) \times C l ( B )$\\
+	Let $ A \subset X $ and $ B \subset Y $. Notice, $ A\subset Cl(A) $ and $ B\subset Cl(B) $. So, $ A\times B \subset Cl(A)\times Cl(B) $. Hence, $ Cl(A\times B) = Cl(A)\times Cl(B) $
 
 	\item[3.23] If $ \R $ has the standard topology, define \\
-	$p : \mathbb { R } \rightarrow \{ a , b , c , d , e \}$ by $p ( x ) = \left\{ \begin{array} { l } { a \text { if } x > 2 } \\ { b \text { if } x > 2 } \\ { b \text { if } x = 2 } \\ { d \text { if } 0 \leq x < 2 } \\ { d \text { if } - 1 < x < 0 } \\ { e \text { if } x \leq - 1 } \end{array} \right.$
+	$p : \mathbb { R } \rightarrow \{ a , b , c , d , e \}$ by $p ( x ) = \left\{ \begin{array} { l } { a \text { if } x > 2 } \\ { b \text { if } x = 2 } \\ { c \text { if } 0\leq x < 2 }  \\ { d \text { if } - 1 < x < 0 } \\ { e \text { if } x \leq - 1 } \end{array} \right.$
 	\begin{enumerate}
-		\item[(a)] List the open sets in the quotient topology on $\{ a , b , c , d , e \}$
+		\item[(a)] List the open sets in the quotient topology on $\{ a , b , c , d , e \}$\\
+		Notice, $ p $ is surjective and must be injective so that $ p^{-1}(U) $ is open in $ \R $. Satisfying this we have, $ \{\{a\},\{d\},\{a,d\}\} $.
 		
-		\item[(b)] Now assume that $\mathbb { R }$ has the lower limit topology. What are the open sets in the resulting quotient topology on $\{ a , b , c , d , e \} ?$
-		
+		\item[(b)] Now assume that $\mathbb { R }$ has the lower limit topology. What are the open sets in the resulting quotient topology on $\{ a , b , c , d , e \} ?$\\
+		The lower limit topology gives us the interval of $ [a,b) $ for open sets. Thus, $ \{c\} $
 	\end{enumerate}
 
 	\item[3.24] Let $X = \mathbb { R }$ in the standard topology. Take the partition
 		\[X ^ { * } = \{ \ldots , ( - 1,0 ] , ( 0,1 ] , ( 1,2 ] , \ldots \}\]
-	Describe the open sets in the resulting quotient topology on $X ^ { * }$ .
-
-	\item[3.25] Define a partition of $X = \mathbb { R } ^ { 2 } - \{ O \}$ by taking each ray emanating from the origin as an element in the partition. (See Figure $3.25 .$ Which topological space that we have previously encountered appears to be topologically equivalent to the quotient space that results from this partition?
-
-	\item[3.27] Provide an example showing that a quotient space of a Hausdorff space need
-	not be a Hausdorff space.
+	Describe the open sets in the resulting quotient topology on $X ^ { * }$ .\\
+	In quotient topology on $ X^* $ we have $ U\subset X^* $ is open if the union of equivalence classes in $ U $ is open in $ X=\R $. Thus, for $ n\in\Z $ $ (n,n+1]\in X^* $. Hence, $ (n,n+1]\cup(n+2,n+2]\cup(n+2,n+3]\cdots $ is open in $ \R $. \\
+	Therefore, $ U\subseteq X^* $ is open in $ X^*$\\
+	Resulting open sets: $U =\{(n,n+1]\cup(n+2,n+2]\cup(n+2,n+3]\cdots\} $
+	
+	\item[3.25] Define a partition of $X = \mathbb { R } ^ { 2 } - \{ O \}$ by taking each ray emanating from the origin as an element in the partition. (See Figure $3.25 .$) Which topological space that we have previously encountered appears to be topologically equivalent to the quotient space that results from this partition?\\
+	The equivalent topological space appears to be the projective line, which is a set of points of a line in $ \R^2 $. Then, $ X = R^2-\{0\} $, results in an equivalent topological space of $ S^1 $.
+	\item[3.27] Provide an example showing that a quotient space of a Hausdorff space need not be a Hausdorff space.\\
+	Take $ X = \R $ and let $ R $ be the equivalence relation with the classes $ Q $ and $ R\ Q. $                          
+	
+	Then $ Y = X/R $ in the quotient topology is not Hausdorff. Since, $ Y $ has $ 2 $ points and no singleton is open.
 
 	\item[3.29] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } + x _ { 2 } = w _ { 1 } + w _ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.
 

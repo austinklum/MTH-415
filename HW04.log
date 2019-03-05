@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  4 MAR 2019 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  5 MAR 2019 00:52
 entering extended mode
 **./HW04.tex
 (HW04.tex
@@ -191,7 +191,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 [1{C:/Users/Austin Klum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-[2] [3] (HW04.aux) ) 
+Overfull \hbox (16.12622pt too wide) in paragraph at lines 76--79
+\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 
+Y$ \OT1/cmr/m/n/12 be Haus-dorff spaces and $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/1
+2  \OML/cmm/m/it/12 Y$ \OT1/cmr/m/n/12 be the prod-uct space. Sup-pose $(\OML/
+cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/c
+mm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )$
+ []
+
+[2] [3] [4] (HW04.aux) ) 
 Here is how much of TeX's memory you used:
  1990 strings out of 493312
  23876 string characters out of 3139339
@@ -199,21 +207,21 @@ Here is how much of TeX's memory you used:
  5533 multiletter control sequences out of 15000+200000
  10358 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,43p,415b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Austin Klum\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\public\doublestroke\dpi600\dsrom12.pk><D:/Programs/MiKTeX2.9.6520/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/
-Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/Mi
-KTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6
-520/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/
-type1/public/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW04.pdf (3 pages, 107446 bytes).
+ 27i,11n,43p,425b,277s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Austin Klum\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\public\doublestroke\dpi600\dsrom12.pk><D:/Programs/MiKTeX2.9.6520/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+<D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program
+s/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2
+.9.6520/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW04.pdf (4 pages, 114298 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
