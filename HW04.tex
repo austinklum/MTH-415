@@ -68,7 +68,24 @@
 				Therefore, $ A $ is closed in $ X $.
 		\end{enumerate}
 
-	\item[3.15] \textbf{Prove Theorem $3.9 :$} Let $X$ and $Y$ be topological spaces, and assume that $A \subset X$ and $B \subset Y .$ Then the topology on $A \times B$ as a subspace of the product $X \times Y$ is the same as the product topology on $A \times B ,$ where $A$ has the subspace topology inherited from $X ,$ and $B$ has the subspace topology inherited from $Y .$
+	\item[3.15] \textbf{Prove Theorem $3.9 :$} Let $X$ and $Y$ be topological spaces, and assume that $A \subset X$ and $B \subset Y .$ Then the topology on $A \times B$ as a subspace of the product $X \times Y$ is the same as the product topology on $A \times B ,$ where $A$ has the subspace topology inherited from $X ,$ and $B$ has the subspace topology inherited from $Y .$\\
+	Notice, the subspace topology on $ A\times B $ is with $ \T_{X\times Y} $ with $ A\times B \subset X\times Y$ 
+		\[S_1 = \T_{A\times B} = \{\bigcup_{i,j} (U_i\cap A)\times(V_j\cap B)| U_i \in \T_{X}, V_j \in \T_Y \]
+	Notice, the subspace topology on $ A\times B $ in the context of $ \T_x $ and $ T_Y $
+		\[S_2 = \T_{A\times B}=\{(\bigcup_{i,j}W_i\times V_j)\cap(A\times B)| W_i\in \T_X, V_j \in \T_Y \} \]
+	Let $ (x,y)\in S_1 $. We then have $ x\in U_i\cap A $ for some $ i $ and $ y\in V_j \cap B $ for some $ j $. So, $ x\in U_i $ and $ x\in A $. In addition, $ y\in V_j $ and $ y\in B $.\\
+	Hence, $ (x,y) \in U_i \times V_j $ and $ (x,y)\in A\times B $.\\
+	Thus, $ (x,y)\in (U_i\times V_j)\cap(A\times B) $. Notice, this is the definition for $ S_2 $.\\
+	Thus, $ (x,y)\in S_2 $\\
+	Therefore, $ S_1\subset S_2 $\\
+	\\
+	Let $ (x,y)\in S_2$. We then have $ (x,y)\in W_i\times V_j)\cap(A\times B)$ for some $ i,j $. So, $ (x,y)\in W_i \times V_j$ and $ (x,y)\in A\times B $. Notice, $x \in W_i$ and $ x\in A $. Also note $y\in V_j $ and $ y\in B $.\\
+	Hence, $ x \in W_i \cap A $ and $ y\in V_j\cap B $.\\
+	Thus, $ (x,y) \in U_i \cap A \times V_j\cap B $.  Notice, this is the definition for $ S_1 $.\\
+	Thus, $ (x,y)\in S_1 $\\
+	Therefore, $ S_2\subset S_1 $\\
+	\\
+	Therefore, as each set is a subset of the other we have that the sets must be equal.
 
 	\item[3.16] Let $S ^ { 2 }$ be the sphere, $D$ be the disk, $T$ be the torus, $S ^ { 1 }$ be the circle, and $I = [ 0,1 ]$ with the standard topology. Draw pictures of the product spaces
 	$S ^ { 2 } \times I , T \times I , S ^ { 1 } \times I \times I ,$ and $S ^ { 1 } \times D$
@@ -109,10 +126,11 @@
 	
 	Then $ Y = X/R $ in the quotient topology is not Hausdorff. Since, $ Y $ has $ 2 $ points and no singleton is open.
 
-	\item[3.29] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } + x _ { 2 } = w _ { 1 } + w _ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.
+	\item[3.29] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } + x _ { 2 } = w _ { 1 } + w _ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.\\
+	$ X^* = [(a,b)] = \{(x,y)|y=-x+(a+b)\} $
 
-	\item[3.30] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } ^ { 2 } + x _ { 2 } ^ { 2 } = w _ { 1 } ^ { 2 } + w _ { 2 } ^ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.
-
+	\item[3.30] Consider the equivalence relation on $\mathbb { R } ^ { 2 }$ defined by $\left( x _ { 1 } , x _ { 2 } \right) \sim \left( w _ { 1 } , w _ { 2 } \right)$ if $x _ { 1 } ^ { 2 } + x _ { 2 } ^ { 2 } = w _ { 1 } ^ { 2 } + w _ { 2 } ^ { 2 } .$ Describe the quotient space that results from the partition of $\mathbb { R } ^ { 2 }$ into the equivalence classes in this equivalence relation.\\
+		$ X^* = \{[x_1,x_2]|x_1^2+x_2^2=r^2,r\geq0\} $
 	\item[3.35] On a sketch of the surface $T \# T$ , illustrate where the glued edges of the octagon in Figure 3.33 appear.
 
 	\item[3.36] \begin{enumerate}

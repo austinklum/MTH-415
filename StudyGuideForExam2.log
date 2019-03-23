@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  15 MAR 2019 06:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  23 MAR 2019 15:24
 entering extended mode
-**./HW04.tex
-(HW04.tex
+**./StudyGuideForExam2.tex
+(StudyGuideForExam2.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 (D:\Programs\MiKTeX2.9.6520\tex\latex\base\article.cls
@@ -135,8 +135,8 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ulht=\dimen114
 )
 \c@theorem=\count99
- (HW04.aux)
-\openout1 = `HW04.aux'.
+ (StudyGuideForExam2.aux)
+\openout1 = `StudyGuideForExam2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -165,73 +165,82 @@ LaTeX Font Info:    ... okay on input line 23.
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks25
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 31.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
  (D:\Programs\MiKTeX2.9.6520\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 32.
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
-(D:\Programs\MiKTeX2.9.6520\tex\latex\doublestroke\udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 [1{C:/Users/Austin Klum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 75--89
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--89
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-[2]
-Overfull \hbox (16.12622pt too wide) in paragraph at lines 93--96
-\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 
-Y$ \OT1/cmr/m/n/12 be Haus-dorff spaces and $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/1
-2  \OML/cmm/m/it/12 Y$ \OT1/cmr/m/n/12 be the prod-uct space. Sup-pose $(\OML/
-cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/c
-mm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )$
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
  []
 
-[3] [4] [5] (HW04.aux) ) 
+[2] [3] (StudyGuideForExam2.aux) ) 
 Here is how much of TeX's memory you used:
- 1990 strings out of 493312
- 23876 string characters out of 3139339
- 84254 words of memory out of 3000000
- 5533 multiletter control sequences out of 15000+200000
- 10358 words of font info for 45 fonts, out of 3000000 for 9000
+ 1991 strings out of 493312
+ 23969 string characters out of 3139339
+ 82254 words of memory out of 3000000
+ 5540 multiletter control sequences out of 15000+200000
+ 13053 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,43p,425b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Austin Klum\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\public\doublestroke\dpi600\dsrom12.pk><D:/Programs/MiKTeX2.9.6520/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/ams
-fonts/cm/cmmi12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program
-s/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2
-.9.6520/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW04.pdf (5 pages, 120191 bytes).
+ 27i,11n,43p,475b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programs/MiKTeX2.9.6520/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfont
+s/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:
+/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/
+MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.6
+520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on StudyGuideForExam2.pdf (3 pages, 98700 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

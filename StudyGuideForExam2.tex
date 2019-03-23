@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+\pagestyle{fancy} \lhead{MTH 415 Study Guide} \chead{Exam 2}
+\rhead{Austin Klum} 
+\lfoot{} \cfoot{} \rfoot{}
+
+\setcounter{section}{3}
+
+\section{Continuous Functions and Homeomorphisms}
+	\subsection{Definition of Continuous}
+		A function $f : \mathbb { R } \rightarrow \mathbb { R }$ is \textbf{continuous} if for every $x _ { 0 } \in \mathbb { R }$ and every $\varepsilon > 0 ,$ there exists $a \delta > 0$ such that if $\left| x - x _ { 0 } \right| < \delta ,$ then $\left| f ( x ) - f \left( x _ { 0 } \right) \right| < \varepsilon$
+		
+	\subsection{Open Set Definition of Continuity}
+		Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is \textbf{continuous} if $f ^ { - 1 } ( V )$ is open in $X$ for every open set $V$ in $Y .$\\
+		\\
+		We call this the \textbf{open set definition of continuity}. Paraphrased, it states
+		that $f$ is continuous if the preimage of every open set is open.
+	
+	\subsection{Theorem that a function is continuous if and only if the preimage of the basis elements is open}
+		Let $X$ and $Y$ be topological spaces and $\mathcal { B }$ be a basis for the
+		topology on $Y$ . Then $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( B )$ is open
+		in $X$ for every $B \in \mathcal { B }$ .\\
+		\subitem Proof on page 132
+		
+	\subsection{Theorem that every polynomial is continuous}
+		Let $\mathbb { R }$ have the standard topology. Then every polynomial
+		function $p : \mathbb { R } \rightarrow \mathbb { R } ,$ with $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.
+		
+	\subsection{Theorem that says the closure of a subset maps to part of the closure of the superset}
+		Let $f : X \rightarrow Y$ be continuous and assume that $A \subset X .$ If
+		$x \in C l ( A ) ,$ then $f ( x ) \in C l ( f ( A ) )$.\\
+		\subitem Proof on page 134
+		
+	\subsection{Translation of $ \varepsilon - \delta $}
+		Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if, for every $x \in X$ and every open set $U$ containing $f ( x )$ , there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U$ .\\
+		\\
+		$ \forall x\in X \text{ and every open set } U \text{ containing } f(x), \exists \text{ neighborhood } V \text{ of } x,$ such that $ f(V)\subset U $
+	
+	\subsection{Theorem that a function is continuous if and only if every element has a neighborhood containing $ f(x) $, there exists a neighbor$ V $ of $ x $ such that $ f(V)\subset U $}
+		A function $f : X \rightarrow Y$ is continuous in the open set definition of continuity if and only if for every $x \in X$ and every open set $U$ containing $f ( x ) ,$ there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U$\\
+		\subitem Proof on page 135
+	\subsection{Theorem that converges points will converge given a function}
+		 Assume that $f : X \rightarrow Y$ is continuous. If a sequence
+		$\left( x _ { 1 } , x _ { 2 } , \ldots \right)$ in $X$ converges to a point $x ,$ then the sequence $\left( f \left( x _ { 1 } \right) , f \left( x _ { 2 } \right) , \ldots \right)$
+		in $Y$ converges to $f ( x )$ .\\
+			\subitem Proof on page 135
+	\subsection{Theorem that we can map closed sets between each other}
+		Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y .$
+	\subsection{Theorem that function composition works for continuity}
+		Let $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ be continuous. Then the
+		composition function, $g \circ f : X \rightarrow Z ,$ is continuous.\\
+		\subitem Proof on page 136
+	\subsection{The Pasting Lemma}
+		Let $ X $ be a topological space and let $ A $ and $B$ be closed subsets of $X$ such that $A \cup B = X .$ Assume that $f : A \rightarrow Y$ and $g : B \rightarrow Y$ are continuous and $f ( x ) = g ( x )$ for all $x$ in $A \cap B .$ Then $h : X \rightarrow Y ,$ defined by
+			\[h ( x ) = \left\{ \begin{array} { l l } { f ( x ) \text { if } x \in A } \\ { g ( x ) \text { if } x \in B } \end{array} \right.\]
+		is a continuous function.\\
+		\subitem Proof on page 137
+	\subsection{Definition of a Homeomorphism}
+		Let $X$ and $Y$ be topological spaces, and let $f : X \rightarrow Y$ be a bijection with inverse $f ^ { - 1 } : Y \rightarrow X .$ If both $f$ and $f ^ { - 1 }$ are continuous functions, then $f$ is said to be a \textbf{homeomorphism}. If there exists a homeomorphism between $X$ and $Y ,$ we say that $X$ and $Y$ are \textbf{homeomorphic} or \textbf{topologically equivalent}, and we denote this by $X \cong Y .$
+	\subsection{Facts about Homeomorphisms}
+		\[\begin{array} { l } { \text { (i) The function } i d : X \rightarrow X , \text { defined by } i d ( x ) = x , \text { is a homeomorphism. } } \\
+		 { \text { (ii) If } f : X \rightarrow Y \text { is a homeomorphism, then so is } f ^ { - 1 } : Y \rightarrow X \text { . } } \\
+		  { \text { (iii) If } f : X \rightarrow Y \text { and } g : Y \rightarrow Z \text { are homeomorphisms, then so is }  g \circ f : X \rightarrow Z } \end{array}\]
+\end{document}
