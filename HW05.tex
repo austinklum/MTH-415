@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+\pagestyle{fancy} \lhead{MTH 415 Homework 05} 
+\chead{04/02/2019}
+\rhead{Austin Klum}
+\lfoot{} \cfoot{} \rfoot{}
+
+\begin{enumerate}
+
+	\item[4.01] 
+	\begin{enumerate}
+	
+	\item[(a)] Let $X$ have the discrete topology and $Y$ be an arbitrary topological space.
+	Show that every function $f : X \rightarrow Y$ is continuous.
+	
+	\item[(b)]Let $Y$ have the trivial topology and $X$ be an arbitrary topological space.
+	Show that every function $f : X \rightarrow Y$ is continuous.
+	
+	\end{enumerate}
+	\item[4.02] Prove Theorem $4.8 :$ Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y$ .
+	
+	\item[4.09] Let $f , g : X \rightarrow Y$ be continuous functions. Assume that $Y$ is Hausdorff and
+	that there exists a dense subset $D$ of $X$ such that $f ( x ) = g ( x )$ for all $x \in D$ .
+	Prove that $f ( x ) = g ( x )$ for all $x \in X .$
+	
+	\item[4.13]
+	  \begin{enumerate}
+	  	\item[(a)] Let $f _ { 1 } : X \rightarrow Y _ { 1 }$ and $f _ { 2 } : X \rightarrow Y _ { 2 }$ be continuous functions. Show that
+	  	$h : X \rightarrow Y _ { 1 } \times Y _ { 2 } ,$ defined by $h ( x ) = \left( f _ { 1 } ( x ) , f _ { 2 } ( x ) \right) ,$ is continuous as well.
+	  	
+	  	\item[(b)] Extend the result of (a) to $n$ functions, for $n > 2$
+	  \end{enumerate}
+	
+	\item[4.14] Show that the addition function, $f : \mathbb { R } ^ { 2 } \rightarrow \mathbb { R }$ , given by $f ( x , y ) = x + y ,$ is a continuous function.
+	
+	\item[4.16] Use Example $4.6 ,$ Exercises 4.13 and $4.14 ,$ and Theorem 4.9 to show that the
+	sum and product of a finite number of continuous functions are also continuous functions. That is, assuming that $f _ { 1 } , \ldots , f _ { m } : \mathbb { R } \rightarrow \mathbb { R }$ are continuous, prove that $S : \mathbb { R } \rightarrow \mathbb { R }$ and $P : \mathbb { R } \rightarrow \mathbb { R }$ , defined by $S ( x ) = f _ { 1 } ( x ) + \ldots + f _ { m } ( x )$ and $P ( x ) = f _ { 1 } ( x ) f _ { 2 } ( x ) \ldots f _ { m } ( x ) ,$ are continuous.
+	
+	\item[4.17] Use Exercise 4.16 to show that every polynomial function $p : \mathbb { R } \rightarrow \mathbb { R }$ , given by $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.
+	
+	\item[4.22] Consider all of the possible topologies on the two-point set $X = \{ a , b \} .$ Indicate which ones are homeomorphic.
+	
+	\item[4.23] Find three different topologies on the three-point set $X = \{ a , b , c \} ,$ each consisting of five open sets (including $X$ and $\varnothing ) ,$ such that two of the topologies
+	are homeomorphic to each other, but the third is not homeomorphic to the other two.
+	
+	\item[4.24] Prove that a bijection $f : X \rightarrow Y$ is a homeomorphism if and only if $f$ and $f ^ { - 1 }$ map closed sets to closed sets.
+	
+	\item[4.28] Prove each of the following statements, and then use them to show that topological equivalence is an equivalence relation on the collection of all topological spaces:
+	\begin{enumerate}
+		\item[(a)] The function $i d : X \rightarrow X ,$ defined by $i d ( x ) = x ,$ is a homeomorphism.
+		
+		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then so is $f ^ { - 1 } : Y \rightarrow X$
+		
+		\item[(c)] If $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ are homeomorphisms, then so is the composition $g \circ f : X \rightarrow Z$
+		
+	\end{enumerate}
+	
+	\item[4.29] Show that $\mathbb { R } ^ { 2 } - \{ O \}$ in the standard topology is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.
+	
+	\item[4.32] Show that homeomorphism preserves interior, closure, and boundary as indicated in the following implications:
+	\begin{enumerate}
+		\item[(a)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \operatorname { Int } ( A ) ) = \operatorname { Int } ( f ( A ) )$ for every $A \subset X .$
+		
+		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \mathrm { Cl } ( A ) ) = \mathrm { Cl } ( f ( A ) )$ for every $A \subset X .$
+		
+		\item[(c)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \partial ( A ) ) = \partial ( f ( A ) )$ for every	$A \subset X .$
+	\end{enumerate}
+	
+	\item[4.33] Let $X \times Y$ be partitioned into subsets of the form $X \times \{ y \}$ for all $y$ in $Y .$ If we let $( X \times Y ) ^ { * }$ denote the collection of sets in the partition, show that $( X \times Y ) ^ { * }$ with the resulting quotient topology is homeomorphic to $Y .$
+
+	\section*{Summary}
+	
+\end{enumerate}
+ 
+\end{document}
+
+
