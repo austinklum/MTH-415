@@ -32,65 +32,117 @@
 	\begin{enumerate}
 	
 	\item[(a)] Let $X$ have the discrete topology and $Y$ be an arbitrary topological space.
-	Show that every function $f : X \rightarrow Y$ is continuous.
-	
+	Show that every function $f : X \rightarrow Y$ is continuous.\\
+	Notice, as $ X $ has the discrete topology every subset of $ X $ is open in $ X $. Let $ U $ be a open set in $ Y $. Then, $ f^{-1}(U) $ is a subset of $ X $ and thus is open. \\
+	Thus, $ f $ is a continuous function. \\
+	Therefore, every function $f : X \rightarrow Y$ is continuous.
 	\item[(b)]Let $Y$ have the trivial topology and $X$ be an arbitrary topological space.
-	Show that every function $f : X \rightarrow Y$ is continuous.
+	Show that every function $f : X \rightarrow Y$ is continuous.\\
+	Since $ Y $ is the trivial topology the only open sets are $ Y $ and $ \varnothing $. Note, the empty set in $ Y $ will map back to the empty set in $ X $. Then, $ f^{-1}(Y) $ maps to all of $ X $, which is open regardless of the topology on $ X $.\\
+	Thus, the preimage of all open sets in $ Y $ are open in $ X $\\
+	Therefore, $ f $ is continuous.
 	
 	\end{enumerate}
-	\item[4.02] Prove Theorem $4.8 :$ Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y$ .
+	\item[\textcolor{red}{4.02}] Prove Theorem $4.8 :$ Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y$ .\\
+	Let $ V $ be an open set of $ Y $ and $ C = Y-V $. Notice,
+		\[f^{-1}(C)=f^{-1}(Y)-f^{-1}(V)=X-f^{-1}(V)\]
+	Thus, $ f^{-1}(V) is open in X$
 	
-	\item[4.09] Let $f , g : X \rightarrow Y$ be continuous functions. Assume that $Y$ is Hausdorff and
-	that there exists a dense subset $D$ of $X$ such that $f ( x ) = g ( x )$ for all $x \in D$ .
-	Prove that $f ( x ) = g ( x )$ for all $x \in X .$
+	\item[4.09] Let $f , g : X \rightarrow Y$ be continuous functions. Assume that $Y$ is Hausdorff and that there exists a dense subset $D$ of $X$ such that $f ( x ) = g ( x )$ for all $x \in D$ .Prove that $f ( x ) = g ( x )$ for all $x \in X .$\\
 	
-	\item[4.13]
+	Suppose for some $ x\in X, f(x)\not= g(x) $. Assume for open neighborhoods $ U,V $ in $ Y $, we have $ f(x)\in U $ and $ g(x) \in V $. Then, $ U\cap V = \varnothing $ as $ Y $ is Hausdorff. Since $ f $ and $ g $ are continuous $ f^{-1}(U) $ and $ g^{-1}(V) $ are both open in $ X $ and non-empty. Define $ N= f^{-1}(U) \cap g^{-1}(V)$. Notice, $ N $ is an open neighborhood of $ x $ and $ \forall y\in N, f(y)\not= g(y) $ as $ f(y)\in U $ and $ g(y)\in V $. This is a contradiction as $ D $ is dense.\\
+	Therefore, $ f(x)=g(x) $ for all $ x \in X $.
+	
+	\item[\textcolor{blue}{4.13}]
 	  \begin{enumerate}
 	  	\item[(a)] Let $f _ { 1 } : X \rightarrow Y _ { 1 }$ and $f _ { 2 } : X \rightarrow Y _ { 2 }$ be continuous functions. Show that
-	  	$h : X \rightarrow Y _ { 1 } \times Y _ { 2 } ,$ defined by $h ( x ) = \left( f _ { 1 } ( x ) , f _ { 2 } ( x ) \right) ,$ is continuous as well.
-	  	
-	  	\item[(b)] Extend the result of (a) to $n$ functions, for $n > 2$
+	  	$h : X \rightarrow Y _ { 1 } \times Y _ { 2 } ,$ defined by $h ( x ) = \left( f _ { 1 } ( x ) , f _ { 2 } ( x ) \right) ,$ is continuous as well.\\
+	  	Let $ V_1 \times V_2 $ form a basis for the product topology on $ Y_1\times Y_2 $. \\
+	  	(Want to show: the preimage of the basis is open.)\\
+	  	Notice, the set of elements of $ x $ such that $ f_1(x)\in V_1 $ and $ f_2(x)\in V_2 $ is $ f^{-1}_1(V_1)\cap f^{-1}_2(V_2) $ Since, $ f_1 $ and $ f_2 $ are continuous and so the preimages of $ V_1 $ and $ V_2 $ are open. Thus, their intersection must also be continuous.\\
+	  	Thus, $ h $ is continuous. 
+	  	\item[(b)] Extend the result of (a) to $n$ functions, for $n > 2$\\
+	  	We can extend this result by taking the intersection of all $ n $ functions. Since all the functions are continuous we have that their intersection must also be continuous. Thus, $ h $ is continuous.
 	  \end{enumerate}
 	
-	\item[4.14] Show that the addition function, $f : \mathbb { R } ^ { 2 } \rightarrow \mathbb { R }$ , given by $f ( x , y ) = x + y ,$ is a continuous function.
+	\item[\textcolor{red}{4.14}] Show that the addition function, $f : \mathbb { R } ^ { 2 } \rightarrow \mathbb { R }$ , given by $f ( x , y ) = x + y ,$ is a continuous function.
 	
-	\item[4.16] Use Example $4.6 ,$ Exercises 4.13 and $4.14 ,$ and Theorem 4.9 to show that the
+	\item[\textcolor{red}{4.16}] Use Example $4.6 ,$ Exercises 4.13 and $4.14 ,$ and Theorem 4.9 to show that the
 	sum and product of a finite number of continuous functions are also continuous functions. That is, assuming that $f _ { 1 } , \ldots , f _ { m } : \mathbb { R } \rightarrow \mathbb { R }$ are continuous, prove that $S : \mathbb { R } \rightarrow \mathbb { R }$ and $P : \mathbb { R } \rightarrow \mathbb { R }$ , defined by $S ( x ) = f _ { 1 } ( x ) + \ldots + f _ { m } ( x )$ and $P ( x ) = f _ { 1 } ( x ) f _ { 2 } ( x ) \ldots f _ { m } ( x ) ,$ are continuous.
 	
-	\item[4.17] Use Exercise 4.16 to show that every polynomial function $p : \mathbb { R } \rightarrow \mathbb { R }$ , given by $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.
+	\item[\textcolor{red}{4.17}] Use Exercise 4.16 to show that every polynomial function $p : \mathbb { R } \rightarrow \mathbb { R }$ , given by $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.
 	
-	\item[4.22] Consider all of the possible topologies on the two-point set $X = \{ a , b \} .$ Indicate which ones are homeomorphic.
+	\item[4.22] Consider all of the possible topologies on the two-point set $X = \{ a , b \} .$ Indicate which ones are homeomorphic.\\
+	$\{ \emptyset , \{ a , b \} \}$ \\
+	$\{ \emptyset , \{ a \} , \{ a , b \} \}$\\
+	$\{ \emptyset , \{ b \} , \{ a , b \} \}$\\
+	$\{ \emptyset , \{ a \} , \{ b \} , \{ a , b \} \}$\\
+	\\
+	The second and third topologies are homeomorphic.
 	
-	\item[4.23] Find three different topologies on the three-point set $X = \{ a , b , c \} ,$ each consisting of five open sets (including $X$ and $\varnothing ) ,$ such that two of the topologies
-	are homeomorphic to each other, but the third is not homeomorphic to the other two.
-	
-	\item[4.24] Prove that a bijection $f : X \rightarrow Y$ is a homeomorphism if and only if $f$ and $f ^ { - 1 }$ map closed sets to closed sets.
+	\item[4.23] Find three different topologies on the three-point set $X = \{ a , b , c \} ,$ each consisting of five open sets (including $X$ and $\varnothing ) ,$ such that two of the topologies are homeomorphic to each other, but the third is not homeomorphic to the other two.\\
+	$\{\varnothing, \{a\}, \{a,b\}, \{a,c\}, \{a,b,c\} \}$\\
+	$\{\varnothing, \{c\}, \{a,c\}, \{b,c\}, \{a,b,c\} \}$\\
+	$\{\varnothing, \{a\}, \{b\}, \{a,b\}, \{a,b,c\} \}$\\
+	\\
+	Notice, the first two topologies are homeomorphic to one another, but the third is not homeomorphic to the other two.
+	\item[\textcolor{red}{4.24}] Prove that a bijection $f : X \rightarrow Y$ is a homeomorphism if and only if $f$ and $f ^ { - 1 }$ map closed sets to closed sets.
 	
 	\item[4.28] Prove each of the following statements, and then use them to show that topological equivalence is an equivalence relation on the collection of all topological spaces:
 	\begin{enumerate}
-		\item[(a)] The function $i d : X \rightarrow X ,$ defined by $i d ( x ) = x ,$ is a homeomorphism.
+		\item[(a)] The function $i d : X \rightarrow X ,$ defined by $i d ( x ) = x ,$ is a homeomorphism.\\
+		Notice,  by definition $ id $ is a bijective function.  \\
+		Let $ A $ be an open subset of $ X $. Then, $ id(A)=A $ which is open. Then, $ id^{-1}(A)=A $ which is open. Thus, $ id $ is continuous.\\
+		Therefore, $ id $ is a homeomorphism.
 		
-		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then so is $f ^ { - 1 } : Y \rightarrow X$
+		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then so is $f ^ { - 1 } : Y \rightarrow X$\\
+		Let $ f $ be a homeomorphism and $ U $ be an open subset of $ X $. Notice, $ (f^{-1})^{-1}(U)=f(U) $ which is an open subset of $ Y $ since $ f $ is open. So, $ f^{-1} $ and $ f $ are continuous.\\
+		Therefore, $ f^{-1} $ is a homeomorphism.
 		
-		\item[(c)] If $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ are homeomorphisms, then so is the composition $g \circ f : X \rightarrow Z$
+		\item[(c)] If $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ are homeomorphisms, then so is the composition $g \circ f : X \rightarrow Z$\\
+		Let $ U $ be an open subset of $ Z $. Then $ (g \circ f)^{-1}(U)=f^{-1}(g^{-1}(U)) $. Since $ g $ is continuous, $ g^{-1}(U) $ is open in $ Y $, and since $ f $ is continuous, $ f^{-1}(g^{-1}(U)) $ is open in $ X $. Thus, $ (g \circ f)^{-1}(U) $ is open in $ X $. Thus, $ (g \circ f)^{-1} $ is continuous.\\
+		Similarly, let $ V $ be an open subset of $ X $. Then $ g \circ f (U) = g(f(U))$. Since, $ f $ is continuous, $ F(U) $ is open in $ Y $, and since $ g $ is continuous $ g(f(U)) $ is open in $ Z $. Thus, $ g \circ f $ is open in $ Z $. Thus, $ g \circ f $ is continuous.\\
+		\\
+		Therefore, $g \circ f : X \rightarrow Z$ is a homeomorphism.
 		
 	\end{enumerate}
 	
-	\item[4.29] Show that $\mathbb { R } ^ { 2 } - \{ O \}$ in the standard topology is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.
+	\item[\textcolor{red}{4.29}] Show that $\mathbb { R } ^ { 2 } - \{ O \}$ in the standard topology is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.
 	
 	\item[4.32] Show that homeomorphism preserves interior, closure, and boundary as indicated in the following implications:
 	\begin{enumerate}
-		\item[(a)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \operatorname { Int } ( A ) ) = \operatorname { Int } ( f ( A ) )$ for every $A \subset X .$
-		
-		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \mathrm { Cl } ( A ) ) = \mathrm { Cl } ( f ( A ) )$ for every $A \subset X .$
-		
-		\item[(c)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \partial ( A ) ) = \partial ( f ( A ) )$ for every	$A \subset X .$
+		\item[(a)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \operatorname { Int } ( A ) ) = \operatorname { Int } ( f ( A ) )$ for every $A \subset X .$\\
+		Notice, $ Int(A) $ is the largest open set in $ X $. So, $ f(Int(A)) $ is open in $ Y $. Since, $ Int(A) \subset A $ we also get $ f(Int(A)) \subset f(a) $. \\
+		As $ Int(f(A)) $ is the largest open set which is contained in $ f(A) $ and $ f(Int(A)) $ is open, we must have $ f(Int(A))\subset Int(f(A)) $\\
+		Going in the other direction, as $ f $ is a homeomorphism  we have that $ f^{-1}(Int(f(A))) $ is an open set in $ X $. Since $ Int(f(A)) \subset $ we also have $ f^{-1}(Int(f(A))) \subset f^{-1}(f(A)) $.\\
+		 Using the previous statement in conjunction with the fact that $ f^{-1}(Int(f(A))) $ is the largest open set contained in $ A $, we must have
+			 \[f^{-1}(Int(A))\subset Int(A) \Rightarrow Int(f(A)) \subset f(Int(A))\]
+		Thus, as $ Int(f(A)) $ and $ f(Int(A)) $ are subsets of each other they must be equal\\
+		Therefore, $ Int(f(A)) = f(Int(A)) $
+		\item[(b)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \mathrm { Cl } ( A ) ) = \mathrm { Cl } ( f ( A ) )$ for every $A \subset X .$\\
+		Note, $ Cl(f(A)) $ is closed as $ Cl(A) $ is a closed set and $ f $ is a homeomorphism. From this we get $ A\subset Cl(A) $ which implies $ f(A) \subset f(Cl(A)) $.\\
+		Since, $ Cl(f(A)) $ is the smallest closed set we have $ f(A)\subset Cl(f(A)) $.\\
+		Hence, from the previous two results we must have $ Cl(f(a)) \subset f(Cl(A))$.\\
+		Going in the other direction, as $ f $ is a homeomorphism, $ f^{-1} $ maps closed set to closed set. Since, $ Cl(f(A))  $ is closed in $ Y $ we have $ f^{-1}(Cl(f(A))) $ being closed in $ X $. Observe,
+			\[f(a)\subset Cl(f(A)) \Rightarrow f^{-1}(f(A))\subset f^{-1}(Cl(f(A))) \Rightarrow A \subset f^{-1}(Cl(f(A))) \]
+		As $ Cl(A) $ is the smallest closed set in $ X $ we have that $ Cl(A) \subset f^{-1}(Cl(f(A))) $ which gives us $ f(Cl(A)) \subset Cl(f(A)) $.\\
+		Thus, as $ f ( \mathrm { Cl } ( A ) ) $ and $ \mathrm { Cl } ( f ( A ) )  $ are subsets of each other they must be equal\\
+		Therefore, $ f ( \mathrm { Cl } ( A ) ) = \mathrm { Cl } ( f ( A ) ) $
+		\item[(c)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \partial ( A ) ) = \partial ( f ( A ) )$ for every	$A \subset X .$\\
+		Note, $ \partial A = Cl(A)-Int(A) $. Observe.
+			\begin{align*}
+				f(\partial A) &= f(Cl(A)-Int(A)) \\
+							  &= f(Cl(A)) - f(Int(A))\\
+							  &= Cl(f(A)) - Int(f(A))\\
+							  &= \partial f(A) 
+			\end{align*}
+			Therefore, $f ( \partial ( A ) ) = \partial ( f ( A ) )$
 	\end{enumerate}
 	
-	\item[4.33] Let $X \times Y$ be partitioned into subsets of the form $X \times \{ y \}$ for all $y$ in $Y .$ If we let $( X \times Y ) ^ { * }$ denote the collection of sets in the partition, show that $( X \times Y ) ^ { * }$ with the resulting quotient topology is homeomorphic to $Y .$
+	\item[\textcolor{red}{4.33}] Let $X \times Y$ be partitioned into subsets of the form $X \times \{ y \}$ for all $y$ in $Y .$ If we let $( X \times Y ) ^ { * }$ denote the collection of sets in the partition, show that $( X \times Y ) ^ { * }$ with the resulting quotient topology is homeomorphic to $Y .$
 
 	\section*{Summary}
-	
+	I'm really struggling now. I thought the struggling was higher than normal for this class, but this current chapter is much more difficult for me to work through. After the exam, my confidence in ability for this class was shot. I'm really worried that I won't be able to spend enough effective, valuable time learning the material. I say effective time spent as in there are a lot of these problems have me completely stuck. So I have very little intuition where to go next in my problem solving process. In other math classes, I've been confused or struggling with material, but I was able to think of some ideas to try and make some semblance of progress. I feel the work is getting me increasingly stuck and having me spend large amounts of time do essentially nothing. I would feel better if my time spent doing the work felt more like learning than just staring at my paper confused.
 \end{enumerate}
  
 \end{document}
