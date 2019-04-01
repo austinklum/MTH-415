@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+\pagestyle{fancy} \lhead{MTH 415 Homework 05} 
+\chead{04/02/2019}
+\rhead{Austin Klum}
+\lfoot{} \cfoot{} \rfoot{}
+
+\begin{enumerate}
+
+	\item[5.01] Show that the taxicab metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
+	
+	\item[5.02] 
+	\begin{enumerate}
+		\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.	
+		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric $\quad$ on $\mathbb { R } ^ { 2 }$ .
+	\end{enumerate}
+	\item[5.03] For points $p = \left( p _ { 1 } , p _ { 2 } \right)$ and $q = \left( q _ { 1 } , q _ { 2 } \right)$ in $\mathbb { R } ^ { 2 }$ define
+		\[d _ { V } ( p , q ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } p _ { 1 } \neq q _ { 1 } \text { or } \left| p _ { 2 } - q _ { 2 } \right| \geq 1 } \\ { \left| p _ { 2 } - q _ { 2 } \right| } & { \text { if } p _ { 1 } = q _ { 1 } \text { and } \left| p _ { 2 } - q _ { 2 } \right| < 1 } \end{array} \right.\]
+	\begin{enumerate}
+		\item[(a)] Show that $d _ { V }$ is a metric.
+	
+		\item[(b)] 	Describe the open balls in the metric $d _ { V }$ .
+	\end{enumerate}
+	\item[5.10]
+	\begin{enumerate}
+		\item[(a)] Let $( X , d )$ be a metric on a space. For $x , y \in X ,$ define
+		\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
+		Show that $D$ is also a metric on $ X $
+		
+		\item[(b)] Explain why no two points in $X$ are distance one or more apart in the
+		metric $D .$
+	\end{enumerate}
+	
+	\item[5.24] Prove Theorem $5.13 :$ Let $\left( X , d _ { X } \right)$ and $\left( Y , d _ { Y } \right)$ be metric spaces. A function
+	$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d x \left( x , x ^ { \prime } \right) < \delta$
+	then $d _ { Y } \left( f ( x ) , f \left( x ^ { \prime } \right) \right) < \varepsilon .$ (Hint: Consider Exercise 4.3 and the proof of
+	Theorem $4.6 .$ )
+	
+	\item[5.25] Let $( X , d )$ be a metric space, and assume $p \in X$ and $A \subset X$
+	\begin{enumerate}
+		\item[(a)] Provide an example showing that $d ( \{ p \} , A ) = 0$ need not imply that $p \in A .$
+		
+		\item[(b)] Prove that if $A$ is closed and $d ( \{ p \} , A ) = 0 ,$ then $p \in A$
+		
+	\end{enumerate}
+	
+	\item[5.26] Use Theorem 5.15 to prove that the taxicab metric and the max metric induce
+	the same topology on $\mathbb { R } ^ { 2 }$ .
+	
+	\item[5.28] Let $( X , d )$ be a metric space. The function
+		\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
+	is a bounded metric on $X$ . (See Exercise 5.10.) Show that the topologies
+	induced by $D$ and $d$ are the same.
+	
+	\item[5.29] On the set of continuous functions $C [ a , b ]$ consider the metrics $\rho _ { M }$ and $\rho$ defined by
+	\[\rho _ { M } ( f , g ) = \max _ { x \in [ a , b ] } [ | f ( x ) - g ( x ) \| \} ,\] and
+	\[\rho ( f , g ) = \int _ { a } ^ { b } | f ( x ) - g ( x ) | d x\]
+	These metrics were introduced in Exercise 5.8 and Example 5.5, respectively.
+	\begin{enumerate}
+		\item[(a)] Use Theorem 5.15 to prove that the topology induced by $\rho _ { M }$ on $C [ a , b ]$ is finer than the topology induced by $\rho$ .
+		\item[(b)] Show that for every $c _ { 1 } , c _ { 2 } > 0$ there exists $f \in C [ a , b ]$ such that\\
+		$\max _ { x \in [ a , b ] } \{ | f ( x ) | \} = c _ { 1 }$ and
+		\[\int _ { a } ^ { b } | f ( x ) | d x = c _ { 2 }\]
+		\item[(c)] Let $Z \in C [ a , b ]$ be the function defined by $Z ( x ) = 0$ for all $x \in [ a , b ]$
+		Given $\varepsilon > 0 ,$ show that no $\delta > 0$ exists such that $B _ { \rho } ( Z , \delta ) \subset B _ { \rho M} ( Z , \varepsilon )$
+		(Hint: Part (b) helps.)
+		\item[(d)] What does Theorem 5.15 allow us to conclude from (c)?
+	\end{enumerate}
+
+\end{enumerate}
+ 
+\end{document}
+
+
