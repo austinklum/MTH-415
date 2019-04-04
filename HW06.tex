@@ -5,8 +5,8 @@
 
 
 \newtheorem{claim}[theorem]{Claim}
-\newcommand{\Z}{\mathds{Z}}
-\newcommand{\R}{\mathds{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\T}{\mathcal{T}}
 
@@ -21,15 +21,35 @@
 
 
 \begin{document}
-\pagestyle{fancy} \lhead{MTH 415 Homework 05} 
-\chead{04/02/2019}
+\pagestyle{fancy} \lhead{MTH 415 Homework 06} 
+\chead{04/05/2019}
 \rhead{Austin Klum}
 \lfoot{} \cfoot{} \rfoot{}
 
 \begin{enumerate}
 
 	\item[5.01] Show that the taxicab metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
-	
+	\begin{enumerate}
+		\item[(1)] Notice, by the definition of the Taxicab metric we take the addition of two absolute values. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\
+		Thus, property 1 is satisfied.
+		\item[(2)] Let $ x,y\in \R^2 $. Observe.
+		\begin{align*}
+			d(x,y) &= |x_1-y_1|+|x_2-y_2|\\
+				   &= |y_1-x_1|+|y_2-x_2|\\
+				   &= d(y,x)
+		\end{align*}
+		Thus, property 2 is satisfied.
+		\item[(3)] Let $ x,y,z \in \R^2 $. Observe.
+			\begin{align*}
+				d(x,z) &= |x_1-z_1|+|x_2-z_2|\\
+					   &= |x_1-y_1+y_1-z_1|+|x_2-y_2+y_2-z_2|\\
+					   &\leq |x_1-y_1|+|y_1-z_1|+|x_2-y_2|+|y_2-z_2|\\
+					   &=    |x_1-y_1|+|x_2-y_2|+|y_1-z_1|+|y_2-z_2|\\
+					   &= d(x,y)+d(y,z)
+			\end{align*}
+		Thus, property 3 is satisfied.
+	\end{enumerate}
+	Therefore, the taxicab metric is a metric.
 	\item[5.02] 
 	\begin{enumerate}
 		\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.	
@@ -87,6 +107,8 @@
 		(Hint: Part (b) helps.)
 		\item[(d)] What does Theorem 5.15 allow us to conclude from (c)?
 	\end{enumerate}
+
+	\section*{Summary}
 
 \end{enumerate}
  

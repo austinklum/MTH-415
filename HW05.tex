@@ -5,8 +5,8 @@
 
 
 \newtheorem{claim}[theorem]{Claim}
-\newcommand{\Z}{\mathds{Z}}
-\newcommand{\R}{\mathds{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\T}{\mathcal{T}}
 
@@ -44,10 +44,23 @@
 	
 	\end{enumerate}
 	\item[\textcolor{red}{4.02}] Prove Theorem $4.8 :$ Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y$ .\\
-	Let $ V $ be an open set of $ Y $ and $ C = Y-V $. Notice,
-		\[f^{-1}(C)=f^{-1}(Y)-f^{-1}(V)=X-f^{-1}(V)\]
-	Thus, $ f^{-1}(V) is open in X$
-	
+	Let $ C $ be a closed set in $ Y $. Notice, $ Y - C$ is open in $ Y $ and so $ f^{-1}(Y-C) $ must also be open in $ X $. \\
+	We claim that $ f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C) $ and is open.\\
+	We define $ f^{-1}(Y-C) = \{x\in X| f(x)\in Y-C \} $. This implies that $ f(x)\in Y $ and $ f(x)\not \in C $. We also define $ f^{-1}(Y)=\{x\in X|f(x)\in Y \} $ and $ f^{-1}(C)=\{x\in X| f(x)\in C\} $ Thus, $ f^{-1}(Y)-f^{-1}(C) $ implies $ f(x)\in Y $ and $ f(x)\not\in C $. Notice, this is our definition of $f^{-1}(Y-C)$.\\
+	Thus, $ f^{-1}(Y-C) \subseteq f^{-1}(Y)-f^{-1}(C)  $\\
+	Going the other direction, we have the definition of $f^{-1}(Y)-f^{-1}(C) $ from our implication of $ f^{-1}(Y-C) $\\
+	Thus, $ f^{-1}(Y)-f^{-1}(C) \subseteq f^{-1}(Y-C) $\\
+	Therefore,  $ f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C) $ \\
+	Since, $ f^{-1}(Y) $ is defined to be $ \{x\in X| f(x)\in Y\} $ we know that $ f^{-1}(Y)\subseteq X $. But since all of $ X $ is mapped in the preimage we also have $ X\subseteq f^{-1}(Y) $. Thus, $ f^{-1}(X)=Y $\\
+	Taking $ X-C $ will result in an open set as $ X-C=X\cap C^\complement $ and since $ C^\complement $ is open and the intersection of open sets are open.\\
+	Observe.
+		\[f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C)=X-f^{-1}(C)\]
+	Thus, $ f^{-1}(C) $ must be closed by our previous result.\\
+	\\
+	Suppose, $ f^{-1}(C) $ is closed. We then know that $X-f^{-1}(C)$ must be open. Notice, that $ X=f^{-1}(Y) $. Observe. 
+		\[X-f^{-1}(C) = f^{-1}(Y)-f^{-1}(C) = f^{-1}(Y-C) \]
+	As, $ Y - C $ is open and $ f^{-1}$ is defined with an arbitrary open set $ U $ as $ f^{-1}(U)=\{x\in X| f(x)=U\} $, we then have that $ f^{-1} $ maps open sets to open sets.\\
+	Thus, $ f $ must be continuous.
 	\item[4.09] Let $f , g : X \rightarrow Y$ be continuous functions. Assume that $Y$ is Hausdorff and that there exists a dense subset $D$ of $X$ such that $f ( x ) = g ( x )$ for all $x \in D$ .Prove that $f ( x ) = g ( x )$ for all $x \in X .$\\
 	
 	Suppose for some $ x\in X, f(x)\not= g(x) $. Assume for open neighborhoods $ U,V $ in $ Y $, we have $ f(x)\in U $ and $ g(x) \in V $. Then, $ U\cap V = \varnothing $ as $ Y $ is Hausdorff. Since $ f $ and $ g $ are continuous $ f^{-1}(U) $ and $ g^{-1}(V) $ are both open in $ X $ and non-empty. Define $ N= f^{-1}(U) \cap g^{-1}(V)$. Notice, $ N $ is an open neighborhood of $ x $ and $ \forall y\in N, f(y)\not= g(y) $ as $ f(y)\in U $ and $ g(y)\in V $. This is a contradiction as $ D $ is dense.\\
@@ -65,13 +78,32 @@
 	  	We can extend this result by taking the intersection of all $ n $ functions. Since all the functions are continuous we have that their intersection must also be continuous. Thus, $ h $ is continuous.
 	  \end{enumerate}
 	
-	\item[\textcolor{red}{4.14}] Show that the addition function, $f : \mathbb { R } ^ { 2 } \rightarrow \mathbb { R }$ , given by $f ( x , y ) = x + y ,$ is a continuous function.
+	\item[\textcolor{red}{4.14}] Show that the addition function, $f : \mathbb { R } ^ { 2 } \rightarrow \mathbb { R }$ , given by $f ( x , y ) = x + y ,$ is a continuous function.\\
+	Let $ f : \R^2\rightarrow \R$, given by $ f(x,y)=x+y $. Notice, $ f^{-1}((x,y)=\{(x,y)\in
+	 \R^2|f(x,y)\subset (x,y))\}$. We can form a neighborhood $ U $ around a point $ z\in f^{-1}(x,y) $. We define $ U = \{(x\ \pm \epsilon,y\pm\epsilon\}$ where $ \epsilon$ is the shortest distance to the nearest line.\\
+	 Thus, as we can form a neighborhood around all points in $ f^{-1}(x,y) $.\\
+	 Therefore, $ f $ is continuous.
 	
 	\item[\textcolor{red}{4.16}] Use Example $4.6 ,$ Exercises 4.13 and $4.14 ,$ and Theorem 4.9 to show that the
-	sum and product of a finite number of continuous functions are also continuous functions. That is, assuming that $f _ { 1 } , \ldots , f _ { m } : \mathbb { R } \rightarrow \mathbb { R }$ are continuous, prove that $S : \mathbb { R } \rightarrow \mathbb { R }$ and $P : \mathbb { R } \rightarrow \mathbb { R }$ , defined by $S ( x ) = f _ { 1 } ( x ) + \ldots + f _ { m } ( x )$ and $P ( x ) = f _ { 1 } ( x ) f _ { 2 } ( x ) \ldots f _ { m } ( x ) ,$ are continuous.
-	
-	\item[\textcolor{red}{4.17}] Use Exercise 4.16 to show that every polynomial function $p : \mathbb { R } \rightarrow \mathbb { R }$ , given by $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.
-	
+	sum and product of a finite number of continuous functions are also continuous functions. That is, assuming that $f _ { 1 } , \ldots , f _ { m } : \mathbb { R } \rightarrow \mathbb { R }$ are continuous, prove that $S : \mathbb { R } \rightarrow \mathbb { R }$ and $P : \mathbb { R } \rightarrow \mathbb { R }$ , defined by $S ( x ) = f _ { 1 } ( x ) + \ldots + f _ { m } ( x )$ and $P ( x ) = f _ { 1 } ( x ) f _ { 2 } ( x ) \ldots f _ { m } ( x ) ,$ are continuous.\\
+	Suppose $ f_1,\cdots,f_m :\R \rightarrow \R $ are continuous. Let $ h:\R\rightarrow\R^2  $ be defined as exercise $ 4.13: h(x)=(f_1(x),f_2(x))$. Let $ g:\R^2\rightarrow \R $ be defined as the addition function from $ 4.14: g(x,y)=x+y $. \\
+	\\
+	Let $ S:\R \rightarrow \R $ by defined by $ S(x)=f_1(x)+\cdots+f_m(x) $. We claim  $\forall x\in \R, S(x) = g(h(x)) $ Observe.
+	\[S(x)= g(h(x))=g(f_1(x),\cdots,f_m(x))=f_1(x)+\cdots+f_m(x)\]
+	Since, $ g,h $ are continuous and function composition is continuous, $ S(x)$ must also be continuous.\\
+	\\
+	Let $ j:\R^2\rightarrow \R $ be defined similarly to the function from $ 4.14: j(x,y)=x*y$. Let $ P:\R\rightarrow\R $ defined by $ f_1(x)f_2(x)\cdots f_m(x) $. We claim  $\forall x\in \R, P(x)=j(h(x)) $ Observe.
+		\[P(x)= j(h(x))=j(f_1(x),\cdots,f_m(x))=f_1(x)f_2(x)\cdots f_m(x)\]
+	Since, $ j,h $ are continuous and function composition is continuous, $ P(x)$ must also be continuous.\\
+	\item[\textcolor{red}{4.17}] Use Exercise 4.16 to show that every polynomial function $p : \mathbb { R } \rightarrow \mathbb { R }$ , given by $p ( x ) = a _ { n } x ^ { n } + \ldots + a _ { 1 } x + a _ { 0 } ,$ is continuous.\\
+	Let $ p : \R \rightarrow \R $ defined by $ a_nx^n+\cdots+a_1x+a_0 $. Notice, we can rewrite our first term as $ a_nx\cdots x $ where there are $ n, x$'s. We can extend this idea to the rest of our function definition. Let $ h:\R\rightarrow\R^2  $ be defined as exercise $ 4.13: h(x)=(f_1(x),f_2(x))$. Let $ g:\R^2 \rightarrow \R $ be defined as exercise $ 4.14: g(x,y)=x+y $ and $ j:\R^2\rightarrow \R $ be defined similarly as $j(x,y)=x*y $.\\
+	Notice, we can contract all of the addition operations by $ g $ to simply be 
+	\[\{g_1(a_nx_1\cdots x_n),g_2(a_{n-1}x_1\cdots x_{n-1}),\cdots ,g_n(a_0))\} \]
+	We can then use this on our function $ j $ to result in
+	\[\{j_1(z),\cdots j_n(z)\}\]
+	Notice, this result matches the definition of $ h $.\\
+	Thus, as $ h,j,g$ are continuous and function composition preserves continuity we have every polynomial is continuous.\\
+	Therefore, every polynomial function is continuous.
 	\item[4.22] Consider all of the possible topologies on the two-point set $X = \{ a , b \} .$ Indicate which ones are homeomorphic.\\
 	$\{ \emptyset , \{ a , b \} \}$ \\
 	$\{ \emptyset , \{ a \} , \{ a , b \} \}$\\
@@ -86,7 +118,22 @@
 	$\{\varnothing, \{a\}, \{b\}, \{a,b\}, \{a,b,c\} \}$\\
 	\\
 	Notice, the first two topologies are homeomorphic to one another, but the third is not homeomorphic to the other two.
-	\item[\textcolor{red}{4.24}] Prove that a bijection $f : X \rightarrow Y$ is a homeomorphism if and only if $f$ and $f ^ { - 1 }$ map closed sets to closed sets.
+	\item[\textcolor{red}{4.24}] Prove that a bijection $f : X \rightarrow Y$ is a homeomorphism if and only if $f$ and $f ^ { - 1 }$ map closed sets to closed sets.\\
+	
+	Let $f : X \rightarrow Y$ be a homeomorphism. Let $ V $ be an open subset in $ Y $. Notice, $ f^{-1}(V) $ is open in $ X $. Thus, $ X-f^{-1}(V) $ is closed. Notice, $ X=f^{-1}(Y) $. Observe.
+		\[f^{-1}(Y)-f^{-1}(V)=f^{-1}(Y-V)\]
+	Hence, $ Y-V $ must be closed and $ f^{-1}(Y-V) $ maps to $ X $.\\
+	Thus, $ f $ is continuous.\\
+	Therefore, $ f^{-1} $ maps closed sets to closed sets.
+ 	Let $C$ be a closed subset in $ Y $. Notice, $ f(C) $ is closed in $ X $. Then, $ X-f(C)  $ must be open. Observe.
+ 		\[X-f^{-1}(C)=f^{-1}(X)-f^{-1}(C)=f^{-1}(X-C)\]
+ 	Hence, $f^{-1}(X-C)$ must be open and maps to $ X $.\\
+ 	Thus, $ f $ is continuous.\\
+ 	Let $ U $ be a closed set in $ X $. Then, $ f(U)$ is an closed set in $ Y $. Notice, $ Y-f(U) $ is open in $ Y $. Observe.
+ 		\[Y-f(U)=f(Y)-f(U)=f(Y-U)\]
+ 	Hence, $ f(Y-U) $ must be open and maps to $Y$\\
+ 	Thus, $ f^{-1} $ is continuous.\\
+ 	Therefore, $ f $ is a homeomorphism.
 	
 	\item[4.28] Prove each of the following statements, and then use them to show that topological equivalence is an equivalence relation on the collection of all topological spaces:
 	\begin{enumerate}
@@ -107,8 +154,15 @@
 		
 	\end{enumerate}
 	
-	\item[\textcolor{red}{4.29}] Show that $\mathbb { R } ^ { 2 } - \{ O \}$ in the standard topology is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.
-	
+	\item[\textcolor{red}{4.29}] Show that $\mathbb { R } ^ { 2 } - \{ O \}$ in the standard topology is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.\\
+	$ R^2-\{O\} $ is best observed in the polar coordinates. That is $ \R^2-\{O\}=\{(r \cos(\theta),r\sin(\theta)|0<r<\infty, 0\leq \theta < 2\pi\} $ and $ S^1 = \{(\cos(\theta),\sin(\theta)|0\leq\theta<2\pi\} $. We define the map $ \phi : \R^+ \times [0,2\pi) \rightarrow \R^2-\{O\} $ with $ \phi(r,\theta)=(r\cos(\theta),r\sin(\theta) $. Notice $ \phi $ is continuous as coordinate functions are continuous. \\
+	Define, $ \phi^{-1}:\R^{2}-\{0\} \rightarrow \R^+ \times [0,2\pi] $ with $ \phi^{-1}(x,y)= (\sqrt{x^2+y^2},\tan^{-1}(y/x)) $ Notice, $ \phi^{-1} $ is continuous as coordinate functions are continuous.\\
+	Thus, $ \phi $ is a homeomorphism.\\
+	\\
+	Define $ f:\R^+\times[0,2\pi]\rightarrow\R\times S^1 $ with $ f(x,\theta) \rightarrow (log(x),(\cos(\theta),\sin(\theta))) $. Notice, $ log:\R^+\rightarrow\R $ has an inverse $ e:\R\rightarrow\R^+ $ with $ e(x)=e^x $. Thus, $ log $ is also a homeomorphism.\\
+	As, $ log $ is a homeomorphism, $ \cos(\theta),\sin(\theta) $ are continuous, and function composition preserves continuity, we have that $ f $ is a homeomorphism.\\
+	Then, $ \phi \circ f^{-1} : \R\times S^1 \rightarrow \R-\{0\} $ is a homeomorphism.\\
+	Therefore,  $\mathbb { R } ^ { 2 } - \{ O \}$ is homeomorphic to $S ^ { 1 } \times \mathbb { R }$.\
 	\item[4.32] Show that homeomorphism preserves interior, closure, and boundary as indicated in the following implications:
 	\begin{enumerate}
 		\item[(a)] If $f : X \rightarrow Y$ is a homeomorphism, then $f ( \operatorname { Int } ( A ) ) = \operatorname { Int } ( f ( A ) )$ for every $A \subset X .$\\
@@ -139,10 +193,16 @@
 			Therefore, $f ( \partial ( A ) ) = \partial ( f ( A ) )$
 	\end{enumerate}
 	
-	\item[\textcolor{red}{4.33}] Let $X \times Y$ be partitioned into subsets of the form $X \times \{ y \}$ for all $y$ in $Y .$ If we let $( X \times Y ) ^ { * }$ denote the collection of sets in the partition, show that $( X \times Y ) ^ { * }$ with the resulting quotient topology is homeomorphic to $Y .$
+	\item[\textcolor{red}{4.33}] Let $X \times Y$ be partitioned into subsets of the form $X \times \{ y \}$ for all $y$ in $Y .$ If we let $( X \times Y ) ^ { * }$ denote the collection of sets in the partition, show that $( X \times Y ) ^ { * }$ with the resulting quotient topology is homeomorphic to $Y .$\\
+	Let $ h : (X\times Y)^* \rightarrow Y $ defined as $ h(X\times \{y\}) =\{y\} $. Define $ p : X\times Y \rightarrow (X\times Y)^*$ with $ p((x,y))=\{y\} $. Also define $p^{-1}:(X\times Y)^*\rightarrow X\times Y$ with  $ p^{-1}(\{y\})=X\times\{y\} $\\
+	 Let $ U $ be an open set in $ Y $. Notice, $ X\times U $ is open in $ X\times Y $ by the definition of the product topology. This gives us that fact $ p^{-1}(U) $ is open in $ X\times Y $. Hence, $ h^{-1}(U) $ is open in $ (X\times Y)^* $.\\
+	 \\
+	 Notice, $ h $ is surjective as every element in $ (X\times Y)* $ maps to an element in $ Y $. Also, note $ h $ is injective as every element in $ (X\times Y)* $ maps to at most one distinct element.\\
+	 Therefore, $( X \times Y ) ^ { * }$ is homeomorphic to $Y .$\\
+	 	
 
 	\section*{Summary}
-	I'm really struggling now. I thought the struggling was higher than normal for this class, but this current chapter is much more difficult for me to work through. After the exam, my confidence in ability for this class was shot. I'm really worried that I won't be able to spend enough effective, valuable time learning the material. I say effective time spent as in there are a lot of these problems have me completely stuck. So I have very little intuition where to go next in my problem solving process. In other math classes, I've been confused or struggling with material, but I was able to think of some ideas to try and make some semblance of progress. I feel the work is getting me increasingly stuck and having me spend large amounts of time do essentially nothing. I would feel better if my time spent doing the work felt more like learning than just staring at my paper confused.
+	I'm really struggling now. I thought the struggling was higher than normal for this class, but this current chapter is much more difficult for me to work through. After the exam, my confidence in ability for this class was shot. I'm really worried that I won't be able to spend enough effective, valuable time learning the material. I say effective time spent as in there are a lot of these problems have me completely stuck. I have so very little intuition where to go next in my problem solving process. In other math classes, I've been confused or struggling with material, but I was able to think of some ideas to try and make some semblance of progress. I feel the work is getting me increasingly stuck and having me spend large amounts of time do essentially nothing. I would feel better if my time spent doing the work felt more like learning than just staring at my paper confused.
 \end{enumerate}
  
 \end{document}
