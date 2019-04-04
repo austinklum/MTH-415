@@ -52,8 +52,45 @@
 	Therefore, the taxicab metric is a metric.
 	\item[5.02] 
 	\begin{enumerate}
-		\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.	
-		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric $\quad$ on $\mathbb { R } ^ { 2 }$ .
+		\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
+		\begin{enumerate}
+			\item[(1)] Notice, we are taking the max value of an absolute value. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\ 
+			Thus, property 1 is satisfied.
+			\item[(2)] Let $ x,y\in \R^2 $. Observe.
+			\begin{align*}
+			d(x,y) &= max\{|x_1-y_1|,|x_2-y_2|\}\\
+			&= max\{|y_1-x_1|,|y_2-x_2|\}\\
+			&= d(y,x)
+			\end{align*}
+			Thus, property 2 is satisfied.
+			\item[(3)] Let $ x,y,z \in \R^2 $. Observe.
+			\begin{align*}
+			d(x,z)  &= max\{|x_1-z_1|,|x_2-z_2|\}\\
+					&= max\{|x_1-y_1+y_1-z_1|,|x_2-y_2+y_2-z_2|\}\\
+					&\leq \max\{|x_1-y_1|+|y_1-z_1|,|x_2-y_2|+|y_2-z_2|\}\\
+					&= |x_i-y_i|+|y_i-z_i| \\
+					&\text{ where $ i $ with value 1 or 2 holds the maximum value}\\
+			|x_i-y_i|&\leq max\{|x_1-y_1|,|x_2-y_2|\}\\
+			|y_i-z_i|&\leq max\{|y_1-z_1|,|y_2-z_2|\}
+			\end{align*}
+			So, 
+				\[d(x,z) \leq max\{|x_1-y_1|,|x_2-y_2|\} + max\{|y_1-z_1|,|y_2-z_2|\}=d(x,y)+d(y,z)\]
+			Thus, property 3 is satisfied.
+		\end{enumerate}	
+		Therefore, the max metric is a metric.
+%		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric on $\mathbb { R } ^ { 2 }$ .\\
+		The Triangle inequality does not hold.\\
+		Let $ p,q,r \in \R^2 $. Observe.
+		\begin{align*}
+			d(p,r) &= min\{|p_1-r_1|,|p_2-r_2|\}\\
+				   &\geq min\{|p_1-q_1|+|q_1-r_1|,|p_2-q_2|+|q_2-r_2|\}\\
+				   &= |p_i-q_i|+|q_i-r_i|\\
+				   &\text{ where $ i $ with value 1 or 2 holds the minimum value}\\
+				    |p_i-q_i| &\leq min\{|p_1-q_1|,|p_2-q_2|\}\\
+				    |q_i-r_i| &\leq min\{|q_1-r_1|,|q_2-r_2|\}
+		\end{align*}
+		So, 
+			\[d(p,r) \leq min\{|p_1-q_1|,|p_2-q_2|\} + min\{|q_1-r_1|,|q_2-r_2|\}\leq d(p,q)+d(q,r)\]
 	\end{enumerate}
 	\item[5.03] For points $p = \left( p _ { 1 } , p _ { 2 } \right)$ and $q = \left( q _ { 1 } , q _ { 2 } \right)$ in $\mathbb { R } ^ { 2 }$ define
 		\[d _ { V } ( p , q ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } p _ { 1 } \neq q _ { 1 } \text { or } \left| p _ { 2 } - q _ { 2 } \right| \geq 1 } \\ { \left| p _ { 2 } - q _ { 2 } \right| } & { \text { if } p _ { 1 } = q _ { 1 } \text { and } \left| p _ { 2 } - q _ { 2 } \right| < 1 } \end{array} \right.\]
