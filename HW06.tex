@@ -78,8 +78,8 @@
 			Thus, property 3 is satisfied.
 		\end{enumerate}	
 		Therefore, the max metric is a metric.
-%		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric on $\mathbb { R } ^ { 2 }$ .\\
-		The Triangle inequality does not hold.\\
+		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric on $\mathbb { R } ^ { 2 }$ .\\
+		The Triangle inequality does not hold.\\ (1,0)(2,0)
 		Let $ p,q,r \in \R^2 $. Observe.
 		\begin{align*}
 			d(p,r) &= min\{|p_1-r_1|,|p_2-r_2|\}\\
@@ -96,7 +96,26 @@
 		\[d _ { V } ( p , q ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } p _ { 1 } \neq q _ { 1 } \text { or } \left| p _ { 2 } - q _ { 2 } \right| \geq 1 } \\ { \left| p _ { 2 } - q _ { 2 } \right| } & { \text { if } p _ { 1 } = q _ { 1 } \text { and } \left| p _ { 2 } - q _ { 2 } \right| < 1 } \end{array} \right.\]
 	\begin{enumerate}
 		\item[(a)] Show that $d _ { V }$ is a metric.
-	
+		\begin{enumerate}
+			\item[(1)]
+			Notice, by the definition of $ D_v $ we are either 1 or the absolute value less than 1. Since, absolute values are never negative, we must have that for some $ p,q\in \R^2 d(p,q)\geq0$. Note if $ x = y $, we must have that $ d(p,q)=0 $ and if $ x\not=y,d(p,q)>0 $.
+			Thus, property 1 is satisfied.
+			\item[(2)] Let $ p,q\in\R^2 $. Observe.
+				\begin{align*}
+					d(p,q) &= 1 \text{ or } |p_2-q_2|\\
+						   &= 1 \text{ or } |q_2-p_2|\\
+						   &= d(q,p)
+				\end{align*}
+			Thus, property 2 is satisfied.
+			\item[(3)] Let $ p,q,r\in\R^2 $. Observe.
+				\begin{align*}
+					d(p,r) &=1 \text{ or } |p_2-r_2|\\
+						   &=1 \text{ or } |p_2-q_2+q_2-r_2|\\
+						   *=
+				\end{align*}
+			Thus, property 3 is satisfied.
+		\end{enumerate}
+		Therefore, $ D_v $ is a metric.
 		\item[(b)] 	Describe the open balls in the metric $d _ { V }$ .
 	\end{enumerate}
 	\item[5.10]
@@ -104,13 +123,34 @@
 		\item[(a)] Let $( X , d )$ be a metric on a space. For $x , y \in X ,$ define
 		\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
 		Show that $D$ is also a metric on $ X $
-		
-		\item[(b)] Explain why no two points in $X$ are distance one or more apart in the
-		metric $D .$
+		\begin{enumerate}
+			\item[(1)] Notice, that $ d(x,y)\geq0 $. Since, we always get a non-negative value back from $ d(x,y) $ we know that our definition for $ D(x,y) $ must also return a non-negative values
+			Thus, property 1 is satisfied.
+			\item[(2)] Let $ x,y\in\R^2 $. Observe.
+			\begin{align*}
+			D(x,y) +  &= \frac{d(x,y)}{1+d(x,y)}\\
+				   &= \frac{d(y,x)}{1+d(y,x)}\\
+				   &= D(y,x)
+			\end{align*}
+			Thus, property 2 is satisfied.
+			\item[(3)] Let $ x,y,z\in\R^2 $. Observe.
+			\begin{align*}
+			D(x,y)+D(y,z) &= \frac{d(x,y)}{1+d(x,y)} + \frac{d(y,z)}{1+d(y,z)} \\
+						  &= \frac{d(x,y)(1+d(y,z))}{(1+d(x,y))(1+d(y,z))} + \frac{d(y,z)(1+d(x,y))}{(1+d(x,y))(1+d(y,z))}\\
+						  &\geq \frac{d(x,y)+d(y,z)}{(1+d(x,y))(1+d(y,z))}\\
+						  &\geq \frac{d(x,z)}{(1+d(x,y))(1+d(y,z))}\\
+						  &\geq \frac{d(x,z)}{1+d(x,z)} \\
+						  &\text{ As $ d(x,z)=d(x,z)  $ and $ (1+d(x,y))(1+d(y,z)) \geq 1+d(x,z)$ }
+			\end{align*}
+			Thus, property 3 is satisfied.
+		\end{enumerate}
+		Therefore, $D$ is a metric.
+		\item[(b)] Explain why no two points in $X$ are distance one or more apart in the metric $D .$\\
+		The top is always smaller than the bottom.
 	\end{enumerate}
 	
 	\item[5.24] Prove Theorem $5.13 :$ Let $\left( X , d _ { X } \right)$ and $\left( Y , d _ { Y } \right)$ be metric spaces. A function
-	$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d x \left( x , x ^ { \prime } \right) < \delta$
+	$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d_X \left( x , x ^ { \prime } \right) < \delta$
 	then $d _ { Y } \left( f ( x ) , f \left( x ^ { \prime } \right) \right) < \varepsilon .$ (Hint: Consider Exercise 4.3 and the proof of
 	Theorem $4.6 .$ )
 	
