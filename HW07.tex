@@ -30,10 +30,24 @@
 		\item[6.01] Prove that an infinite set with the finite complement topology is a connected
 		topological space.\\
 		
-		\item[6.02] \textbf{Prove Theorem $6.2 :$} A topological space $X$ is connected if and only if there are no nonempty proper subsets of $X$ that are both open and closed in $X .$
 		
+		\item[6.02] \textbf{Prove Theorem $6.2 :$} A topological space $X$ is connected if and only if there are no nonempty proper subsets of $X$ that are both open and closed in $X .$\\
+		Suppose that $ X $ is not connected. Let $ U,V $ be a separation of $ X $. That is $ U\cup V = X$ and $ U,V $ are disjoint nonempty open sets. Notice, $ V=X-U  $ as $ U $ and $ V $ are disjoint. Then, we have that $ U $ is closed as it is the complement of an open set. We then have $ V=X-U\not= \varnothing $. This results says that $ U $ is a proper subset. Thus, $ U $ is a nonempty, proper, closed, and open set.\\
+		\\
+		Suppose $ U$ is a nonempty proper set that is closed and open. Let $ V=X-U $. Since, $ U $ is proper we have $ V $ is nonempty and open. Notice.
+			\[X=U\cup(X-U)=U\cup V\]
+		Thus, $ U,V $ form a separation of $ X $.\\
+		Thus, $ X $ is not connected.\\
+		\\
+		Therefore, $X$ is connected if and only if there are no nonempty proper subsets of $X$ that are both open and closed in $X .$\\
 		\item[6.07] \begin{enumerate}
-			\item[(a)]  Prove that if a topological space $X$ has the discrete topology, then $X$ is totally disconnected.
+			\item[(a)]  Prove that if a topological space $X$ has the discrete topology, then $X$ is totally disconnected.\\
+			Assume $ X $ has the discrete topology and $ A\subset X $ contains more than one point. Let $ x',x\in A $ with $ U=\{x'\} $ and  $V = A-\{x\} $. Hence, $ V $ is nonempty as $ A $ was defined with more than one point. Since, singletons are open and the union of singletons are open in the discrete topology, we must have that $ U $ and $ V $ are open. Then, $ U\cap V = \varnothing $ and $ U\cup V = A $. \\
+			Thus, $ U $ and $ V $ form a separation of $ A $.\\
+			Hence, $ A $ is disconnected\\
+			So, only one point sets are connected\\
+			Thus, $ X $ is totally disconnected\\
+			Therefore, if a topological space $X$ has the discrete topology, then $X$ is totally disconnected
 			\item[(b)] Let $\mathbb { Q }$ be the set of rational numbers with the standard topology. Prove	that $\mathbb { Q }$ is totally disconnected. (This exercise and Example 6.9 demonstrate that the converse to the result in part (a) does not hold. In both cases, the space is totally disconnected but does not have the discrete topology.)
 		\end{enumerate}
 		
@@ -45,13 +59,15 @@
 			open subsets of $X .$
 		\end{enumerate}
 		
-		\item[6.10] 
+		\item[6.10] The following examples demonstrate that the condition $U \cap V \cap A = \varnothing$ is appropriate in the definition of a separation of $A$ in $X$ and that the condition would be too strong if it required $U \cap V = \varnothing$ :
 		\begin{enumerate}
-			\item[(a)] The following examples demonstrate that the condition $U \cap V \cap A = \varnothing$ is appropriate in the definition of a separation of $A$ in $X$ and that the condition would be too strong if it required $U \cap V = \varnothing$ :
+			\item[(a)] Find an example of a topology on $X = \{ a , b , c \}$ and a disconnected subset
+			$A$ such that every pair of sets, $U$ and $V ,$ that is a separation of $A$ in $X$
+			satisfies $U \cap V \cap ( X - A ) \neq \varnothing$ .
 			\item[(b)] Find a topology on $\mathbb { R }$ and a disconnected subset $A$ such that every pair of
 			sets, $U$ and $V ,$ that is a separation of $A$ in $\mathbb { R }$ satisfies $U \cap V \cap ( \mathbb { R } - A ) \neq \varnothing$
 		\end{enumerate}
-		\item[6.18] 
+		\item[6.18] Give examples of subsets $A$ and $B$ in $\mathbb { R } ^ { 2 }$ such that
 		\begin{enumerate}
 			\item[(a)] $A$ and $B$ are connected, but $A \cap B$ is not.
 			\item[(b)] $A$ and $B$ are connected, but $A - B$ is not.
@@ -64,13 +80,11 @@
 		\begin{enumerate}
 			\item[(a)] $C = \{ b \}$ and $X = \{ a , b , c \}$ with topology $\{ \varnothing , \{ b \} , \{ a , b \} , \{ b , c \} , X \}$
 			\item[(b)] $C = \{ c \}$ and $X$ is the same as in (a).
-			$C = \{ 0 \}$ and $X = P P \mathbb { R } _ { 0 } ,$ the particular point topology on $\mathbb { R }$ with the origin as the particular point.
 			\item[(c)] $C = \{ 0 \}$ and $X = P P \mathbb { R } _ { 0 } ,$ the particular point topology on $\mathbb { R }$ with the
 			origin as the particular point.
 			\item[(d)]	$C = \{ - 1,1 \}$ and $X = \mathbb { R } _ { f c } ,$ the real line in the finite complement topology.
 			\item[(e)] $C =$ the circle $S ^ { 1 }$ and $X = \mathbb { R } ^ { 2 }$
-			\item[(f)]$C = \{ - 1,1 \}$ and $X = \mathbb { R } ^ { 2 }$ .
-			$C =$ the core curve in the Möbius band $X ,$ as shown in Figure 6.16 .
+			\item[(f)] $C =$ the core curve in the Möbius band $X ,$ as shown in Figure 6.16 .
 		\end{enumerate}
 		
 		\item[6.22] Can you cut a Klein bottle into two Möbius bands? Find a cutset $C$ for the
