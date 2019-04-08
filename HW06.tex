@@ -21,174 +21,220 @@
 
 
 \begin{document}
-\pagestyle{fancy} \lhead{MTH 415 Homework 06} 
-\chead{04/05/2019}
-\rhead{Austin Klum}
-\lfoot{} \cfoot{} \rfoot{}
-
-\begin{enumerate}
-
-	\item[5.01] Show that the taxicab metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
+	\pagestyle{fancy} \lhead{MTH 415 Homework 06} 
+	\chead{04/05/2019}
+	\rhead{Austin Klum}
+	\lfoot{} \cfoot{} \rfoot{}
+	
 	\begin{enumerate}
-		\item[(1)] Notice, by the definition of the Taxicab metric we take the addition of two absolute values. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\
-		Thus, property 1 is satisfied.
-		\item[(2)] Let $ x,y\in \R^2 $. Observe.
-		\begin{align*}
-			d(x,y) &= |x_1-y_1|+|x_2-y_2|\\
-				   &= |y_1-x_1|+|y_2-x_2|\\
-				   &= d(y,x)
-		\end{align*}
-		Thus, property 2 is satisfied.
-		\item[(3)] Let $ x,y,z \in \R^2 $. Observe.
-			\begin{align*}
-				d(x,z) &= |x_1-z_1|+|x_2-z_2|\\
-					   &= |x_1-y_1+y_1-z_1|+|x_2-y_2+y_2-z_2|\\
-					   &\leq |x_1-y_1|+|y_1-z_1|+|x_2-y_2|+|y_2-z_2|\\
-					   &=    |x_1-y_1|+|x_2-y_2|+|y_1-z_1|+|y_2-z_2|\\
-					   &= d(x,y)+d(y,z)
-			\end{align*}
-		Thus, property 3 is satisfied.
-	\end{enumerate}
-	Therefore, the taxicab metric is a metric.
-	\item[5.02] 
-	\begin{enumerate}
-		\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
+		
+		\item[5.01] Show that the taxicab metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
 		\begin{enumerate}
-			\item[(1)] Notice, we are taking the max value of an absolute value. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\ 
+			\item[(1)] Notice, by the definition of the Taxicab metric we take the addition of two absolute values. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\
 			Thus, property 1 is satisfied.
 			\item[(2)] Let $ x,y\in \R^2 $. Observe.
 			\begin{align*}
-			d(x,y) &= max\{|x_1-y_1|,|x_2-y_2|\}\\
-			&= max\{|y_1-x_1|,|y_2-x_2|\}\\
+			d(x,y) &= |x_1-y_1|+|x_2-y_2|\\
+			&= |y_1-x_1|+|y_2-x_2|\\
 			&= d(y,x)
 			\end{align*}
 			Thus, property 2 is satisfied.
 			\item[(3)] Let $ x,y,z \in \R^2 $. Observe.
 			\begin{align*}
-			d(x,z)  &= max\{|x_1-z_1|,|x_2-z_2|\}\\
-					&= max\{|x_1-y_1+y_1-z_1|,|x_2-y_2+y_2-z_2|\}\\
-					&\leq \max\{|x_1-y_1|+|y_1-z_1|,|x_2-y_2|+|y_2-z_2|\}\\
-					&= |x_i-y_i|+|y_i-z_i| \\
-					&\text{ where $ i $ with value 1 or 2 holds the maximum value}\\
-			|x_i-y_i|&\leq max\{|x_1-y_1|,|x_2-y_2|\}\\
-			|y_i-z_i|&\leq max\{|y_1-z_1|,|y_2-z_2|\}
+			d(x,z) &= |x_1-z_1|+|x_2-z_2|\\
+			&= |x_1-y_1+y_1-z_1|+|x_2-y_2+y_2-z_2|\\
+			&\leq |x_1-y_1|+|y_1-z_1|+|x_2-y_2|+|y_2-z_2|\\
+			&=    |x_1-y_1|+|x_2-y_2|+|y_1-z_1|+|y_2-z_2|\\
+			&= d(x,y)+d(y,z)
+			\end{align*}
+			Thus, property 3 is satisfied.
+		\end{enumerate}
+		Therefore, the taxicab metric is a metric.
+		\item[5.02] 
+		\begin{enumerate}
+			\item[(a)] Show that the max metric on $\mathbb { R } ^ { 2 }$ satisfies the properties of a metric.
+			\begin{enumerate}
+				\item[(1)] Notice, we are taking the max value of an absolute value. Since absolute values are never negative, we must have that for some $ x,y\in \R^2 , d(x,y)\geq 0$. Note, if $ x=y $, we must have that $ d(x,y)=0 $ and if $ x\not=y, d(x,y)>0 $\\ 
+				Thus, property 1 is satisfied.
+				\item[(2)] Let $ x,y\in \R^2 $. Observe.
+				\begin{align*}
+				d(x,y) &= max\{|x_1-y_1|,|x_2-y_2|\}\\
+				&= max\{|y_1-x_1|,|y_2-x_2|\}\\
+				&= d(y,x)
+				\end{align*}
+				Thus, property 2 is satisfied.
+				\item[(3)] Let $ x,y,z \in \R^2 $. Observe.
+				\begin{align*}
+				d(x,z)  &= max\{|x_1-z_1|,|x_2-z_2|\}\\
+				&= max\{|x_1-y_1+y_1-z_1|,|x_2-y_2+y_2-z_2|\}\\
+				&\leq \max\{|x_1-y_1|+|y_1-z_1|,|x_2-y_2|+|y_2-z_2|\}\\
+				&= |x_i-y_i|+|y_i-z_i| \\
+				&\text{ where $ i $ with value 1 or 2 holds the maximum value}\\
+				|x_i-y_i|&\leq max\{|x_1-y_1|,|x_2-y_2|\}\\
+				|y_i-z_i|&\leq max\{|y_1-z_1|,|y_2-z_2|\}
+				\end{align*}
+				So, 
+				\[d(x,z) \leq max\{|x_1-y_1|,|x_2-y_2|\} + max\{|y_1-z_1|,|y_2-z_2|\}=d(x,y)+d(y,z)\]
+				Thus, property 3 is satisfied.
+			\end{enumerate}	
+			Therefore, the max metric is a metric.
+			\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric on $\mathbb { R } ^ { 2 }$ .\\
+			The Triangle inequality does not hold.\\ (1,0)(2,0)
+			Let $ p,q,r \in \R^2 $. Observe.
+			\begin{align*}
+			d(p,r) &= min\{|p_1-r_1|,|p_2-r_2|\}\\
+			&\geq min\{|p_1-q_1|+|q_1-r_1|,|p_2-q_2|+|q_2-r_2|\}\\
+			&= |p_i-q_i|+|q_i-r_i|\\
+			&\text{ where $ i $ with value 1 or 2 holds the minimum value}\\
+			|p_i-q_i| &\leq min\{|p_1-q_1|,|p_2-q_2|\}\\
+			|q_i-r_i| &\leq min\{|q_1-r_1|,|q_2-r_2|\}
 			\end{align*}
 			So, 
-				\[d(x,z) \leq max\{|x_1-y_1|,|x_2-y_2|\} + max\{|y_1-z_1|,|y_2-z_2|\}=d(x,y)+d(y,z)\]
-			Thus, property 3 is satisfied.
-		\end{enumerate}	
-		Therefore, the max metric is a metric.
-		\item[(b)] Explain why $d ( p , q ) = \min \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}$ does not define a metric on $\mathbb { R } ^ { 2 }$ .\\
-		The Triangle inequality does not hold.\\ (1,0)(2,0)
-		Let $ p,q,r \in \R^2 $. Observe.
-		\begin{align*}
-			d(p,r) &= min\{|p_1-r_1|,|p_2-r_2|\}\\
-				   &\geq min\{|p_1-q_1|+|q_1-r_1|,|p_2-q_2|+|q_2-r_2|\}\\
-				   &= |p_i-q_i|+|q_i-r_i|\\
-				   &\text{ where $ i $ with value 1 or 2 holds the minimum value}\\
-				    |p_i-q_i| &\leq min\{|p_1-q_1|,|p_2-q_2|\}\\
-				    |q_i-r_i| &\leq min\{|q_1-r_1|,|q_2-r_2|\}
-		\end{align*}
-		So, 
 			\[d(p,r) \leq min\{|p_1-q_1|,|p_2-q_2|\} + min\{|q_1-r_1|,|q_2-r_2|\}\leq d(p,q)+d(q,r)\]
-	\end{enumerate}
-	\item[5.03] For points $p = \left( p _ { 1 } , p _ { 2 } \right)$ and $q = \left( q _ { 1 } , q _ { 2 } \right)$ in $\mathbb { R } ^ { 2 }$ define
+		\end{enumerate}
+		\item[5.03] For points $p = \left( p _ { 1 } , p _ { 2 } \right)$ and $q = \left( q _ { 1 } , q _ { 2 } \right)$ in $\mathbb { R } ^ { 2 }$ define
 		\[d _ { V } ( p , q ) = \left\{ \begin{array} { l l } { 1 } & { \text { if } p _ { 1 } \neq q _ { 1 } \text { or } \left| p _ { 2 } - q _ { 2 } \right| \geq 1 } \\ { \left| p _ { 2 } - q _ { 2 } \right| } & { \text { if } p _ { 1 } = q _ { 1 } \text { and } \left| p _ { 2 } - q _ { 2 } \right| < 1 } \end{array} \right.\]
-	\begin{enumerate}
-		\item[(a)] Show that $d _ { V }$ is a metric.
 		\begin{enumerate}
-			\item[(1)]
-			Notice, by the definition of $ D_v $ we are either 1 or the absolute value less than 1. Since, absolute values are never negative, we must have that for some $ p,q\in \R^2 d(p,q)\geq0$. Note if $ x = y $, we must have that $ d(p,q)=0 $ and if $ x\not=y,d(p,q)>0 $.
-			Thus, property 1 is satisfied.
-			\item[(2)] Let $ p,q\in\R^2 $. Observe.
+			\item[(a)] Show that $d _ { V }$ is a metric.
+			\begin{enumerate}
+				\item[(1)]
+				Notice, by the definition of $ D_v $ we are either 1 or the absolute value less than 1. Since, absolute values are never negative, we must have that for some $ p,q\in \R^2 d(p,q)\geq0$. Note if $ x = y $, we must have that $ d(p,q)=0 $ and if $ x\not=y,d(p,q)>0 $.
+				Thus, property 1 is satisfied.
+				\item[(2)] Let $ p,q\in\R^2 $. Observe.
 				\begin{align*}
-					d(p,q) &= 1 \text{ or } |p_2-q_2|\\
-						   &= 1 \text{ or } |q_2-p_2|\\
-						   &= d(q,p)
+				d(p,q) &= 1 \text{ or } |p_2-q_2|\\
+				&= 1 \text{ or } |q_2-p_2|\\
+				&= d(q,p)
 				\end{align*}
-			Thus, property 2 is satisfied.
-			\item[(3)] Let $ p,q,r\in\R^2 $. Observe.
+				Thus, property 2 is satisfied.
+				\item[(3)] Let $ p,q,r\in\R^2 $. Observe.
 				\begin{align*}
-					d(p,r) &=1 \text{ or } |p_2-r_2|\\
-						   &=1 \text{ or } |p_2-q_2+q_2-r_2|\\
-						   *=
+				d(p,r) &=1 \text{ or } |p_2-r_2|\\
+				&=1 \text{ or } |p_2-q_2+q_2-r_2|\\
+				&= 1 \text{ or } |p_2-q_2|+|q_2-r_2|\\
+				&\leq 1 \text { or } d(p,q)+d(q,r) \text{ or } \\
+				&   1 + d(q,r) \text{ or } d(p,q) + 1 \text{ or } 1 + 1
 				\end{align*}
-			Thus, property 3 is satisfied.
+				Thus, property 3 is satisfied.
+			\end{enumerate}
+			Therefore, $ D_v $ is a metric.
+			\item[(b)] 	Describe the open balls in the metric $d _ { V }$ .
+			If $ \epsilon > 1$, then $ d_V(p,\epsilon) = \R^2 $ since $ d_V(p,q)\leq 1 $\\
+			If $ \epsilon < 1 $, then $ d_v(p,\epsilon) = |p_2-q_2| $
 		\end{enumerate}
-		Therefore, $ D_v $ is a metric.
-		\item[(b)] 	Describe the open balls in the metric $d _ { V }$ .
-	\end{enumerate}
-	\item[5.10]
-	\begin{enumerate}
-		\item[(a)] Let $( X , d )$ be a metric on a space. For $x , y \in X ,$ define
-		\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
-		Show that $D$ is also a metric on $ X $
+		\item[5.10]
 		\begin{enumerate}
-			\item[(1)] Notice, that $ d(x,y)\geq0 $. Since, we always get a non-negative value back from $ d(x,y) $ we know that our definition for $ D(x,y) $ must also return a non-negative values
-			Thus, property 1 is satisfied.
-			\item[(2)] Let $ x,y\in\R^2 $. Observe.
-			\begin{align*}
-			D(x,y) +  &= \frac{d(x,y)}{1+d(x,y)}\\
-				   &= \frac{d(y,x)}{1+d(y,x)}\\
-				   &= D(y,x)
-			\end{align*}
-			Thus, property 2 is satisfied.
-			\item[(3)] Let $ x,y,z\in\R^2 $. Observe.
-			\begin{align*}
-			D(x,y)+D(y,z) &= \frac{d(x,y)}{1+d(x,y)} + \frac{d(y,z)}{1+d(y,z)} \\
-						  &= \frac{d(x,y)(1+d(y,z))}{(1+d(x,y))(1+d(y,z))} + \frac{d(y,z)(1+d(x,y))}{(1+d(x,y))(1+d(y,z))}\\
-						  &\geq \frac{d(x,y)+d(y,z)}{(1+d(x,y))(1+d(y,z))}\\
-						  &\geq \frac{d(x,z)}{(1+d(x,y))(1+d(y,z))}\\
-						  &\geq \frac{d(x,z)}{1+d(x,z)} \\
-						  &\text{ As $ d(x,z)=d(x,z)  $ and $ (1+d(x,y))(1+d(y,z)) \geq 1+d(x,z)$ }
-			\end{align*}
-			Thus, property 3 is satisfied.
+			\item[(a)] Let $( X , d )$ be a metric on a space. For $x , y \in X ,$ define
+			\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
+			Show that $D$ is also a metric on $ X $
+			\begin{enumerate}
+				\item[(1)] Notice, that $ d(x,y)\geq0 $. Since, we always get a non-negative value back from $ d(x,y) $ we know that our definition for $ D(x,y) $ must also return a non-negative values
+				Thus, property 1 is satisfied.
+				\item[(2)] Let $ x,y\in\R^2 $. Observe.
+				\begin{align*}
+				D(x,y) +  &= \frac{d(x,y)}{1+d(x,y)}\\
+				&= \frac{d(y,x)}{1+d(y,x)}\\
+				&= D(y,x)
+				\end{align*}
+				Thus, property 2 is satisfied.
+				\item[(3)] Let $ x,y,z\in\R^2 $. Observe.
+				\begin{align*}
+				D(x,y)+D(y,z) &= \frac{d(x,y)}{1+d(x,y)} + \frac{d(y,z)}{1+d(y,z)} \\
+				&= \frac{d(x,y)(1+d(y,z))}{(1+d(x,y))(1+d(y,z))} + \frac{d(y,z)(1+d(x,y))}{(1+d(x,y))(1+d(y,z))}\\
+				&\geq \frac{d(x,y)+d(y,z)}{(1+d(x,y))(1+d(y,z))}\\
+				&\geq \frac{d(x,z)}{(1+d(x,y))(1+d(y,z))}\\
+				&\geq \frac{d(x,z)}{1+d(x,z)} \\
+				&\text{ As $ d(x,z)=d(x,z)  $ and $ (1+d(x,y))(1+d(y,z)) \geq 1+d(x,z)$ }
+				\end{align*}
+				Thus, property 3 is satisfied.
+			\end{enumerate}
+			Therefore, $D$ is a metric.
+			\item[(b)] Explain why no two points in $X$ are distance one or more apart in the metric $D .$\\
+			The numerator is always smaller than the denominator, so the distance will always be less than 1 apart.
 		\end{enumerate}
-		Therefore, $D$ is a metric.
-		\item[(b)] Explain why no two points in $X$ are distance one or more apart in the metric $D .$\\
-		The top is always smaller than the bottom.
-	\end{enumerate}
-	
-	\item[5.24] Prove Theorem $5.13 :$ Let $\left( X , d _ { X } \right)$ and $\left( Y , d _ { Y } \right)$ be metric spaces. A function
-	$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d_X \left( x , x ^ { \prime } \right) < \delta$
-	then $d _ { Y } \left( f ( x ) , f \left( x ^ { \prime } \right) \right) < \varepsilon .$ (Hint: Consider Exercise 4.3 and the proof of
-	Theorem $4.6 .$ )
-	
-	\item[5.25] Let $( X , d )$ be a metric space, and assume $p \in X$ and $A \subset X$
-	\begin{enumerate}
-		\item[(a)] Provide an example showing that $d ( \{ p \} , A ) = 0$ need not imply that $p \in A .$
 		
-		\item[(b)] Prove that if $A$ is closed and $d ( \{ p \} , A ) = 0 ,$ then $p \in A$
+		\item[5.24] Prove Theorem $5.13 :$ Let $\left( X , d _ { X } \right)$ and $\left( Y , d _ { Y } \right)$ be metric spaces. A function
+		$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d_X \left( x , x ^ { \prime } \right) < \delta$
+		then $d _ { Y } \left( f ( x ) , f \left( x ^ { \prime } \right) \right) < \varepsilon .$ (Hint: Consider Exercise 4.3 and the proof of
+		Theorem $4.6 .$ )\\
+		(WTS: $\forall x\in X \exists \delta >0$ such that $ x'\in X $ and $ d_x(x,x')< \delta$, we have $ d_Y(f(x),f(x'))<\epsilon $)\\
+		Suppose $ f $ is continuous. Let $ x\in X , \epsilon >0 $, and $ \delta > 0 $ such that $ x' \in X $ and $ d_x(x,x') < \delta $. Notice, as $ f $ is continuous, $ f(x), f(x')\in Y $. Since, $ x $ is bound by $\epsilon$, $ d(x,x') $ is bounded by $ \delta $, and $ f(x),f(x')\in Y $, we must have that $ d_Y(f(x),f(x') < \epsilon $.\\
+		\\
+		Let $ U $ be an open set in $ Y $. Let $ x\in f^{-1}(U) $ and define $ \epsilon > 0 $ such that $B(f(x),\epsilon)\subseteq U $. Define $ \delta $ such that$ x'\in X$ satisfies $ d(x,x')<\delta $. Which implies $ x'\in B(x,\delta) $. Notice, we must have $ d(f(x),f(x'))<\epsilon $. From this result, we have $ f(x')\in B(f(x),\epsilon)\subseteq U $. So, $ x'\in B(x,\delta) $ as $ x'\in f^{-1}(U) $.\\
+		Thus, $ B(x,\delta) \subseteq f^{-1}(U) $.\\
+		Thus, $ f $ is continuous.\\
+		\\
+		Therefore, A function
+		$f : X \rightarrow Y$ is continuous in the open set definition if and only if for each $x \in X$ and $\varepsilon > 0 ,$ there exists a $\delta > 0$ such that if $x ^ { \prime } \in X$ and $d_X \left( x , x ^ { \prime } \right) < \delta$
+		then $d _ { Y } \left( f ( x ) , f \left( x ^ { \prime } \right) \right) < \varepsilon .$
 		
-	\end{enumerate}
-	
-	\item[5.26] Use Theorem 5.15 to prove that the taxicab metric and the max metric induce
-	the same topology on $\mathbb { R } ^ { 2 }$ .
-	
-	\item[5.28] Let $( X , d )$ be a metric space. The function
+		\item[\textcolor{red}{5.25}] Let $( X , d )$ be a metric space, and assume $p \in X$ and $A \subset X$
+		\begin{enumerate}
+			\item[(a)] Provide an example showing that $d ( \{ p \} , A ) = 0$ need not imply that $p \in A .$
+			Suppose $ p $ is a limit point of $ A $. Then, $ d(\{p\},A) $ would equal 0, but $ p\not\in A $.
+			\item[(b)] Prove that if $A$ is closed and $d ( \{ p \} , A ) = 0 ,$ then $p \in A$\\
+			Notice, if $ d(\{p\},A)=0 , p$ must be in $ A $ or a limit point of $ A $. \\
+			Suppose $ p $ is a limit point of $ A $. That is $ p\in A' $ We know that as $ A $ is closed, we must have that $ A $ contains all of its limit points. That is $ A'\subset A $.\\
+			Thus, as $ p\in A' $ we must have $ p\in A $.\\
+			Therefore, if $A$ is closed and $d ( \{ p \} , A ) = 0 ,$ then $p \in A$
+		\end{enumerate}
+		
+		\item[\textcolor{red}{5.26}] Use Theorem 5.15 to prove that the taxicab metric and the max metric induce the same topology on $\mathbb { R } ^ { 2 }$ .\\
+		Without loss of generality, assume we are centered at the origin.
+		Let $\epsilon > 0 $ and $B_T(0,\epsilon)=\{q\in\R^2|d_T(0,q)<\epsilon\}=\{q\in\R^2||q_1|+|q_2|<\epsilon\} $. Where $ B_T $ is the open ball in our taxicab topology, $ T_T $ \\
+		Define $  B_M(0,\delta)=\{q\in\R^2|d_m(0,q)<\delta\}=\{q\in\R^2|max\{|q_1|,|q_2|<\delta\}\} $.  Where $ B_M $ is the open ball in our max topology, $ T_M $ \\ 
+		\\
+		Assume, $ \epsilon > \delta $. Notice, the boundary of $ B_M  $ contained inside $ B_T $ is simply $ a+b=\epsilon $. Since, $ a=b $ we then have $ 2a=\epsilon \Rightarrow a=\epsilon/2$. So, we can define $ \delta = \epsilon/2 $\\
+		Thus, $ B_M(0,\delta)\subset B_T(0,\epsilon) $\\
+		Thus, $ T_M $ is finer than $ T_T $\\
+		\\
+		Going the other way, assume $ \epsilon < \delta $ (WTS: $ B_T \subset B_M$)\\
+		Notice, the boundary of $ B_T $ contained inside $ B_M $ is limited by $ a = \delta $.  So, $ \epsilon = \delta $.\\
+		Thus, $ B_T(0,\epsilon) \subset B_M(0,\delta) $\\
+		Thus, $ T_T $ is finer than $ T_M$\\
+		\\
+		Therefore, the taxicab metric and max metric induce the same topology on $ \R^2 $
+		\item[5.28] Let $( X , d )$ be a metric space. The function
 		\[D ( x , y ) = \frac { d ( x , y ) } { 1 + d ( x , y ) }\]
-	is a bounded metric on $X$ . (See Exercise 5.10.) Show that the topologies
-	induced by $D$ and $d$ are the same.
-	
-	\item[5.29] On the set of continuous functions $C [ a , b ]$ consider the metrics $\rho _ { M }$ and $\rho$ defined by
-	\[\rho _ { M } ( f , g ) = \max _ { x \in [ a , b ] } [ | f ( x ) - g ( x ) \| \} ,\] and
-	\[\rho ( f , g ) = \int _ { a } ^ { b } | f ( x ) - g ( x ) | d x\]
-	These metrics were introduced in Exercise 5.8 and Example 5.5, respectively.
-	\begin{enumerate}
-		\item[(a)] Use Theorem 5.15 to prove that the topology induced by $\rho _ { M }$ on $C [ a , b ]$ is finer than the topology induced by $\rho$ .
-		\item[(b)] Show that for every $c _ { 1 } , c _ { 2 } > 0$ there exists $f \in C [ a , b ]$ such that\\
-		$\max _ { x \in [ a , b ] } \{ | f ( x ) | \} = c _ { 1 }$ and
-		\[\int _ { a } ^ { b } | f ( x ) | d x = c _ { 2 }\]
-		\item[(c)] Let $Z \in C [ a , b ]$ be the function defined by $Z ( x ) = 0$ for all $x \in [ a , b ]$
-		Given $\varepsilon > 0 ,$ show that no $\delta > 0$ exists such that $B _ { \rho } ( Z , \delta ) \subset B _ { \rho M} ( Z , \varepsilon )$
-		(Hint: Part (b) helps.)
-		\item[(d)] What does Theorem 5.15 allow us to conclude from (c)?
+		is a bounded metric on $X$ . (See Exercise 5.10.) Show that the topologies
+		induced by $D$ and $d$ are the same.\\
+		(WTS: The topologies are finer than each other.)\\
+		Without loss of generality, assume we are centered at the origin
+		Let $\epsilon > 0 $ and $B_D(0,\epsilon)=\{q\in\R^2|D(0,q)<\epsilon\}=\{q\in\R^2|\frac{d(0,q)}{1+d(0,q)}<\epsilon\} $. Where $ B_D $ is the open ball in our $ D(x,y) $ topology, $ T_D $ \\
+		Define $ B_d(0,\delta)=\{q\in\R^2|d(0,q)<\delta\}=\{q\in\R^2|d(0,q)<\delta\}\} $.  Where $ B_d $ is the open ball in our $ d(x,y) $ topology, $ T_d $ \\ 
+		\\
+		Assume, $ \epsilon > \delta $. Notice, the boundary of $ B_D  $ contained inside $ B_d $ is simply $ \delta=\frac{\epsilon}{1+\epsilon} $. \\
+		Thus, $ B_d(0,\delta)\subset B_D(0,\epsilon) $\\
+		Thus, $ T_d $ is finer than $ T_D $\\
+		\\
+		Going the other way, assume $ \epsilon < \delta $ (WTS: $ B_D \subset B_d$)\\
+		Notice, the boundary of $ B_D$ contained inside $ B_d $ is limited by $ \delta $.  So, $ \epsilon = \delta $.\\
+		Thus, $ B_D(0,\epsilon) \subset B_d(0,\delta) $\\
+		Thus, $ T_D $ is finer than $ T_d$\\
+		\\
+		Therefore, the topologies induced by $D$ and $d$ are the same.
+		
+		\item[5.29]  $\rho _ { M }$ and $\rho$ defined by
+		\[\rho _ { M } ( f , g ) = \max _ { x \in [ a , b ] } [ | f ( x ) - g ( x ) \| \} ,\] and
+		\[\rho ( f , g ) = \int _ { a } ^ { b } | f ( x ) - g ( x ) | d x\]
+		These metrics were introduced in Exercise 5.8 and Example 5.5, respectively.
+		\begin{enumerate}
+			\item[(a)] Use Theorem 5.15 to prove that the topology induced by $\rho _ { M }$ on $C [ a , b ]$ is finer than the topology induced by $\rho$ .\\
+			
+			Without loss of generality, assume we are centered at the origin.
+			Let $\epsilon > 0 $ and $B_\rho(0,\epsilon)=\{f,g\in C[a,b]|\rho(f,g)<\epsilon\}=\{f,g\in C[a,b]| \int_{a}^{b}|f(x)-g(x)|dx<\epsilon\} $. Where $ B_\rho $ is the open ball in our $ \rho $ topology, $ T_\rho $ \\
+			Define $  B_{\rho_M}(0,\delta)=\{f,g\in C[a,b]|\rho_M(f,g)<\delta\}=\{f,g\in C[a,b]|max_{x\in[a,b]}\{|f(x)-g(x)|<\delta\}\} $.  Where $ B_{\rho_M} $ is the open ball in our $ \rho_M $ topology, $ T_{\rho_M} $ \\ 
+			\\
+			Notice, the boundary of $ B_{\rho_M}  $ contained inside $ B_\rho $ is simply $M(b-a)$. Where $ M(b-a) $ is the maximum value for $ |f-g| $ over $ [a,b] $. So, we can define $ \delta = M(b-a) $\\
+			Thus, $ B_{\rho_M}(0,\delta)\subset B_\rho(0,\epsilon) $\\
+			Therefore, $ T_{\rho_M} $ is finer than $ T_\rho $\\
+			\\
+		\end{enumerate}
+		
+		\section*{Summary}
+		It's going I guess. I've been more stuck lately. But now that I am making more time to go to office hours often and discussing with a few other classmates, I feel like I have a better understanding of some of the material. I'm noticing that I will occasionally have some intuition on where to go next in a problem. So, when I've been getting stuck, I've been getting stuck big as in I have no idea how to continue, but now I have some problems where I'm not super stuck and only have to struggle through them. I plan on continuing to work on my homeworks earlier and come to office hours more regularly.
 	\end{enumerate}
-
-	\section*{Summary}
-
-\end{enumerate}
- 
+	
 \end{document}
 
 
