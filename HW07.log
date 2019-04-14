@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  7 APR 2019 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  14 APR 2019 17:44
 entering extended mode
 **./HW07.tex
 (HW07.tex
@@ -138,18 +138,18 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
  (HW07.aux)
 \openout1 = `HW07.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (D:\Programs\MiKTeX2.9.6520\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -165,62 +165,57 @@ LaTeX Font Info:    ... okay on input line 23.
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks25
 )
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
- []
-
-LaTeX Font Info:    Try loading font information for U+lasy on input line 34.
-(D:\Programs\MiKTeX2.9.6520\tex\latex\base\ulasy.fd
+LaTeX Font Info:    Try loading font information for U+lasy on input line 33.
+ (D:\Programs\MiKTeX2.9.6520\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/Austin Klum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+)
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
-]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr8!
-Missing character: There is no ¶ in font cmr8!
-Missing character: There is no Ã in font cmr6!
-Missing character: There is no ¶ in font cmr6!
-
-Overfull \hbox (159.99167pt too wide) detected at line 81
-[]
  []
 
-[2] (HW07.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+
+ []
+
+[1{C:/Users/Austin Klum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+]
+[2] [3] [4] (HW07.aux) ) 
 Here is how much of TeX's memory you used:
- 1981 strings out of 493312
- 23669 string characters out of 3139339
- 83254 words of memory out of 3000000
- 5528 multiletter control sequences out of 15000+200000
- 10580 words of font info for 43 fonts, out of 3000000 for 9000
+ 1974 strings out of 493312
+ 23606 string characters out of 3139339
+ 84260 words of memory out of 3000000
+ 5524 multiletter control sequences out of 15000+200000
+ 9829 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,43p,356b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D
-:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Programs
-/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKTeX2.9
-.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.6520/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on HW07.pdf (2 pages, 78149 bytes).
+ 27i,11n,43p,463b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/
+Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/M
+iKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.65
+20/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb>
+Output written on HW07.pdf (4 pages, 100119 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

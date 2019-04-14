@@ -7,6 +7,7 @@
 \newtheorem{claim}[theorem]{Claim}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\T}{\mathcal{T}}
 
@@ -29,7 +30,7 @@
 	\begin{enumerate}
 		\item[6.01] Prove that an infinite set with the finite complement topology is a connected
 		topological space.\\
-		
+		Assume $ X $ with the finite complement topology is the union of two disjoint closed subsets of $ X $, namely $ U,V $. That is $ X= U\cup V $. Since, $ U$ and $V $ are closed they are finite by definition. This is a contradiction as $ X $ is the infinite sets and two finite sets do not equal the infinite set.
 		
 		\item[6.02] \textbf{Prove Theorem $6.2 :$} A topological space $X$ is connected if and only if there are no nonempty proper subsets of $X$ that are both open and closed in $X .$\\
 		Suppose that $ X $ is not connected. Let $ U,V $ be a separation of $ X $. That is $ U\cup V = X$ and $ U,V $ are disjoint nonempty open sets. Notice, $ V=X-U  $ as $ U $ and $ V $ are disjoint. Then, we have that $ U $ is closed as it is the complement of an open set. We then have $ V=X-U\not= \varnothing $. This results says that $ U $ is a proper subset. Thus, $ U $ is a nonempty, proper, closed, and open set.\\
@@ -48,53 +49,106 @@
 			So, only one point sets are connected\\
 			Thus, $ X $ is totally disconnected\\
 			Therefore, if a topological space $X$ has the discrete topology, then $X$ is totally disconnected
-			\item[(b)] Let $\mathbb { Q }$ be the set of rational numbers with the standard topology. Prove	that $\mathbb { Q }$ is totally disconnected. (This exercise and Example 6.9 demonstrate that the converse to the result in part (a) does not hold. In both cases, the space is totally disconnected but does not have the discrete topology.)
+			\item[(b)] Let $\mathbb { Q }$ be the set of rational numbers with the standard topology. Prove	that $\mathbb { Q }$ is totally disconnected. (This exercise and Example 6.9 demonstrate that the converse to the result in part (a) does not hold. In both cases, the space is totally disconnected but does not have the discrete topology.)\\
+			Let $ x,y \in \mathbb{ Q } $ such that $ x\not=y $. Without loss of generality assume $ x<y $. Notice, there exists an irrational number $ z $ such that $ x<z<y $. Then, $ x $ and $ y $ are in different components of $ \mathbb{ Q } $. Hence, the components of $ \mathbb{ Q } $ are singletons.\\
+			Thus, $ \mathbb{ Q } $ is totally disconnected.
 		\end{enumerate}
 		
 		\item[6.09] \textbf{Prove Theorem 6.12, parts(ii) and (iii):} Let $ X $ be a topological space.
 		\begin{enumerate}
 			\item[(a)]If $A$ is connected in $X ,$ then $A$ is a subset of a component of $X .$
-			\item[(b)]Each component of $X$ is a closed subset of $X .$
+			\item[(b)]Each component of $X$ is a closed subset of $X .$\\
+				Let $ C $ be a component of $ X $. We then know that $ C $ is connected in $ X $. Suppose $ x \in X $ and $ x\notin C $. Define $ B = C\cup \{x\} $, which is not connected. Let $ U,V $ form a separation of $ B $ and $ x\in U $. That is $ B=U\cup V $. Notice, $ U\cup C = \varnothing $ as if it weren't true $ U\cap C $ and $ V\cap C $ would form a separation of $ C $. But $ C $ is connected and thus cannot have a separation. \\
+				Thus, $ C $  has an open complement\\
+				Therefore, $ C $ is Closed 
 			\item[(c)] Provide an example showing that the components of $X$ are not necessarily
-			open subsets of $X .$
+			open subsets of $X .$\\
+			Consider $ \mathbb{ Q } $. Notice components of $ \mathbb{ Q } $ are singletons. Hence, components of $ \Q $ are not open.
 		\end{enumerate}
 		
 		\item[6.10] The following examples demonstrate that the condition $U \cap V \cap A = \varnothing$ is appropriate in the definition of a separation of $A$ in $X$ and that the condition would be too strong if it required $U \cap V = \varnothing$ :
 		\begin{enumerate}
 			\item[(a)] Find an example of a topology on $X = \{ a , b , c \}$ and a disconnected subset
 			$A$ such that every pair of sets, $U$ and $V ,$ that is a separation of $A$ in $X$
-			satisfies $U \cap V \cap ( X - A ) \neq \varnothing$ .
+			satisfies $U \cap V \cap ( X - A ) \neq \varnothing$ .\\
+			Using the discrete topology, let $ A = \{a,b\} $. Notice, $ X-A =\{c\} $. Then, an example that satisfies this is $ U = \{a,c\} $ and $ V = \{b,c\} $. As $ U,V $ form a separation on $ A $ and satisfy $U \cap V \cap ( X - A ) \neq \varnothing$. 
 			\item[(b)] Find a topology on $\mathbb { R }$ and a disconnected subset $A$ such that every pair of
 			sets, $U$ and $V ,$ that is a separation of $A$ in $\mathbb { R }$ satisfies $U \cap V \cap ( \mathbb { R } - A ) \neq \varnothing$
 		\end{enumerate}
 		\item[6.18] Give examples of subsets $A$ and $B$ in $\mathbb { R } ^ { 2 }$ such that
 		\begin{enumerate}
 			\item[(a)] $A$ and $B$ are connected, but $A \cap B$ is not.
-			\item[(b)] $A$ and $B$ are connected, but $A - B$ is not.
+			\item[(b)] $A$ and $B$ are connected, but $A - B$ is not.\\
+				Let $ A = \{(x,0)\in \R^2|0\leq x\leq1\} $ and $ B=\{(x,0)\in \R^2|0<x<1\} $. Then, $ A-B= \{(0,0)\}\cup\{(1,0)\} $
 			\item[(c)] $A$ is connected, $B$ is disconnected, and $A \cap B$ is connected.
+				Let $A= \{B((0,0),1)\}$ and $ B=A\cup\{B(10,0),1)\} $. Notice, $ A $ is connected and $ B $ is disconnected. Then, $ A\cap B = A$.\\
+				 Thus, $ A\cap B $ is continuous as $ A $ is continuous.
 			\item[(d)] $A$ and $B$ are disconnected, but $A \cup B$ is connected.
 			\item[(e)] $A$ and $B$ are connected, $\mathrm { Cl } ( A ) \cap \mathrm { Cl } ( B ) \neq \varnothing ,$ and $A \cup B$ is disconnected.
 		\end{enumerate}
 		
 		\item[6.20] In each of the following cases, prove whether or not the given set $C$ is a cutset of the connected topological space $X :$
 		\begin{enumerate}
-			\item[(a)] $C = \{ b \}$ and $X = \{ a , b , c \}$ with topology $\{ \varnothing , \{ b \} , \{ a , b \} , \{ b , c \} , X \}$
-			\item[(b)] $C = \{ c \}$ and $X$ is the same as in (a).
-			\item[(c)] $C = \{ 0 \}$ and $X = P P \mathbb { R } _ { 0 } ,$ the particular point topology on $\mathbb { R }$ with the
-			origin as the particular point.
-			\item[(d)]	$C = \{ - 1,1 \}$ and $X = \mathbb { R } _ { f c } ,$ the real line in the finite complement topology.
-			\item[(e)] $C =$ the circle $S ^ { 1 }$ and $X = \mathbb { R } ^ { 2 }$
-			\item[(f)] $C =$ the core curve in the Möbius band $X ,$ as shown in Figure 6.16 .
+			\item[(a)] $C = \{ b \}$ and $X = \{ a , b , c \}$ with topology $\{ \varnothing , \{ b \} , \{ a , b \} , \{ b , c \} , X \}$\\
+			$ X - \{b\} = \{a,c\}$ and the topology is $\{\varnothing,\{a\},\{c\},X-\{b\}\} $. Thus, disconnected.\\
+			$ C $ is a cutset
+			\item[(b)] $C = \{ c \}$ and $X$ is the same as in (a).\\
+			$ X-\{c\}=\{a,b\} $ and the topology is $ \{\varnothing, \{b\},\{a,b\},X-\{c\}\} $. Thus, connected.\\
+			$ C $ is not a cutset.
+			\item[\textcolor{red}{(c)}] $C = \{ 0 \}$ and $X = P P \mathbb { R } _ { 0 } ,$ the particular point topology on $\mathbb { R }$ with the origin as the particular point.\\
+			$ C $ is a cutset.
+			\item[(d)]	$C = \{ - 1,1 \}$ and $X = \mathbb { R } _ { f c } ,$ the real line in the finite complement topology.\\
+			As we are on the real line, if we cut a point out we are no longer connected.
+			$ C $ is a cutset.
+			\item[(e)] $C = $ the equator in $ S^2 $. \\
+			When you cut the equator of the sphere $ S^2 $, you end up with two disjoint sets $ NH $ and $ SH $ where $ NH\cup SH = S^2$. Thus, disconnected.\\
+			$ C $ is a cutset.
+			\item[(f)] $C =$ the core curve in the Mobius band $X ,$ as shown in Figure 6.16 .\\
+			As the twist in the band allows us to get to either side of the core curve, we are still connected. (Not really sure how to describe this. I made a Mobius band and I could get around to all elements.)\\
+			$ C $ is not a cutset.
 		\end{enumerate}
 		
-		\item[6.22] Can you cut a Klein bottle into two Möbius bands? Find a cutset $C$ for the
+		\item[6.22] Can you cut a Klein bottle into two Mobius bands? Find a cutset $C$ for the
 		Klein bottle $K$ such that
-			\[\text{(i) $C$ is a simple closed curve in $K ,$ and}\]
-			\[\text{(ii) $K - C$ is a union of two disjoint open sets such that the closure of
-			each in $K$ is homeomorphic to a Möbius band.}\]
+		 \begin{enumerate}
+		 	\item[(i)]  $C$ is a simple closed curve in $K ,$ and
+		 	\item[(ii)] $K - C$ is a union of two disjoint open sets such that the closure of
+		 	each in $K$ is homeomorphic to a Mobius band.
+		 \end{enumerate}\\
+	 	Yes, using the core curve of the Klein bottle we result in two Mobius bands that meet the requirements.
 		\item[6.24] Prove Theorem $6.20 :$ Let $f : X \rightarrow Y$ be a homeomorphism. If $S$ is a cutset of $X$ , then $f ( S )$ is a cutset of $Y .$
 		
 		\item[6.26] Prove that for every $n \geq 2$ neither the line nor the circle is homeomorphic to	$S ^ { n } .$
+		
+		\item[6.32] Let $T : S ^ { 2 } \rightarrow \mathbb { R }$ be defined by equating the sphere with the surface of the Earth
+		and letting $T ( x )$ be the temperature at point $x$ on the surface at some given time.
+		Assume that $T$ is a continuous function. Show that if $T ($ Anchorage $) = - 30 ^ { \circ }$ and $T ($ Honolulu $) = 80 ^ { \circ }$ , there is some point on the Earth where the temperature	is $0 ^ { \circ } .$ Does the conclusion necessarily hold if we restrict the domain to the fifty United States? Does the conclusion hold in the United States if $T$ (Duluth) $=- 30 ^ { \circ }$ and $T ($ Fort Lauderdale $) = 80 ^ { \circ } ?$
+		
+		\item[6.33] Let $p ( x )$ be an odd-degree polynomial function. Prove that $p ( x ) = 0$ has at least one real solution.
+		
+		\item[6.36] Suppose that at a given time we measure the intensity of sunlight at each point on the Earth's surface. According to Theorem 6.26 , there must be a pair of points
+		opposite each other on the Earth's surface at which the intensity of sunlight is the same. However, if it is daytime at one point, it must be nighttime at the
+		point opposite it! Resolve the paradox.
+		
+		\item[6.38] \begin{enumerate}
+			\item[(a)] Let $X$ be connected, and assume a homeomorphism $A : X \rightarrow X$ exists
+			such that $A \circ A ( x ) = x$ for all $x \in X .$ Prove that, for every continuous
+			function $f : X \rightarrow \mathbb { R }$ , there exists $x \in X$ such that $f ( x ) = f ( A ( x ) )$ .
+			\item[(b)] Use the result from part (a) to prove that somewhere on a glazed doughnut
+			there is a point that has the same thickness of glazing as the point obtained
+			by 180 -degree rotation through the central axis of the doughnut. 
+		\end{enumerate}
+		
+		\item[6.39] Let $X = \{ a , b \}$ and assume that $X$ has the topology $\mathcal { T } = \{ \varnothing , \{ a \} , X \} .$ Show
+		that $X$ is path connected in this topology.
+		
+		\item[6.41] A set $C \subset \mathbb { R } ^ { n }$ is said to be star convex if there exists a point $p ^ { * } \in C$ such that
+		for every $p \in C ,$ the line segment in $\mathbb { R } ^ { n }$ joining $p ^ { * }$ and $p$ lies in $C .$ Prove that
+		if $C \subset \mathbb { R } ^ { n }$ is star convex, then $C$ is path connected in $\mathbb { R } ^ { n } .$
+		
+		\item[6.45] Prove that the $n$ -sphere $S ^ { n }$ is path connected for $n \geq 1 .$ (Hint: Find a surjective continuous function from a path connected space to $S ^ { n })$ 
+		
+		\item[6.51] Prove that if $f : X \rightarrow Y$ is a homeomorphism and $C$ is a path component of $X ,$ then $f ( C )$ is a path component of $Y .$
 	
 	\end{enumerate}
 	\section*{Summary}
