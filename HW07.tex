@@ -77,13 +77,15 @@
 		\end{enumerate}
 		\item[6.18] Give examples of subsets $A$ and $B$ in $\mathbb { R } ^ { 2 }$ such that
 		\begin{enumerate}
-			\item[(a)] $A$ and $B$ are connected, but $A \cap B$ is not.
+			\item[(a)] $A$ and $B$ are connected, but $A \cap B$ is not.\\
+			 Let $ A = \{B((0,0),1)\} $ and $ B=\{B((10,0),1)\} $. Notice, $ A $ and $ B $ are connected, but $ A\cap B $ is not connected.
 			\item[(b)] $A$ and $B$ are connected, but $A - B$ is not.\\
 				Let $ A = \{(x,0)\in \R^2|0\leq x\leq1\} $ and $ B=\{(x,0)\in \R^2|0<x<1\} $. Then, $ A-B= \{(0,0)\}\cup\{(1,0)\} $
 			\item[(c)] $A$ is connected, $B$ is disconnected, and $A \cap B$ is connected.
 				Let $A= \{B((0,0),1)\}$ and $ B=A\cup\{B(10,0),1)\} $. Notice, $ A $ is connected and $ B $ is disconnected. Then, $ A\cap B = A$.\\
 				 Thus, $ A\cap B $ is continuous as $ A $ is continuous.
-			\item[(d)] $A$ and $B$ are disconnected, but $A \cup B$ is connected.
+			\item[(d)] $A$ and $B$ are disconnected, but $A \cup B$ is connected.\\
+			Let $ A=\{[0,1]\cup[2,3]\} $ and $ B=\{[1,2]\cup[3,4]\} $. Notice, $ A $ and $ B $ are disconnected, but $ A\cup B = \{(x,0)\in\R^2|0\leq x \leq 4\} $ is connected.
 			\item[(e)] $A$ and $B$ are connected, $\mathrm { Cl } ( A ) \cap \mathrm { Cl } ( B ) \neq \varnothing ,$ and $A \cup B$ is disconnected.
 		\end{enumerate}
 		
@@ -96,7 +98,8 @@
 			$ X-\{c\}=\{a,b\} $ and the topology is $ \{\varnothing, \{b\},\{a,b\},X-\{c\}\} $. Thus, connected.\\
 			$ C $ is not a cutset.
 			\item[\textcolor{red}{(c)}] $C = \{ 0 \}$ and $X = P P \mathbb { R } _ { 0 } ,$ the particular point topology on $\mathbb { R }$ with the origin as the particular point.\\
-			$ C $ is a cutset.
+			$ \R  -\{0\} = (-\infty,0)\cup(0,\infty)$ which is closed. Thus, we cannot form two disjoint open nonempty sets such that their union is $ X $.\\ 
+			$ C $ is not a cutset.
 			\item[(d)]	$C = \{ - 1,1 \}$ and $X = \mathbb { R } _ { f c } ,$ the real line in the finite complement topology.\\
 			As we are on the real line, if we cut a point out we are no longer connected.
 			$ C $ is a cutset.
@@ -114,42 +117,57 @@
 		 	\item[(i)]  $C$ is a simple closed curve in $K ,$ and
 		 	\item[(ii)] $K - C$ is a union of two disjoint open sets such that the closure of
 		 	each in $K$ is homeomorphic to a Mobius band.
-		 \end{enumerate}\\
-	 	Yes, using the core curve of the Klein bottle we result in two Mobius bands that meet the requirements.
+		 \end{enumerate}
+	 	Yes, using the core curve of the Klein bottle we result in two Mobius bands that meet the requirements. (You cut the Klein bottle in half and you'll have two Mobius bands)
 		\item[6.24] Prove Theorem $6.20 :$ Let $f : X \rightarrow Y$ be a homeomorphism. If $S$ is a cutset of $X$ , then $f ( S )$ is a cutset of $Y .$
-		
-		\item[6.26] Prove that for every $n \geq 2$ neither the line nor the circle is homeomorphic to	$S ^ { n } .$
+			Suppose $ f: X \rightarrow Y $ is a homeomorphism and $ S $ is a cutset of $X$. Notice, $ X-S $ is disconnected. (WTS: $ Y-f(S) $ is disconnected).\\
+			 We can then restrict the domain of $ f $ to $ X-S $. Define $ f':X-S \rightarrow Y-f'(S) $. Note, $ f' $ is a homeomorphism since $ f $ is a bijection and restriction of continuous maps are continuous. Since, $ f' $ is a homeomorphism and $ X-S $ is disconnected, $ Y-f'(S) $ must also be disconnected.\\
+			 Therefore, $ f'(S) $ is a cutset of $ Y $
+		\item[\textcolor{red}{6.26}] Prove that for every $n \geq 2$ neither the line nor the circle is homeomorphic to	$S ^ { n } .$
 		
 		\item[6.32] Let $T : S ^ { 2 } \rightarrow \mathbb { R }$ be defined by equating the sphere with the surface of the Earth
 		and letting $T ( x )$ be the temperature at point $x$ on the surface at some given time.
-		Assume that $T$ is a continuous function. Show that if $T ($ Anchorage $) = - 30 ^ { \circ }$ and $T ($ Honolulu $) = 80 ^ { \circ }$ , there is some point on the Earth where the temperature	is $0 ^ { \circ } .$ Does the conclusion necessarily hold if we restrict the domain to the fifty United States? Does the conclusion hold in the United States if $T$ (Duluth) $=- 30 ^ { \circ }$ and $T ($ Fort Lauderdale $) = 80 ^ { \circ } ?$
+		Assume that $T$ is a continuous function. Show that if $T ($ Anchorage $) = - 30 ^ { \circ }$ and $T ($ Honolulu $) = 80 ^ { \circ }$ , there is some point on the Earth where the temperature	is $0 ^ { \circ } .$ Does the conclusion necessarily hold if we restrict the domain to the fifty United States? Does the conclusion hold in the United States if $T$ (Duluth) $=- 30 ^ { \circ }$ and $T ($ Fort Lauderdale $) = 80 ^ { \circ } ?$\\
 		
-		\item[6.33] Let $p ( x )$ be an odd-degree polynomial function. Prove that $p ( x ) = 0$ has at least one real solution.
+		No, as the fifty United States is disconnected and so the intermediate value theorem does not hold.\\
+		Yes, as the continental USA is connected, so the intermediate value theorem hold. Thus, there is a point where the temperature is $ 0^\circ $. 
+		
+		\item[6.33] Let $p ( x )$ be an odd-degree polynomial function. Prove that $p ( x ) = 0$ has at least one real solution.\\
+		Let $ p(x) $ be an odd-degree polynomial function. Notice, $ p $ is continuous as polynomial functions are continuous by definition. Suppose $ p(a') $ is some positive value $ a $ and $ p(b') = b $ is some negative value. Then by the intermediate value theorem we must that $ f(x)=0 $ for some $ x $.\\
+		\textcolor{red}{I never used anything about it being an odd-degree poloynomial. Also did a lot of assuming to make this work...}
 		
 		\item[6.36] Suppose that at a given time we measure the intensity of sunlight at each point on the Earth's surface. According to Theorem 6.26 , there must be a pair of points
 		opposite each other on the Earth's surface at which the intensity of sunlight is the same. However, if it is daytime at one point, it must be nighttime at the
-		point opposite it! Resolve the paradox.
+		point opposite it! Resolve the paradox.\\
+		The intensity of sunlight is matched on the opposing sides of Earth's surface. For example when a certain place is experiencing dawn and another place is experiencing twilight, the two places have the same intensity of sunlight. Thus, this the paradox is resolved as there are a pair of points opposite each other on the Earth's surface at which the intensity of sunlight is the same.
 		
-		\item[6.38] \begin{enumerate}
+		\item[\textcolor{blue}{6.38}] \begin{enumerate}
 			\item[(a)] Let $X$ be connected, and assume a homeomorphism $A : X \rightarrow X$ exists
 			such that $A \circ A ( x ) = x$ for all $x \in X .$ Prove that, for every continuous
-			function $f : X \rightarrow \mathbb { R }$ , there exists $x \in X$ such that $f ( x ) = f ( A ( x ) )$ .
+			function $f : X \rightarrow \mathbb { R }$ , there exists $x \in X$ such that $f ( x ) = f ( A ( x ) )$ .\\
+			Suppose $ A:X\rightarrow X $ is a a homeomorphism such that $ \forall x \in X, A\circ A(x) =x$ and $ f:X\rightarrow \R $ is continuous. Let $ x\in X $. Notice, $ A(A(x))=x $. So, $ A $ is its own inverse. Hence, $ A(x)=x $.\\
+			Thus, $ f(x)=f(A(x)) $\\
+			Therefore, $ \exists x\in X $ such that $ f(x)=f(A(x)) $ 
 			\item[(b)] Use the result from part (a) to prove that somewhere on a glazed doughnut
 			there is a point that has the same thickness of glazing as the point obtained
-			by 180 -degree rotation through the central axis of the doughnut. 
+			by 180 -degree rotation through the central axis of the doughnut. \\
+			Let $ X $ be our doughnut, our continuous function $ f $ be the thickness of the glaze, and $ A: X \rightarrow X $ be our rotation of the doughnut. By part (a), we have that there must exist a point $ x $ such that $ f(x)=f(A(x)) $. 
 		\end{enumerate}
 		
-		\item[6.39] Let $X = \{ a , b \}$ and assume that $X$ has the topology $\mathcal { T } = \{ \varnothing , \{ a \} , X \} .$ Show
-		that $X$ is path connected in this topology.
+		\item[6.39] Let $X = \{ a , b \}$ and assume that $X$ has the topology $\mathcal { T } = \{ \varnothing , \{ a \} , X \} .$ Show that $X$ is path connected in this topology.\\
+		We define a function $ f:[0,1]\rightarrow X $ with $ f(t)=(1-t)a+tb $. Notice, $ f(0)=a $ and $ f(1)=b $. $ f $ must also be continuous by definition. Thus, there is a path between any two point in $ X $.
+		\textcolor{red}{Is this enough? Do I need to say something about the topology itself?}
 		
 		\item[6.41] A set $C \subset \mathbb { R } ^ { n }$ is said to be star convex if there exists a point $p ^ { * } \in C$ such that
 		for every $p \in C ,$ the line segment in $\mathbb { R } ^ { n }$ joining $p ^ { * }$ and $p$ lies in $C .$ Prove that
-		if $C \subset \mathbb { R } ^ { n }$ is star convex, then $C$ is path connected in $\mathbb { R } ^ { n } .$
+		if $C \subset \mathbb { R } ^ { n }$ is star convex, then $C$ is path connected in $\mathbb { R } ^ { n } .$\\
+		Let $ C $ be a start convex. Then we must have a $ p*\in C $ and $ p\in C $ such that the line segment in $ \R^n $ joining $ p^* $ and $ p $ lies in $ C $. Thus, there exists a path for every two points in $ C $. Therefore, $ C $ is path connected.\\
+		\textcolor{red}{Look this one over again. Seems too easy and must be missing something in my understanding of the question.}
 		
 		\item[6.45] Prove that the $n$ -sphere $S ^ { n }$ is path connected for $n \geq 1 .$ (Hint: Find a surjective continuous function from a path connected space to $S ^ { n })$ 
 		
 		\item[6.51] Prove that if $f : X \rightarrow Y$ is a homeomorphism and $C$ is a path component of $X ,$ then $f ( C )$ is a path component of $Y .$
-	
+			Let $ f:X\rightarrow Y $ be a homeomorphism and $ C $ be a path component of $ X $. Notice, we then have
 	\end{enumerate}
 	\section*{Summary}
 	
