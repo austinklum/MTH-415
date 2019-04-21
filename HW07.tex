@@ -56,7 +56,9 @@
 		
 		\item[6.09] \textbf{Prove Theorem 6.12, parts(ii) and (iii):} Let $ X $ be a topological space.
 		\begin{enumerate}
-			\item[(a)]If $A$ is connected in $X ,$ then $A$ is a subset of a component of $X .$
+			\item[(a)]If $A$ is connected in $X ,$ then $A$ is a subset of a component of $X .$\\
+				Suppose $ A $ is connected in $ X $. Notice, there exists $ \sim_c $ defined by $ x \sim_c y $ for  $ x $ and $ y $ that lie in $A$. This forms a component of $ X $.\\
+				Therefore, $ A $ is a subset of a component of $ X $.
 			\item[(b)]Each component of $X$ is a closed subset of $X .$\\
 				Let $ C $ be a component of $ X $. We then know that $ C $ is connected in $ X $. Suppose $ x \in X $ and $ x\notin C $. Define $ B = C\cup \{x\} $, which is not connected. Let $ U,V $ form a separation of $ B $ and $ x\in U $. That is $ B=U\cup V $. Notice, $ U\cup C = \varnothing $ as if it weren't true $ U\cap C $ and $ V\cap C $ would form a separation of $ C $. But $ C $ is connected and thus cannot have a separation. \\
 				Thus, $ C $  has an open complement\\
@@ -123,7 +125,9 @@
 			Suppose $ f: X \rightarrow Y $ is a homeomorphism and $ S $ is a cutset of $X$. Notice, $ X-S $ is disconnected. (WTS: $ Y-f(S) $ is disconnected).\\
 			 We can then restrict the domain of $ f $ to $ X-S $. Define $ f':X-S \rightarrow Y-f'(S) $. Note, $ f' $ is a homeomorphism since $ f $ is a bijection and restriction of continuous maps are continuous. Since, $ f' $ is a homeomorphism and $ X-S $ is disconnected, $ Y-f'(S) $ must also be disconnected.\\
 			 Therefore, $ f'(S) $ is a cutset of $ Y $
-		\item[\textcolor{red}{6.26}] Prove that for every $n \geq 2$ neither the line nor the circle is homeomorphic to	$S ^ { n } .$
+		\item[\textcolor{red}{6.26}] Prove that for every $n \geq 2$ neither the line nor the circle is homeomorphic to	$S ^ { n } .$\\
+		Suppose not. That is suppose the line and the circle are homeomorphic to $ S^n $. Take a cutpoint in the line or the circle. We know that a singular point in is a cutset on the line and the circle. This does not hold for $ S^n $. This is a contradiction as $ S^n $ doesn't have a cutpoint but rather a cutset. \\
+		Therefore the line and the circle are not homeomorphic to $ S^n $.
 		
 		\item[6.32] Let $T : S ^ { 2 } \rightarrow \mathbb { R }$ be defined by equating the sphere with the surface of the Earth
 		and letting $T ( x )$ be the temperature at point $x$ on the surface at some given time.
@@ -164,13 +168,19 @@
 		Let $ C $ be a start convex. Then we must have a $ p*\in C $ and $ p\in C $ such that the line segment in $ \R^n $ joining $ p^* $ and $ p $ lies in $ C $. Thus, there exists a path for every two points in $ C $. Therefore, $ C $ is path connected.\\
 		\textcolor{red}{Look this one over again. Seems too easy and must be missing something in my understanding of the question.}
 		
-		\item[6.45] Prove that the $n$ -sphere $S ^ { n }$ is path connected for $n \geq 1 .$ (Hint: Find a surjective continuous function from a path connected space to $S ^ { n })$ 
-		
+		\item[6.45] Prove that the $n$ -sphere $S ^ { n }$ is path connected for $n \geq 1 .$ (Hint: Find a surjective continuous function from a path connected space to $S ^ { n })$ \\
+		Let $ f: \R^{n+1}-\{0\} \rightarrow S^n$ with $ f(x)=\frac{x}{|x|} $. Notice, as 0 is not in the domain, we must have that $ f $ is continuous. We define $ S^n = \{x\in\R^{n+1}| |x| = 1\} $. Then, $ f $ is surjective as all of $ S^n $ must be contained by $ \R^{n+1} -\{0\}$. Thus, suppose $ x \in S^n $, we then have $ f(x)=\frac{x}{1} = x $. Thus, $ f(x)\in S^n $\\
+		Since, $ f $ is continuous and $ \R^{n+1}-\{0\} $ is path connected, we then have $ f(\R^{n+1}-\{0\}) $ is a path connected subspace of $ S^n$. Note, as $ f $ is also a surjection we know $ f(\R^{n+1}-\{0\}) =  S^n $\\
+		Therefore, $ n $-sphere $ S^n{0} $ is path connected.
 		\item[6.51] Prove that if $f : X \rightarrow Y$ is a homeomorphism and $C$ is a path component of $X ,$ then $f ( C )$ is a path component of $Y .$
-			Let $ f:X\rightarrow Y $ be a homeomorphism and $ C $ be a path component of $ X $. Notice, we then have
+			Let $ f:X\rightarrow Y $ be a homeomorphism and $ C $ be a path component of $ X $. Let $x_1,x_2\in X$ such that $ x_2 \in C$ and $ x_1 \sim_x x_2 $. Notice, there must exist a continuous function $ g:[0,1]\rightarrow X $ such that $ g(0)= x_1$ and $ g(1)=x_2 $. Since the composition of continuous functions is continuous we have $ f\circ g:[0,1]\rightarrow Y $ is also a continuous function. Let $g' = f\circ g  $ and $ y_1 = f(x_1) $ and $ y_2=f(x_2) $. Observe.
+				\[g'(0)=f\circ g(0)=f(x_1)=y_1\]
+				\[g'(1)=f\circ g(1)=f(x_2)=y_2\]
+			Thus, $ g' $ maps paths from $ f(C) $ to $ Y $. \\
+			Therefore, $ f(c) $ is a path component of $ Y $.
 	\end{enumerate}
 	\section*{Summary}
-	
+	I am getting a better handle on the material in class. I have been spending significant more time going to office hours and working on the homeworks over multiple sessions. I'm still having a difficult time, but the situation does not seem entirely hopeless now. These next 4 weeks are going to be grueling and long, but will be very rewarding once completed. I plan on continuing to come to office hours often and working on the homework well in advance so I can ask better questions.
 \end{document}
 
 
