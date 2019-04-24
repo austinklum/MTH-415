@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+\pagestyle{fancy} \lhead{MTH 415 Study Guide} \chead{Exam 2}
+\rhead{Austin Klum} 
+\lfoot{} \cfoot{} \rfoot{}
+
+\setcounter{section}{6}
+
+\section{Compactness 7.1}
+	Let $A$ be a subset of a topological space $X ,$ and let $\mathcal { O }$ be a collection of subsets of $ X $
+	\subsection{Definition of Cover}
+		The collection $\mathcal { O }$ is said to \textbf{cover} $A$ if $A$ is
+		contained in the union of the sets in $\mathcal { O }$ .
+	\subsection{Definition of Open Cover}
+		If $\mathcal { O }$ covers $A ,$ and each set in $\mathcal { O }$ is open, then we call $\mathcal { O }$ an \textbf{ open cover} of $A .$ 
+	\subsection{Definition of Subcover}
+		If $\mathcal { O }$ covers $A ,$ and $\mathcal { O } ^ { \prime }$ is a subcollection of $\mathcal { O }$ that also covers $A$
+		then $\mathcal { O } ^ { \prime }$ is called a \textbf{subcover} of $\mathcal { O } .$\\
+		
+	\subsection{Definition of Compact}
+		A topological space $X$ is \textbf{compact} if every open cover of $ X $ has a finite subcover.
+	
+	\subsection{Definition of Compact In}
+		Let $X$ be a topological space, and assume $A \subset X .$ Then $A$ is said to be \textbf{compact in} $X$ if $A$ is compact in the subspace topology inherited from $X .$ 
+		
+	
+	\subsection{Lemma: Checks weather or not a subspace A is compact}
+			Let $X$ be a topological space, and assume $A \subset X .$ Then $ A $ is compact in $ X $ if and only if every cover of $A$ by sets that are open in $X$ has a finite subcover.\\
+			\\
+			Proof:\\
+			Let $A$ be compact in $X ,$ and suppose that $\mathcal { O }$ is a cover of $A$ by
+			open sets in $X .$ Then $\mathcal { O } ^ { \prime } = \{ U \cap A | U \in \mathcal { O } \}$ is a cover of $A$ by open sets in $A .$ Hence, there exists a finite subcover $\left\{ U _ { 1 } \cap A , U _ { 2 } \cap A , \ldots , U _ { n } \cap A \right\}$
+			of $\mathcal { O } ^ { \prime } .$ But then $\left\{ U _ { 1 } , U _ { 2 } , \ldots , U _ { n } \right\}$ is a finite subcover of $\mathcal { O }$ . Therefore
+			every cover of $A$ by open sets in $X$ has a finite subcover.\\
+			\\
+			Conversely, suppose every cover of $A$ by sets that are open in $X$
+			has a finite subcover. Let $\mathcal { O } = \left\{ V _ { \beta } \right\} _ { \beta \in B }$ be a cover of $A$ by open sets
+			in $A .$ Then, by definition of the subspace topology, for each $V _ { \beta }$ there vis an open set $U _ { \beta }$ in $X$ such that $V _ { \beta } = U _ { \beta } \cap A .$ It follows that the
+			collection $\mathcal { O } ^ { \prime } = \left\{ U _ { B } \right\} _ { B \in R }$ is a cover of $A$ by open sets in $X$ . Since $\mathcal { O } ^ { \prime }$ has a finite subcover $\left\{ U _ { \beta _ { 1 } } , \ldots , U _ { \beta _ { n } } \right\} ,$ it follows that $\left\{ V _ { \beta _ { 1 } } , \ldots , V _ { \beta _ { n } } \right\}$ is a
+			finite subcover of $\mathcal { O }$ . Thus every cover of $A$ by open sets in $A$ has a finite subcover, and therefore $ A $ is compact.\\
+	\subsection{Compactness will be preserved through continuous functions}
+		Let $f : X \rightarrow Y$ be continuous, and let $A$ be compact in $X .$ Then $ f(A) $ is compact in $ Y $.\\
+		Proof:\\
+		
+	\subsection{Compact sets unioned together are compact}
+		Let $ X $ be a topological space. If $C _ { 1 } , \ldots , C _ { n }$ are each compact in $X ,$ then $U _ { j = 1 } ^ { n } C _ { j }$ is compact	in $X .$
+	\subsection{Intersection of Hausdorff compact sets are compact}
+		If $X$ is Hausdorff, and $\left\{ C _ { \alpha } \right\} _ { \alpha \in A }$ is a collection of sets that are	compact in $X ,$ then $\bigcap _ { \alpha \in A } C _ { \alpha }$ is compact in $X$ .
+	\subsection{If a subset of a compact set is closed, then that subset is also compact}
+		Let $X$ be a topological space and let $D$ be compact in $X $. If $C$ is closed in $X ,$ and $C \subset D ,$ then $C$ is compact in $X$ .
+	\subsection{All compact subsets of a Hausdorff space are closed}
+	 	Let $X$ be a Hausdorff topological space and $A$ be compact in $X$ . Then $A$ is closed in $X .$
+	 \subsection{Tube Lemma i.e. You can take a slice of a space and it'll be compact still}
+		 Let $X$ and $Y$ be topological spaces, and assume that $Y$ is compact. If $x \in X ,$ and $U$ is an open set in $X \times Y$ containing $\{ x \} \times Y ,$ then there exists a neighborhood $W$ of $x$ in $X$ such that $W \times Y \subset U$.
+	\subsection{Product topology preserves compactness}
+		THEOREM $7.10 .$ If $X$ and $Y$ are compact topological spaces, then the product $X \times Y$ is compact.
+	\setcounter{section}{6}
+\section{Compactness in Metric Spaces 7.2}
+	\subsection{Closed Bounded Intervals are compact}
+		Every closed and bounded interval $[ a , b ]$ is a compact subset of $\mathbb { R }$ with the standard topology.	
+	\subsection{Product of closed bounded intervals are compact}
+		Let $\left[ a _ { 1 } , b _ { 1 } \right] , \ldots , \left[ a _ { n } , b _ { n } \right]$ be closed bounded intervals in R. Then $\left[ a _ { 1 } , b _ { 1 } \right] \times \ldots \times \left[ a _ { n } , b _ { n } \right]$ is a compact subset of $\mathbb { R } ^ { n }$
+	
+	\subsection{The standard topology in standard metric in $ \R^n $ is compact iff it is closed and bounded}
+	Let $\mathbb { R } ^ { n }$ have the standard topology and the standard metric
+	d. A set $A \subset \mathbb { R } ^ { n }$ is compact in $\mathbb { R } ^ { n }$ if and only if it is closed and bounded.
+	
+	\subsection{In a metric space with compact subset $ A $, if there is a sequence, then there is a subsequence that converges to a limit in $ A $}
+	Let $( X , d )$ be a metric space, and assume that $A$ is compact in $X .$ If $\left( x _ { n } \right)$ is a sequence in $A ,$ then there exists a subsequence $\left( x _ { n _ { m } } \right)$ of $\left( x _ { n } \right)$
+ 	that converges to a limit in $A .$
+ 	\subsection{Definition of Cauchy Sequence}
+		 Let $( X , d )$ be a metric space. A sequence $\left( x _ { n } \right)$ in $X$ is
+		called a \textbf{ Cauchy Sequence } if for every $\varepsilon > 0$ there exists $N \in \mathbb { Z } _ { + }$ such that $d \left( x _ { n } , x _ { m } \right) < \varepsilon$ for every $n , m \geq N$
+	\subsection{With everything standard, a Cauchy Sequence converges to a limit}
+		Let $\left( x _ { n } \right)$ be a Cauchy sequence in $\mathbb { R } ^ { n }$ with the standard metric $d .$ Then $\left( x _ { n } \right)$ converges to a limit in $\mathbb { R } ^ { n }$ .
+	\subsection{Definition of Complete}
+		A metric space $X$ is called \textbf{complete} if every Cauchy sequence in $X$ converges to a limit in $X$ .
+\end{document}
