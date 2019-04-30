@@ -48,7 +48,7 @@
 		
 		\item[7.12] Show that the Tube Lemma does noes not necessarily hold if we drop the assumption that $Y$ is compact. That is, provide an example of a noncompact space $Y$ and
 		an open set $U$ in $X \times Y$ such that $U$ contains a slice $\{ x \} \times Y \subset X \times Y$ but does not contain an open tube $W \times Y$ containing the slice.\\
-		Consider the space $ \R $ and open set defined as $ U = \{(x,y)||x\cdot y < 1\} $. Notice, $ U $ contains $ \{0\}\times \R $, but cannot contain the a tube. But for $ U $ to contain $ \{0\} $, we would have $ U =\{0\} $ which is not open.\\
+		Consider the space $ \R $ and open set defined as $ U = \{(x,y)| |x\cdot y| < 1\} $. Notice, $ U $ contains $ \{0\}\times \R $, but cannot contain the a tube. But for $ U $ to contain $ \{0\} $, we would have $ U =\{0\} $ which is not open.\\
 		 Thus, we must have $ Y $ to compact for the Tube Lemma to hold true.
 		
 		\item[7.17] Use compactness to prove that the plane is not homeomorphic to the sphere.
@@ -57,13 +57,20 @@
 		
 		\item[7.18] In this exercise we demonstrate that if we drop the condition that $X$ is Hausdorff in Theorem 7.6 , then the intersection of compact sets in $X$ is not necessarily a compact set. Define the extra-point line as follows. Let $X = \mathbb { R } \cup \left( p _ { e } \right)$, where $p _ { e }$ is an extra point, not contained in $\mathbb { R }$. Let $\B$ be the collection of	subsets of $X$ consisting of all intervals $( a , b ) \subset \mathbb { R }$ and all sets of the form $( c , 0 ) \cup \left\{ p _ { e } \right\} \cup ( 0 , d )$ for $c < 0$ and $d > 0$.\\
 		\begin{enumerate}
-			\item[(a)] Prove that $\mathcal { B }$ is a basis for a topology on $X .$
+			\item[(a)] Prove that $\mathcal { B }$ is a basis for a topology on $X .$\\
+			Let $ x \in X $ with $ B =\{(x-\varepsilon,x+\varepsilon)|\varepsilon > 0\} $. Thus, every point, including the extra point, is contained in a basis element.\\
+			\\
+			Let $ B_1, B_2 \in \B $ and $ x\in B_1 \cap B_2 $. Notice, as $ B_1 $ and $ B_2 $ are open intervals their intersection would also be open. Thus, there exists a $ B_3 $ such that $ x\in B_3 \subset B_1\cap B_2 $.\\
+			Therefore, $ \B $ is a basis for a topology $ X $.
 			
 			\item[(b)] Show that the resulting topology on $X$ is not Hausdorff.
-			
+			Let $ x,y\in X $ with $ U = \{(x-\varepsilon,x+\varepsilon)|\varepsilon>0\} $ and $ V = \{(y-\delta,y+\delta)|\delta > 0\} $. Without loss of generality suppose $ x < y $, then we can define $ \varepsilon=\delta=\frac{y-x}{2} $. 
+			Thus, $ U\cap V = \varnothing $. But, the extra point is not part of $ \R $. That is $ U\cap V \neq \varnothing $. \\
+			Therefore, $ X $ is not Hausdorff.
 			\item[(c)] Find two compact subsets of $X$ whose intersection is not compact. Prove
-			that the sets are compact and that the intersection is not.
-			
+			that the sets are compact and that the intersection is not.\\
+			Let $ A = \{\{pe\}\cup 0\} $ and $ B=\{\{pe\}\cup 0\} $. Notice, $ [-1,1] -\{0\}\cup A$ is compact and $ [-1,1]-\{0\}\cup B $ is compact. But $ ([-1,1]-\{0\}\cup A)\cap ( [-1,1]-\{0\}\cup B ) $ is missing the extra point and origin. \\ 
+			Therefore, their intersection is not compact.
 		\end{enumerate}
 		
 		\item[7.19] \begin{enumerate}
@@ -80,6 +87,7 @@
 		\end{enumerate}
 	\end{enumerate}
 	\section*{Summary}
+	I'm super worried about his upcoming exam. Going to office hours a ton has helped, but I'm not sure if I'll be ready for the exam. There were so many topics we covered, I'm not sure if the 4 questions on the exam will be able to accurately reflect my understanding. There's so many different areas to study and I'm concerned if I study the bigger topics a lot since they're the ``most important", I will not have as great of an of understanding on the ``less important" topics which of course will be on the exam and frustrate me even more since "I know I've seen it...". The quizzes have also not been going well for me. I like the idea as it allows for a greater understating of the problem stated.
 \end{document}
 
 

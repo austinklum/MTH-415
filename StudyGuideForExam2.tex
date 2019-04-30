@@ -1,14 +1,18 @@
 \documentclass[12pt]{article}
 \usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
 \usepackage{color,soul}
+
 \newtheorem{theorem}{Theorem}[section]
-
-
 \newtheorem{claim}[theorem]{Claim}
 \newcommand{\Z}{\mathds{Z}}
 \newcommand{\R}{\mathds{R}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\T}{\mathcal{T}}
+\newcommand{\w}[1]{\textcolor{red}{#1}}
+
+\newenvironment{proofed}[1][]{\par \medskip \noindent \textbf{#1 Proof: }}{\hfill$\square$}
+\newenvironment{defn}[2][]{\par \medskip \noindent \textbf{#1 Definition of \large#2 \medskip \\}}{\rmfamily \medskip}
+\newenvironment{thm}[2][]{\par \medskip \noindent \textbf{#1 Theorem about \large#2 \medskip \\}}{\rmfamily \medskip}
 
 
 \topmargin        -0.2 in
@@ -40,8 +44,21 @@
 	\subsection{Theorem that a function is continuous if and only if the preimage of the basis elements is open}
 		Let $X$ and $Y$ be topological spaces and $\mathcal { B }$ be a basis for the
 		topology on $Y$ . Then $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( B )$ is open
-		in $X$ for every $B \in \mathcal { B }$ .\\
-		\subitem Proof on page 132
+		in $X$ for every $B \in \mathcal { B }$ .
+	\begin{proofed}
+			Suppose $f : X \rightarrow Y$ is continuous. Then $f ^ { - 1 } ( V )$ is open in
+		$X$ for every $V$ open in $Y .$ Since every basis element $B$ is open in $Y ,$ it
+		follows that $f ^ { - 1 } ( B )$ is open in $X$ for all $B \in \mathcal { B }$ .\\
+		\\
+		Now, suppose $f ^ { - 1 } ( B )$ is open in $X$ for every $B \in \mathcal { B } .$ We show that
+		$f$ is continuous. Let $V$ be an open set in $Y$ . Then $V$ is a union of basis
+		elements, say $V = \cup B _ { \alpha }$ . Thus,
+			\[f ^ { - 1 } ( V ) = f ^ { - 1 } \left( \cup B _ { \alpha } \right) = \cup f ^ { - 1 } \left( B _ { \alpha } \right)\]
+		By assumption, each set $f ^ { - 1 } \left( B _ { \alpha } \right)$ is open in $X ;$ therefore so is their
+		union. Thus, $f ^ { - 1 } ( V )$ is open in $X$ , and it follows that the preimage of
+		every open set in $Y$ is open in $X$ . Hence, $f$ is continuous.
+	\end{proofed}
+
 		
 	\subsection{Theorem that every polynomial is continuous}
 		Let $\mathbb { R }$ have the standard topology. Then every polynomial
@@ -49,8 +66,14 @@
 		
 	\subsection{Theorem that says the closure of a subset maps to part of the closure of the superset}
 		Let $f : X \rightarrow Y$ be continuous and assume that $A \subset X .$ If
-		$x \in C l ( A ) ,$ then $f ( x ) \in C l ( f ( A ) )$.\\
-		\subitem Proof on page 134
+		$x \in C l ( A ) ,$ then $f ( x ) \in C l ( f ( A ) )$.
+	\begin{proofed}
+		Suppose that $f : X \rightarrow Y$ is continuous, $x \in X ,$ and $A \subset X$ .
+		We prove that if $f ( x ) \notin \operatorname { Cl } ( f ( A ) ) ,$ then $x \notin C l ( A ) .$ Thus suppose that $f ( x ) \notin \operatorname { Cl } ( f ( A ) ) .$ By Theorem 2.5 there exists an open set $U$ containing
+		$f ( x ) ,$ but not intersecting $f ( A ) .$ It follows that $f ^ { - 1 } ( U )$ is an open set
+		containing $x$ that does not intersect $A$ . Thus $x \notin C I ( A ) ,$ and the result
+		follows.
+	\end{proofed}
 		
 	\subsection{Translation of $ \varepsilon - \delta $}
 		Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if, for every $x \in X$ and every open set $U$ containing $f ( x )$ , there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U$ .\\
@@ -58,28 +81,135 @@
 		$ \forall x\in X \text{ and every open set } U \text{ containing } f(x), \exists \text{ neighborhood } V \text{ of } x,$ such that $ f(V)\subset U $
 	
 	\subsection{Theorem that a function is continuous if and only if every element has a neighborhood containing $ f(x) $, there exists a neighbor$ V $ of $ x $ such that $ f(V)\subset U $}
-		A function $f : X \rightarrow Y$ is continuous in the open set definition of continuity if and only if for every $x \in X$ and every open set $U$ containing $f ( x ) ,$ there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U$\\
-		\subitem Proof on page 135
+		A function $f : X \rightarrow Y$ is continuous in the open set definition of continuity if and only if for every $x \in X$ and every open set $U$ containing $f ( x ) ,$ there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U$
+		\begin{proofed}
+			First, suppose that the open set definition holds for functions
+			$f : X \rightarrow Y .$ Let $x \in X$ and an open set $U$ C $Y$ containing $f ( x )$ be
+			given. Set $V = f ^ { - 1 } ( U ) .$ It follows that $x \in V$ and that $V$ is open in $X$
+			since $f$ is continuous by the open set definition. Clearly $f ( V ) \subset U ,$ and
+			therefore we have shown the desired result.\\
+			\\
+			Now assume that for every $x \in X$ and every open set $U$ containing
+			$f ( x )$ , there exists a neighborhood $V$ of $x$ such that $f ( V ) \subset U .$ We show
+			that $f ^ { - 1 } ( W )$ is open in $X$ for every open set $W$ in $Y$ . Thus let $W$ be an arbitrary open set in $Y .$ To show that $f ^ { - 1 } ( W )$ is open in $X ,$ choose an
+			arbitrary $x \in f ^ { - 1 } ( W ) .$ It follows that $f ( x ) \in W ,$ and therefore there
+			exists a neighborhood $V _ { x }$ of $x$ in $X$ such that $f \left( V _ { x } \right) \subset W ,$ equivalently,
+			such that $V _ { x } \subset f ^ { - 1 } ( W ) .$ Thus, for an arbitrary $x \in f ^ { - 1 } ( W )$ there exists an open set $V _ { x }$ such that $x \in V _ { x } \subset f ^ { - 1 } ( W ) .$ Theorem 1.4 implies that
+			$f ^ { - 1 } ( W )$ is open in $X .$
+		\end{proofed}
 	\subsection{Theorem that converges points will converge given a function}
 		 Assume that $f : X \rightarrow Y$ is continuous. If a sequence
 		$\left( x _ { 1 } , x _ { 2 } , \ldots \right)$ in $X$ converges to a point $x ,$ then the sequence $\left( f \left( x _ { 1 } \right) , f \left( x _ { 2 } \right) , \ldots \right)$
-		in $Y$ converges to $f ( x )$ .\\
-			\subitem Proof on page 135
+		in $Y$ converges to $f ( x )$ .
+		\begin{proofed}
+			Let $U$ be an arbitrary neighborhood of $f ( x )$ in $Y .$ Since $f$ is
+			continuous, $f ^ { - 1 } ( U )$ is open in $X$ . Furthermore, $f ( x ) \in U$ implies that
+			$x \in f ^ { - 1 } ( U ) .$ The sequence $\left( x _ { 1 } , x _ { 2 } , \ldots \right)$ converges to $x ;$ thus, there exists $N \in Z _ { + }$ such that $x _ { n } \in f ^ { - 1 } ( U )$ for all $n \geq N .$ It follows that
+			$f \left( x _ { n } \right) \in U$ for all $n \geq N ,$ and therefore the sequence $\left( f \left( x _ { 1 } \right) , f \left( x _ { 2 } \right) , \ldots \right)$
+			converges to $f ( x )$
+		\end{proofed}
 	\subsection{Theorem that we can map closed sets between each other}
 		Let $X$ and $Y$ be topological spaces. A function $f : X \rightarrow Y$ is continuous if and only if $f ^ { - 1 } ( C )$ is closed in $X$ for every closed set $C \subset Y .$
+		\begin{proofed}[My]
+			Let $ C $ be a closed set in $ Y $. Notice, $ Y - C$ is open in $ Y $ and so $ f^{-1}(Y-C) $ must also be open in $ X $. \\
+			We claim that $ f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C) $ and is open.\\
+			We define $ f^{-1}(Y-C) = \{x\in X| f(x)\in Y-C \} $. This implies that $ f(x)\in Y $ and $ f(x)\not \in C $. We also define $ f^{-1}(Y)=\{x\in X|f(x)\in Y \} $ and $ f^{-1}(C)=\{x\in X| f(x)\in C\} $ Thus, $ f^{-1}(Y)-f^{-1}(C) $ implies $ f(x)\in Y $ and $ f(x)\not\in C $. Notice, this is our definition of $f^{-1}(Y-C)$.\\
+			Thus, $ f^{-1}(Y-C) \subseteq f^{-1}(Y)-f^{-1}(C)  $\\
+			Going the other direction, we have the definition of $f^{-1}(Y)-f^{-1}(C) $ from our implication of $ f^{-1}(Y-C) $\\
+			Thus, $ f^{-1}(Y)-f^{-1}(C) \subseteq f^{-1}(Y-C) $\\
+			Therefore,  $ f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C) $ \w{(Thank you for recognizing this needed to be proved.) }\\
+			Since, $ f^{-1}(Y) $ is defined to be $ \{x\in X| f(x)\in Y\} $ we know that $ f^{-1}(Y)\subseteq X $. But since all of $ X $ is mapped in the preimage we also have $ X\subseteq f^{-1}(Y) $. Thus, $ f^{-1}(X)=Y $\w{(You mean $ f^{-1}(Y)=X $)}\\
+			Taking $ X-C $ will result in an open set as $ X-C=X\cap C^\complement $ and since $ C^\complement $ is open and the intersection of open sets are open.\\
+			Observe.
+			\[f^{-1}(Y-C)=f^{-1}(Y)-f^{-1}(C)=X-f^{-1}(C)\]
+			Thus, $ f^{-1}(C) $ must be closed by our previous result.\\
+			\\
+			Suppose, $ f^{-1}(C) $ is closed. We then know that $X-f^{-1}(C)$ must be open. Notice, that $ X=f^{-1}(Y) $. Observe. 
+			\[X-f^{-1}(C) = f^{-1}(Y)-f^{-1}(C) = f^{-1}(Y-C) \]
+			As, $ Y - C $ is open and $ f^{-1}$ is defined with an arbitrary open set $ U $ as $ f^{-1}(U)=\{x\in X| f(x)=U\} $, we then have that $ f^{-1} $ maps open sets to open sets.\\
+			Thus, $ f $ must be continuous.\w{5/5 }
+		\end{proofed}
 	\subsection{Theorem that function composition works for continuity}
 		Let $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ be continuous. Then the
-		composition function, $g \circ f : X \rightarrow Z ,$ is continuous.\\
-		\subitem Proof on page 136
+		composition function, $g \circ f : X \rightarrow Z ,$ is continuous.
+		\begin{proofed}
+			Suppose that $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ are continuous,
+			and let $U$ be an open set in $Z$ . Then $( g \circ f ) ^ { - 1 } ( U ) = f ^ { - 1 } \left( g ^ { - 1 } ( U ) \right)$ ,
+			since $g$ is continuous, $g ^ { - 1 } ( U )$ is open in $Y$ , and since $f$ is continuous, $f ^ { - 1 } \left( g ^ { - 1 } ( U ) \right)$ is open in $X .$ Thus, $( g \circ f ) ^ { - 1 } ( U )$ is open in $X$ for an arbitrary $U$ open in $Z ,$ implying that $g \circ f$ is continuous.
+		\end{proofed}
 	\subsection{The Pasting Lemma}
 		Let $ X $ be a topological space and let $ A $ and $B$ be closed subsets of $X$ such that $A \cup B = X .$ Assume that $f : A \rightarrow Y$ and $g : B \rightarrow Y$ are continuous and $f ( x ) = g ( x )$ for all $x$ in $A \cap B .$ Then $h : X \rightarrow Y ,$ defined by
 			\[h ( x ) = \left\{ \begin{array} { l l } { f ( x ) \text { if } x \in A } \\ { g ( x ) \text { if } x \in B } \end{array} \right.\]
-		is a continuous function.\\
-		\subitem Proof on page 137
+		is a continuous function.
+		\begin{proofed}
+			Proof. By Theorem 4.8 , it suffices to show that if $C$ is closed in $Y$ ,
+			then $h ^ { - 1 } ( C )$ is closed in $X .$ Thus suppose that $C$ is closed in $Y .$ Note
+			that $h ^ { - 1 } ( C ) = f ^ { - 1 } ( C ) \cup g ^ { - 1 } ( C ) .$ since $f$ is continuous, it follows by Theorem 4.8 that $f ^ { - 1 } ( C )$ is closed in $A$ . Theorem 3.4 then implies that
+			$f ^ { - 1 } ( C ) = D \cap A$ where $D$ is closed in $X$ . Now, $D$ and $A$ are both closed
+			in $X ,$ and $f ^ { - 1 } ( C ) = D \cap A ;$ therefore $, f ^ { - 1 } ( C )$ is closed in $X .$ Similarly, $g ^ { - 1 } ( C )$ is closed in $X .$ Thus, $h ^ { - 1 } ( C )$ is the union of two closed sets in
+			$X$ and therefore is closed in $X$ as well. It follows that $h$ is continuous. 
+		\end{proofed}
 	\subsection{Definition of a Homeomorphism}
 		Let $X$ and $Y$ be topological spaces, and let $f : X \rightarrow Y$ be a bijection with inverse $f ^ { - 1 } : Y \rightarrow X .$ If both $f$ and $f ^ { - 1 }$ are continuous functions, then $f$ is said to be a \textbf{homeomorphism}. If there exists a homeomorphism between $X$ and $Y ,$ we say that $X$ and $Y$ are \textbf{homeomorphic} or \textbf{topologically equivalent}, and we denote this by $X \cong Y .$
 	\subsection{Facts about Homeomorphisms}
 		\[\begin{array} { l } { \text { (i) The function } i d : X \rightarrow X , \text { defined by } i d ( x ) = x , \text { is a homeomorphism. } } \\
 		 { \text { (ii) If } f : X \rightarrow Y \text { is a homeomorphism, then so is } f ^ { - 1 } : Y \rightarrow X \text { . } } \\
 		  { \text { (iii) If } f : X \rightarrow Y \text { and } g : Y \rightarrow Z \text { are homeomorphisms, then so is }  g \circ f : X \rightarrow Z } \end{array}\]
+		 \\
+	\begin{defn}[4.15]{Embedding}
+			An \textbf{embedding} of $X$ in $Y$ is a function $f : X \rightarrow Y$ that
+			maps $X$ homeomorphically to the subspace $f ( X )$ in $Y .$
+	\end{defn} 
+	\begin{defn}[4.16]{Arc \& Simple Closed Curve}
+			Let $X$ be a topological space. If $f : [ - 1,1 ] \rightarrow X$ is an
+			embedding, then the image of $f$ is called an \textbf{arc} in $X$ , and if $f : S ^ { 1 } \rightarrow X$ is an embedding, then the image of $f$ is called a \textbf{simple closed curve} in $X$ .
+	\end{defn}
+	\begin{thm}[4.17]{Hausdorffness being a topological property}	  
+		If $f : X \rightarrow Y$ is a homeomorphism and $X$ is Hausdorff,
+		then $Y$ is Hausdorff.
+		\begin{proofed}
+			Suppose that $X$ is Hausdorff and $f : X \rightarrow Y$ is a homeomorphism. Let $x$ and $y$ be distinct points in $Y .$ Then $f ^ { - 1 } ( x )$ and $f ^ { - 1 } ( y )$ are distinct points in $X .$ Thus, there exist disjoint open sets $U$ and $V$ containing $f ^ { - 1 } ( x )$ and $f ^ { - 1 } ( y ) ,$ respectively. It follows that $f ( U )$ and
+			$f ( V )$ are disjoint open sets containing $x$ and $y$ , respectively. Therefore
+			$Y$ is Hausdorff.
+		\end{proofed}
+	\end{thm}
+	
+	\begin{defn}{Topological Property}
+		A property of topological spaces that is preserved by homeomorphism is
+		said to be a \textbf{topological property.}
+	\end{defn}
+
+	\section{Metric Spaces}
+	\begin{defn}[5.1]{Metric}
+		A \textbf{metric} on a set $X$ is a function  $d : X \times X \rightarrow \mathbb { R }$ with the following properties:
+		\begin{enumerate}
+			\item[(O)]  $d ( x , y ) = 0$ for some $x , y \in X ;$ if and only if $x = y$
+			\item[(i)] $d ( x , y ) \geq 0$ for all $x , y \in X$
+			\item[(ii)]  $d ( x , y ) = d ( y , x )$ for all $x , y \in X$
+			\item[(iii)] $d ( x , y ) + d ( y , z ) \geq d ( x , z )$ for all $x , y , z \in X$
+		\end{enumerate}
+	\end{defn}
+	
+	\begin{defn}{Metric Space}
+		We call $d ( x , y )$ the distance between $x$ and $y ,$ and we call the pair $( X , d )$ , consisting of the set $X$ and the metric $d$ , a \textbf{metric space}.
+	\end{defn}
+
+	\begin{defn}{Standard Metric}
+		Given points $ p = {(p_1,p_2)} $ and $ q = (q_1,q_2) $
+		\[d ( p , q ) = \sqrt { \left( p _ { 1 } - q _ { 1 } \right) ^ { 2 } + \left( p _ { 2 } - q _ { 2 } \right) ^ { 2 } }\]
+		We call $d$ the\textbf{ standard metric} on $\mathbb { R } ^ { 2 }$ . This metric measures the straight-line distance between points in the plane.
+	\end{defn}
+
+	\begin{defn}{Taxicab Metric}
+		Given points $ p = {(p_1,p_2)} $ and $ q = (q_1,q_2) $
+		\[d _ { M } ( p , q ) = \max \left\{ \left| p _ { 1 } - q _ { 1 } \right| , \left| p _ { 2 } - q _ { 2 } \right| \right\}\]
+		We call $d$ the\textbf{ max metric} on $\mathbb { R } ^ { 2 }$ . The distance in this metric is the maximum of the differences between their coordinates.
+	\end{defn}
+		  
+	\begin{defn}{Taxicab Metric}
+		Given points $ p = {(p_1,p_2)} $ and $ q = (q_1,q_2) $
+		\[d _ { T } ( p , q ) = \left| p _ { 1 } - q _ { 1 } \right| + \left| p _ { 2 } - q _ { 2 } \right|\]
+		We call $d$ the\textbf{ taxicab metric} on $\mathbb { R } ^ { 2 }$ . This metric measures the total distance traveled vertically and horizontally. (Traveling in a grid)
+	\end{defn}
+		  
 \end{document}

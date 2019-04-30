@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  23 MAR 2019 15:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  30 APR 2019 09:08
 entering extended mode
 **./StudyGuideForExam2.tex
 (StudyGuideForExam2.tex
@@ -138,18 +138,18 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
  (StudyGuideForExam2.aux)
 \openout1 = `StudyGuideForExam2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (D:\Programs\MiKTeX2.9.6520\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -165,70 +165,60 @@ LaTeX Font Info:    ... okay on input line 23.
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks25
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 36.
  (D:\Programs\MiKTeX2.9.6520\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (D:\Programs\MiKTeX2.9.6520\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 35--39
+Underfull \hbox (badness 10000) in paragraph at lines 39--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 49--56
 
  []
 
 [1{C:/Users/Austin Klum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 64--67
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 86--100
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
-[2] [3] (StudyGuideForExam2.aux) ) 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+[4] [5] (StudyGuideForExam2.aux) ) 
 Here is how much of TeX's memory you used:
- 1991 strings out of 493312
- 23969 string characters out of 3139339
- 82254 words of memory out of 3000000
- 5540 multiletter control sequences out of 15000+200000
+ 2000 strings out of 493312
+ 24023 string characters out of 3139339
+ 84395 words of memory out of 3000000
+ 5549 multiletter control sequences out of 15000+200000
  13053 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,43p,475b,202s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,11n,43p,475b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Programs/MiKTeX2.9.6520/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfont
 s/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi
@@ -237,10 +227,11 @@ s/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi
 MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.6
 520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on StudyGuideForExam2.pdf (3 pages, 98700 bytes).
+lic/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on StudyGuideForExam2.pdf (5 pages, 126816 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
