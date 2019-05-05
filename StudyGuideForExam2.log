@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  30 APR 2019 09:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.4.24)  1 MAY 2019 07:04
 entering extended mode
 **./StudyGuideForExam2.tex
 (StudyGuideForExam2.tex
@@ -210,28 +210,135 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
-[4] [5] (StudyGuideForExam2.aux) ) 
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 241--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--278
+
+ []
+
+[7]
+Overfull \hbox (3.31584pt too wide) in paragraph at lines 283--288
+\OT1/cmr/bx/n/12 5.18 The-o-rem about \OT1/cmr/bx/n/14.4 A topol-ogy is bounded
+ if it is in-duced by a bounded
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 311--318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 347--356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--388
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+[11]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 411.
+
+ (D:\Programs\MiKTeX2.9.6520\tex\latex\doublestroke\udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [12]
+(StudyGuideForExam2.aux) ) 
 Here is how much of TeX's memory you used:
- 2000 strings out of 493312
- 24023 string characters out of 3139339
- 84395 words of memory out of 3000000
- 5549 multiletter control sequences out of 15000+200000
- 13053 words of font info for 54 fonts, out of 3000000 for 9000
+ 2015 strings out of 493312
+ 24307 string characters out of 3139339
+ 85395 words of memory out of 3000000
+ 5558 multiletter control sequences out of 15000+200000
+ 13629 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,43p,475b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Programs/MiKTeX2.9.6520/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:
-/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/
-MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.6
-520/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/pub
-lic/amsfonts/symbols/msam10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on StudyGuideForExam2.pdf (5 pages, 126816 bytes).
+ 27i,12n,43p,475b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Austin Klum\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\public\doublestroke\dpi720\dsrom12.pk><D:/Programs/MiKTeX2.9.6520/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Pro
+grams/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programs/MiKT
+eX2.9.6520/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programs/MiKTeX2.9.6520/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/a
+msfonts/cm/cmsy6.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/symbols/msam
+10.pfb><D:/Programs/MiKTeX2.9.6520/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on StudyGuideForExam2.pdf (12 pages, 187332 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

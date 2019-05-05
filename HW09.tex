@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{color,latexsym,fancyhdr,amsmath,amsfonts,dsfont,amssymb}
+\usepackage{color,soul}
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{claim}[theorem]{Claim}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\ak}[1]{\textcolor{red}{#1}}
+
+
+\topmargin        -0.2 in
+\textheight       8.4 in
+\oddsidemargin    0 in  
+\evensidemargin   0 in     
+\textwidth        6.5 in
+\headheight       15pt     
+\headsep          .35 in     
+
+
+\begin{document}
+	\pagestyle{fancy} \lhead{MTH 415 Homework 09} 
+	\chead{05/05/2019}
+	\rhead{Austin Klum}
+	\lfoot{} \cfoot{} \rfoot{}
+	
+	\begin{enumerate}
+		\item[7.22] Prove Corollary $7.24 :$ Let $[ a , b ]$ be a closed and bounded interval in $\R ,$ and
+		assume that $f : [ a , b ] \rightarrow \mathbb { R }$ is continuous. Then the image of $f$ is a closed and
+		bounded interval in $\mathbb { R }$ .\\
+		Let $[a,b] $ be a closed bounded interval in $ \R $ and suppose that $ f:[a,b]\rightarrow \R $ is continuous. Notice, that $ [a,b] $ is compact and so by the extreme value theorem $ f $ has a maximum and minimum, $ c $ at a point $ y\in[a,b] $ and $ d $ at a point $ x\in[a,b] $ respectively. So, $ f([a,b])\subset [c,d] $. Without loss of generality, suppose $ x<y $. Let $ z\in[c,d] $. By the intermediate value theorem, there exists a $ z' $ such that $ x<z'<y $ and $ f(z')=z $. So, $ f([a,b])=[c,d] $. \\
+		Therefore,  the image of $f$ is a closed and
+		bounded interval in $\mathbb { R }$ .
+		\item[7.23] Provide an example of closed sets, $ A $ and $ B $, in a metric space $ (X,d) $ such that $ A $ and $ B $ are disjoint and $ d(A,B)=0 $\\
+		Let $ A = \mathbb{ N } $ and $ B=\{n+\frac{1}{2^n}|n\in\mathbb{ N }\} $. By definition the two sets are closed subsets of $ \R $ and for any $ \varepsilon > 0 $ there is some $ n\in \mathbb{ N } $ such that $ 1/n < \varepsilon $. So, $ d(A,B)= 0 $.
+		\item[\ak{7.24}] Prove Lemma $7.26 :$ Let $( X , d )$ be a metric space, and let $A$ be a subset of $X$ .
+		The function $f _ { A } : X \rightarrow \mathbb { R }$ , defined by $f _ { A } ( x ) = d ( \{ x \} , A ) ,$ is continuous.\\
+		(WTS: $  f_A^{-1}(U) $  is open in $X$ for every open $  U  $  in $ R $)\\
+		Let $ U $ be an open set in $ \R $ with $ U=[a,b] $ for $ a,b\in\R $\\
+		$f_A^{-1}=\{x\in X|f(x)\in \R\}$
+		\item[7.38] Prove Theorem $7.40 :$ Let $X$ be a Hausdorff space, and let $Y = X \cup \{ \infty \}$ be its one-point compactification. Then the subspace topology that $X$ inherits from $Y$ is equal to the original topology on $X$ .\\
+		Let $ X $ be a Hausdorff space and let $ Y=X\cup\{\infty\} $ be its one point compactification.  Let $ Y' $ be the subspace topology of $ Y $. We know that the open sets in $ Y $ are the open sets in $ X $ and $ Y-C $ where $ C $ is compact in $ X $. Thus, $ X \subset Y$. Since, every open set that is $ Y-C $
+		
+	
+		\item[\ak{7.39}] Show that the one-point compactification of $( 0,1 )$ is homeomorphic to the
+		circle.\\
+		Consider bijective $ f:(0,1)\rightarrow S^1-\{(0,1)\} $ defined by $ f(t)=(\cos(2\pi t), \sin(2\pi t)) $. Since, trigonometric functions are continuous we must have $ f $ is continuous. Let $ f^{-1} $ be defined by:
+			\[f^{-1}(x,y)=\{\begin{array} {ll} 
+					{\frac{1}{2\pi}\cos^{-1}(x)} & {\text{ if  $y > 0$ }} \\
+					{\frac{1}{2}-\frac{1}{2\pi}\sin^{-1}(y)} & {\text { if $x < 0$}}\\
+					{1-\frac{1}{2\pi}\cos^{-1}(x)} & {\text { if $y < 0$}}  
+		  	\end{array}\] 
+		Notice, by the pasting lemma since each piece of the function is comprised of continuous trig functions we must have that $ f^{-1} $ is continuous.\\
+		Thus, $ f $ is a bijection, continuous, and $ f^{-1} $ is continuous.\\
+		Thus, $ f $ is a homeomorphism.\\
+		Therefore, the one-point compactification of $( 0,1 )$ is homeomorphic to the
+		circle, $ S^1 $.	
+		\item[\ak{7.40}] Show that the one-point compactification of $Q$ is not Hausdorff.\\
+		By way of contradiction, suppose that the one point compactification of $ \Q $, $ \Q' $, is Hausdorff. Let $ x, \infty \in \Q'  $ with $ x\neq \infty $ and let $ U,V $ be open disjoint sets such that $ x\in U $ and $ \infty\in V $ . Notice, $ U $ is on open neighborhood of $ x \in \Q $, thus it contains an open neighborhood $ ,W, $ of $ x $ with the form $ (a,b)\cap \Q$ for some irrational $ a,b\in\R $. We must have that $ W $ and $ V $ are disjoint by definition. So, $ \infty \not\in Cl_{\Q'}(W) $. Observe.
+			\[Cl_{\Q'}(W)=Cl_\Q(W)=[a,b]\cap\Q=W\]
+		This is a contradiction, since $ W $ is not compact.\\
+		Therefore, the one-point compactification of $Q$ is not Hausdorff	
+		\item[7.41]
+		\begin{enumerate}
+			\item[(a)] Describe and illustrate the result of taking the one-point compactification
+			of the open annulus $S ^ { 1 } \times ( 0,1 ) .$
+			
+			\item[(b)] An open Mobius band is the space obtained from $[ 0,1 ] \times ( 0,1 )$ by gluing
+			the ends as we do with the usual Mobius band. Describe and illustrate the
+			result of taking the one-point compactification of the open Mobius band.
+			(Hint: The resulting space is one that we have previously encountered.)
+		\end{enumerate}
+		
+		\item[\ak{7.42}] Let $X$ be Hausdorff and assume $Y = X \cup \{ \infty \}$ is the one-point compactification of $X .$
+		\begin{enumerate}
+			\item[(a)] Show that if $X$ is not compact, then $C l ( X ) = Y$
+			Suppose $ X $ is not compact. We then know $ Y $ is comprised solely of open sets of $ X $ and $ Y-C $ where $ C $ is compact in $ X $. But since there are no compact subsets of $ X $, we are left only with $ Y $ being comprised of open sets of $ X $ and $ Y-\varnothing = Y$. \\
+			Therefore, $ Cl(X)=Y $
+				\item[(b)] Show that if $X$ is compact, then $C l ( X ) = X ,$ and $Y$ is disconnected with
+			$\{ \infty \}$ being one of its components. (This shows that not much interesting
+			happens when taking the one-point compactification of a space that is
+			already compact.)\\
+			Let $ X $ be compact.  Since, $ X $ is compact and Hausdorff we have that the compact sets, $ C = X $. Thus, since $ Y $ is comprised of open sets of $ X $ and $ Y-C $, we must have that $ Y-C $ is open and must be $ \{\infty\} $. \\
+			Hence, the $ Cl(X)=X $ and $ Y $ is disconnected with $ \{\infty\} $
+		\end{enumerate}
+	\end{enumerate}
+	\section*{Summary}
+\end{document}
+
+
