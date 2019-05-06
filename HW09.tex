@@ -10,7 +10,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\B}{\mathcal{B}}
 \newcommand{\T}{\mathcal{T}}
-\newcommand{\ak}[1]{\textcolor{red}{#1}}
+\newcommand{\ak}[1]{\textcolor{blue}{#1}}
 
 
 \topmargin        -0.2 in
@@ -39,11 +39,20 @@
 		Let $ A = \mathbb{ N } $ and $ B=\{n+\frac{1}{2^n}|n\in\mathbb{ N }\} $. By definition the two sets are closed subsets of $ \R $ and for any $ \varepsilon > 0 $ there is some $ n\in \mathbb{ N } $ such that $ 1/n < \varepsilon $. So, $ d(A,B)= 0 $.
 		\item[\ak{7.24}] Prove Lemma $7.26 :$ Let $( X , d )$ be a metric space, and let $A$ be a subset of $X$ .
 		The function $f _ { A } : X \rightarrow \mathbb { R }$ , defined by $f _ { A } ( x ) = d ( \{ x \} , A ) ,$ is continuous.\\
-		(WTS: $  f_A^{-1}(U) $  is open in $X$ for every open $  U  $  in $ R $)\\
-		Let $ U $ be an open set in $ \R $ with $ U=[a,b] $ for $ a,b\in\R $\\
-		$f_A^{-1}=\{x\in X|f(x)\in \R\}$
+		Let $ x\in X$ and let $ U $ be an open set in $ \R $ with $ U=(a,b) $ for $ a,b\in\R $\\
+		We define $ c = \frac{1}{2}min\{d(a,b)\} $\\ where $ d $ is the standard metric. Notice, $ (f(x)-c,f(x)+c)\subset U $. Let $ V $ be the open ball $ B_{d_x}(x,f_A^{-1}(c)) $. We then have an open neighborhood of $ x $. Notice, $ f_A(V) $ forms on open interval around $ f(x) $ that is $ f_A(V)=(f(x)-c,f(x)+c)$. Which we stated earlier as being a subset of $ U $. Thus, $ f(V) \subset U$. \\
+		Therefore, by Theorem 4.6 we must have that $ f_A $ is continuous.
+		
 		\item[7.38] Prove Theorem $7.40 :$ Let $X$ be a Hausdorff space, and let $Y = X \cup \{ \infty \}$ be its one-point compactification. Then the subspace topology that $X$ inherits from $Y$ is equal to the original topology on $X$ .\\
-		Let $ X $ be a Hausdorff space and let $ Y=X\cup\{\infty\} $ be its one point compactification.  Let $ Y' $ be the subspace topology of $ Y $. We know that the open sets in $ Y $ are the open sets in $ X $ and $ Y-C $ where $ C $ is compact in $ X $. Thus, $ X \subset Y$. Since, every open set that is $ Y-C $
+		Let $ X $ be a Hausdorff space and let $ Y=X\cup\{\infty\} $ be its one point compactification. \\
+		\\
+		We know that $ T_X \subset T_{Y_X} $ since $ Y $ contains all open sets of $ X $. \\
+		\\
+		For $ T_{Y_X} \subset T_X $ we have two cases. The first is $ Y $ is an open set in $ X $ and the second is $ Y-C $ is open in $ X $. The first case is trivially true, open sets of $ X $ are of course open in $ X $. The second case can be shown by taking the open set $ U = Y-C $ where $ C $ is a compact set in $ X $. Let $ V $ be an open set in $ Y $ defined by $ V = U\cap X $. We then argue that 
+			\[V= U\cap X = (Y-C)\cap X = [((X\cup\{\infty\})-C)\cap X]= X-C.\]
+		 Since $ C $ is a compact set in $ X $ and $ X $ is Hausdorff, we then have $ C $ is closed. We then must have that $ X-C $ is open in $ X $. Since, $ V = X-C $ we must have that $ V $ is open in $ X $. Hence, $ V $ is open in $ Y $ and open in $ X $ and so satisfies case 2. \\
+		 Thus, $ T_{Y_X} \subset T_X $.\\
+		 Therefore,  the subspace topology that $X$ inherits from $Y$ is equal to the original topology on $X$
 		
 	
 		\item[\ak{7.39}] Show that the one-point compactification of $( 0,1 )$ is homeomorphic to the
@@ -69,8 +78,7 @@
 			\item[(a)] Describe and illustrate the result of taking the one-point compactification
 			of the open annulus $S ^ { 1 } \times ( 0,1 ) .$
 			
-			\item[(b)] An open Mobius band is the space obtained from $[ 0,1 ] \times ( 0,1 )$ by gluing
-			the ends as we do with the usual Mobius band. Describe and illustrate the
+			\item[(b)] An open Mobius band is the space obtained from $[ 0,1 ] \times ( 0,1 )$ by gluing the ends as we do with the usual Mobius band. Describe and illustrate the
 			result of taking the one-point compactification of the open Mobius band.
 			(Hint: The resulting space is one that we have previously encountered.)
 		\end{enumerate}
@@ -89,6 +97,7 @@
 		\end{enumerate}
 	\end{enumerate}
 	\section*{Summary}
+	I am amazed that we only have one more week of class left. I am unsure how I feel about the last exam. It was tough, but I had some alright work put down. I don't think I did as well as I wanted to, but I'm expecting to receive better marks than last time. One point compactification is really hard for me to wrap my head around. A lot of these answers to the homework questions, I'm not very confident in. I feel like I really had to scourge the Internet and other resources to complete these problems. I ended up working with Jordan for an hour and then some just on one problem. I also talked to Collin and Tim in order to get some ideas on where to go in the proofs.\\  I'm working hard and I'm just not seeing enough results for all the effort being put in. It's frustrating and discouraging. I'm just feeling very helpless in this class.
 \end{document}
 
 
