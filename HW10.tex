@@ -32,17 +32,47 @@
 		\item[9.01] Show that the identity map from the disk $D$ in the plane to itself is homotopic to the map that takes $D$ to the origin.
 		
 		\item[9.02] Show that if $f _ { 1 } , f _ { 2 } : X \rightarrow Y$ are homotopic and $g _ { 1 } , g _ { 2 } : Y \rightarrow Z$ are homotopic,
-		then $g _ { 2 } \circ f _ { 2 }$ is homotopic to $g _ { 1 } \circ f _ { 1 } .$
-		
-		\item[9.03] Let $f$ and $g$ be paths in $\mathbb { R }$ . Show that $f$ is homotopic to $g .$ .
-		
+		then $g _ { 2 } \circ f _ { 2 }$ is homotopic to $g _ { 1 } \circ f _ { 1 } .$\\
+		Suppose  $f _ { 1 } , f _ { 2 } : X \rightarrow Y$ are homotopic and $g _ { 1 } , g _ { 2 } : Y \rightarrow Z$ are homotopic. Notice, we must have the homotopies
+			\begin{align*}
+				F : X\times I \rightarrow Y &\text{ with } F(x,0) = f_1(x), F(x,1)=f_2(x)\\
+				G : X\times I \rightarrow Y &\text{ with } G(x,0) = g_1(x), G(x,1)=g_2(x)
+			\end{align*}
+		We then define $ H:X\times I \rightarrow Z $ by
+			\[H(x,t) = \{\begin{array}{ll}
+				{g_1(F(x,2t))} & {0 \leq t \leq \frac{1}{2}} \\
+				{G(f_2(x),2t-1)} & {\frac{1}{2} \leq t \leq 1 }
+			 \end{array}.\]
+		We then check that $ H $ gives us a homotopy by checking $ t=0,\frac{1}{2},1 $.
+			\begin{align*}
+			H(x,0) &= g_1(F(x,0)) = g_1(f_1(x))=g_1\circ f_1 (x)\\
+			H(x,\frac{1}{2}) &= g_1(F(x,1)) = g_1(f_2(x))=G(f_2(x),0)\\
+			H(x,1) &= G(f_2(x),1) = f_2(g_2(x))=f_2\circ g_2 (x)\\
+			\end{align*}
+		Therefore, $g _ { 2 } \circ f _ { 2 }$ is homotopic to $g _ { 1 } \circ f _ { 1 } .$
+		\item[9.03] Let $f$ and $g$ be paths in $\mathbb { R }$ . Show that $f$ is homotopic to $g .$ .\\
+		Let $ f,g $ be paths in $ \R $ defined as $ f,g : [0,1]\rightarrow \R $ with $ f(0)=x, f(1)=y, g(0)=x,g(1)=y$ for all $ x,y\in\R $.
+		We define $ F:I\times I \rightarrow \R $ with 	
+		\[F(t) = \{\begin{array}{ll}
+			{f(2t)} & {0 \leq t \leq \frac{1}{2}} \\
+			{g(2t-1)} & {\frac{1}{2} \leq t \leq 1 }
+		\end{array}.\]
+		Checking the points for $ t=0,\frac{1}{2},1 $
+		\begin{align*}
+			F(0) &= f(0) \\
+			F(\frac{1}{2}) &= f(1)\\
+			F(\frac{1}{2}) &= g(0)\\
+			F(1) &= g(1)\\
+		\end{align*}
+		Since, paths and multiplication is continuous we must have that $ F $ is continuous.\\
+		Therefore, $f$ is homotopic to $g .$ 
 		\item[9.04] Let $f$ and $g$ be paths in $\mathbb { R } ^ { 2 } - \{ O \} .$ Show that $f$ is homotopic to $g$ . (Hint: Show
 		that every path is homotopic to the constant path that sends the entire interval
 		to the path's starting point. Then show that two constant paths are homotopic
 		using the fact that $\mathbb { R } ^ { 2 } - \{ O \}$ is path connected.)
 		
 		\item[9.06] Show that if $X$ is a topological space, and $D$ is the disk in the plane, then there is only one homotopy class of continuous functions from $X$ to $D$ .
-		
+		Constant function
 		\item[9.07] Consider the following definition:\medskip\\
 		\textbf{DEFINITION 9.4.} A topological space $X$ is said to be \textbf{contractible} if the
 		identity function on $X$ is homotopic to a constant function.
@@ -54,32 +84,21 @@
 			
 			\item[(b)] Prove that $\mathbb { R } ^ { n }$ is contractible.
 			
-			\item[(c)] Let $X$ be a contractible space. Prove that $X$ is path connected.
-			
+			\item[(c)] Let $X$ be a contractible space. Prove that $X$ is path connected.\\
+			Let $ X $ be a contractible space. Then the identity function on $ X $ is homotopic to a constant function, call it $ f $ with $ f(x)=c $ where $ c $ is a constant in $ X $ and $ x\in X $. We define this homotopy:
+				\[F:X\times I \rightarrow X \text{ with } F(x,0)=id_X(x),F(x,1)=f(x)=c\]
+			Let $ a,b \in X$ be our fixed points for our path. Notice, $ F(a,t) $ is a path from $ a $ to $ c $ and $ F(b,t) $ is a path from $ b $ to $ c $. So, we define the path as
+			\[p(t) = \{\begin{array}{ll}
+				{F(a,2t)} & {0 \leq t \leq \frac{1}{2}} \\
+				{F(b,2-2t)} & {\frac{1}{2} \leq t \leq 1}
+			\end{array}\]
+			We then check the points $ t=0,\frac{1}{2},1 $.
+			\begin{align*}
+				p(1)&=F(a,0)=id_X(a)=a\\
+				p(\frac{1}{2})&=F(a,1)=c=F(b,1)\\
+				p(1)&=F(b,0)=id_X(b)=b
+			\end{align*}
 		\end{enumerate}
-		
-		\item[9.09] Determine the degree of each of the following circle functions:
-			\begin{enumerate}
-				\item[(a)] The antipodal map, $A : S ^ { 1 } \rightarrow S ^ { 1 } , A ( \theta ) = \theta + \pi ,$ that maps each point
-				on the circle to the point opposite it through the center.
-				
-				\item[(b)] A function that wraps the circle around itself once in one direction and
-				then back around once in the other direction,
-					\[f : S ^ { 1 } \rightarrow S ^ { 1 } , f ( \theta ) =
-					 \left\{ \begin{array}{ l l } 
-						 { 2 \theta } & { \text { for } \theta \in [ 0 , \pi ] } \\
-						 { - 2 \theta } & { \text { for } \theta \in [ \pi , 2 \pi ] } 
-					 \end{array} \right.\]
-			\end{enumerate}
-		
-		\item[9.11] Prove Theorem 9.10: If a circle function $f : S ^ { 1 } \rightarrow S ^ { 1 }$ has a nonzero degree,
-		then $f$ is surjective. (Hint: Prove the contrapositive.)
-		
-		\item[9.12] Let $X$ be a connected Hausdorff space and $B$ be a two-point subset of $X .$ Prove
-		that $B$ is not a retract of $X .$
-		
-		\item[9.13] Let $X$ be a Hausdorff space and $A$ be a retract of $X .$ Prove that $A$ is a closed
-		subset of $X .$
 		
 	\end{enumerate}
 	\section*{Summary}
